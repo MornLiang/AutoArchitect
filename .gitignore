@@ -1,0 +1,18 @@
+# 用户指定排除的目录
+BIMNet_release/
+Gen-Searcher/
+floor_plan/
+demo_data/
+demo_prompts/
+tests/
+test_data/
+test_output/
+test_output_floorplan/
+
+# 系统/IDE/缓存文件
+.DS_Store
+.idea/
+__pycache__/
+.pytest_cache/
+.claude/
+*.pyc

@@ -1,0 +1,181 @@
+## Architect Domain Knowledge — Building & IFC Caveats
+
+You MUST apply the following domain knowledge when analyzing IFC models.
+These are hard constraints; violating them will produce WRONG answers.
+
+────────────────────────────────────────────────────────
+### 1. Floor / Storey Counting
+────────────────────────────────────────────────────────
+- IfcBuildingStorey does NOT always represent a usable floor.
+  IFC files commonly include **reference levels** such as "天花板"
+  (ceiling), "屋顶" (roof), "女儿墙" (parapet), whose sole purpose is
+  to mark an elevation datum — they are NOT real floors.
+- To determine the actual number of floors you MUST call the API to
+  query ALL IfcBuildingStorey instances and inspect their attributes.
+
+- **Step 1 — Identify reference levels by NAME (primary rule):**
+  Exclude storeys whose Name or LongName matches any of these
+  patterns (case-insensitive):
+    "天花板", "天花", "Roof", "屋顶", "Parapet", "女儿墙",
+    "参照标高", "基础", "Foundation"
+  These are ALWAYS reference levels regardless of element count.
+
+- **Step 2 — Keep all remaining storeys as real floors.**
+  A storey named "地板", "楼层", "F1", "1F", "首层", "标准层",
+  "Ground", "Level" or any numeric floor name IS a real floor.
+  IMPORTANT: "地板" literally means "floor" — it is a REAL floor,
+  even if its ObjectType contains "标高" (elevation). ALL storeys
+  have elevation data; the presence of "标高" in ObjectType does
+  NOT make it a reference level.
+
+- **Step 3 — Handle ambiguous names:**
+  If a storey name is ambiguous (not in either list above), check:
+    • ObjectType — "标高:上标头", "标高:屋顶" → reference level.
+      But "标高:正负零标高" → ground floor (elevation ±0.000).
+    • Element count — as a secondary hint only; do NOT use element
+      count as the primary criterion because many IFC files have
+      incomplete spatial containment (elements exist but are not
+      explicitly assigned to storeys).
+
+- A common ground slab (IfcSlab with PredefinedType=FLOOR) is a
+  structural component, NOT a separate floor.
+- **Final rule**: count = total IfcBuildingStorey − reference levels
+  identified in Step 1. When in doubt, a storey IS a real floor.
+
+────────────────────────────────────────────────────────
+### 2. IFC Type Classification Caveats
+────────────────────────────────────────────────────────
+- Roof components are frequently MISCLASSIFIED:
+    • A roof may appear as IfcCovering with PredefinedType=CEILING
+      instead of the correct IfcRoof or IfcSlab(ROOF).
+    • If no IfcRoof entity exists but an IfcCovering with CEILING
+      type is found, it is very likely the actual roof component.
+    • Always report this misclassification as a data-quality issue.
+- IfcBuildingElementProxy often holds components that should have
+  more specific types (e.g. balcony, canopy). Flag these.
+- Check PredefinedType for every element — NOTDEFINED or missing
+  values indicate incomplete classification.
+
+────────────────────────────────────────────────────────
+### 3. Material Analysis
+────────────────────────────────────────────────────────
+- "默认墙" (Default Wall) and similar names like "Default",
+  "Generic", "Default Material" are PLACEHOLDER materials with
+  no real physical properties.
+- When encountered, report that:
+    • Thermal Resistance = 0 → no valid insulation data
+    • Thermal Mass = 0 → no valid heat storage data
+    • No real material (concrete, brick, etc.) has been assigned
+    • This causes errors in energy simulation, cost estimation,
+      and structural analysis
+- Always recommend replacing placeholders with real materials.
+
+────────────────────────────────────────────────────────
+### 4. Structural System Determination
+────────────────────────────────────────────────────────
+- **Analysis strategy**: you MUST call the API to query ALL IfcColumn,
+  IfcWall, IfcBeam elements with their properties (LoadBearing,
+  ObjectType, wall thickness). Directly use query.by_type for each
+  type, then query.get_pset for LoadBearing and thickness. Do NOT
+  rely on spatial containment queries (get_children / get_contained)
+  as they may return empty results.
+
+- **Decision matrix** — follow this step-by-step:
+  1. Count: walls_n = number of IfcWall/IfcWallStandardCase
+  2. Count: cols_n = number of IfcColumn
+  3. Count: beams_n = number of IfcBeam
+  4. Compute: wall_to_col_ratio = walls_n / max(cols_n, 1)
+
+  **If wall_to_col_ratio ≥ 4 AND beams_n ≤ 3:**
+    → **Load-bearing wall system (承重墙结构)**
+    The primary structure relies on thick walls (≥200mm) to carry
+    vertical and lateral loads. Columns are supplementary or
+    decorative. This is common in residential and low-rise buildings.
+
+  **If cols_n ≥ 15 AND beams_n ≥ 10 AND wall thickness < 200mm:**
+    → **Frame system (框架结构)**
+    Regular grid of columns and beams forms the primary structure;
+    walls are non-structural infill.
+
+  **If wall_to_col_ratio is between 1.5 and 4 AND beams_n > 3:**
+    → **Shear-wall system / frame-shear wall (剪力墙/框剪结构)**
+    Walls and frame elements jointly resist loads.
+
+  **Otherwise:** analyze LoadBearing properties for individual
+  elements to determine roles.
+
+- **Column role classification:**
+  • Columns named "装饰柱" (decorative) or "矩形柱" (rectangular)
+    in a wall-dominant building are typically decorative/supplementary.
+  • If IfcColumn.LoadBearing is None/unset/False, assume decorative
+    in a wall-dominant building.
+  • Column size alone does NOT determine structural role — a 540×330mm
+    column can be decorative if walls are the primary load-bearing
+    system.
+  • Only classify columns as structural frame elements when they form
+    a regular grid pattern with beams.
+
+────────────────────────────────────────────────────────
+### 5. Enclosure & Ventilation Analysis
+────────────────────────────────────────────────────────
+- "Is the building fully enclosed?" means: are ALL boundaries of
+  the building formed by solid wall elements (IfcWall)?
+  This is NOT about whether openings have fillings (doors/windows).
+- IfcRailing is NOT a full enclosure element. If a boundary uses
+  only railings (no walls), that area is open-air / semi-enclosed.
+- When checking whether a building is "fully enclosed":
+    • FIRST check if IfcRailing exists — if it does, the building
+      is almost certainly NOT fully enclosed.
+    • Look for areas bounded only by IfcRailing → open corridors,
+      terraces, balconies.
+    • A canopy or cantilevered roof without surrounding walls
+      means that section is NOT enclosed.
+    • Check the spatial layout: if there is a corridor area between
+      building volumes with railings instead of walls, that corridor
+      is an open-air walkway.
+- **Analysis strategy**: query IfcRailing elements, check their
+  location and relationship to walls. If IfcRailing exists where
+  walls would be needed for full enclosure, the building is NOT
+  fully enclosed.
+- IfcSpace may NOT be defined in many IFC files. Do not assume
+  every room is explicitly modelled as IfcSpace.
+- To check ventilation, examine which walls have IfcWindow
+  attached (via IfcRelVoidsElement → IfcRelFillsElement chain).
+  Interior rooms surrounded by internal walls with no windows
+  may lack natural ventilation.
+- Building codes typically require habitable rooms to have a
+  window-to-floor area ratio of at least 1:7.
+
+────────────────────────────────────────────────────────
+### 6. When to Use API vs Graph Data
+────────────────────────────────────────────────────────
+- Graph data (L0/L1/L2) provides pre-extracted snapshots.
+  Use it for:
+    • Element counting, spatial hierarchy overview
+    • Reading properties already captured in element graphs
+    • Understanding connectivity and relationships
+- You MUST call the API (EXECUTE_API) when:
+    • You need to compute derived values (areas, volumes, lengths)
+    • You need to cross-reference multiple elements dynamically
+    • You need properties NOT captured in the graph (e.g. quantities,
+      geometry coordinates for all elements)
+    • The question requires iterating through ALL instances of a type
+- Even when graph data seems sufficient, prefer EXECUTE_API for
+  questions about counts, properties, or classifications where
+  accuracy is critical — API results are always authoritative.
+
+────────────────────────────────────────────────────────
+### 7. Answer Quality Requirements
+────────────────────────────────────────────────────────
+- Always cite specific IFC entity types and instance counts.
+- When reporting issues, provide:
+    • What is wrong (e.g. misclassified type)
+    • What the correct value should be
+    • What impact the issue has (energy simulation, compliance, etc.)
+    • A concrete recommendation for fixing it
+- For numerical answers, show the derivation (e.g. "2 IfcBuildingStorey
+  found, but '天花板' at 2680mm is a reference level with only 2
+  elements → 1 actual floor").
+- Do NOT blindly trust element counts from graphs for final answers
+  about floors, rooms, or compliance — always validate with domain
+  logic.
