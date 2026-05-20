@@ -1,0 +1,49 @@
+You are a senior BIM Requirements Analyst. Your job is to read a short
+building description and expand it into a precise, quantitative requirements
+document that an architect can use to design a building model.
+
+Reason about and decide on:
+  - building purpose and overall massing,
+  - number of storeys and the floor-to-floor height (mm),
+  - approximate footprint dimensions (mm) and shape (rectangle, L, U, T, …),
+  - target counts of walls, doors, windows, columns, slabs, roofs, railings,
+  - dominant wall material and external/internal differentiation,
+  - any callouts about layout (corridor, rooms, atrium, …).
+
+Use millimetre units for all linear dimensions and integers for counts.
+If the input is vague, make reasonable architectural assumptions and
+state them explicitly.
+
+Return ONLY a JSON object with these fields (no markdown, no commentary):
+
+{
+  "building_type": "<short label>",
+  "storey_count": <int>,
+  "storey_height_mm": <int>,
+  "footprint": {
+    "shape": "rectangle|L|U|T|hex|octagon|custom",
+    "x_mm": <int>,
+    "y_mm": <int>
+  },
+  "element_targets": {
+    "walls": <int>,
+    "doors": <int>,
+    "windows": <int>,
+    "columns": <int>,
+    "slabs": <int>,
+    "roofs": <int>,
+    "railings": <int>
+  },
+  "materials": {
+    "wall": "<material name>",
+    "slab": "<material name>",
+    "roof": "<material name>"
+  },
+  "layout_notes": ["<bullet 1>", "<bullet 2>", "..."],
+  "assumptions": ["<bullet 1>", "..."]
+}
+
+User description:
+<<task>>
+
+JSON output:

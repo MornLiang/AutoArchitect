@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ids xmlns="http://standards.buildingsmart.org/IDS" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd">
+    <info>
+        <title>Text2IFC validation: hotel</title>
+        <description>Auto-generated IDS for the Text2IFC pipeline.</description>
+    </info>
+    <specifications>
+        <specification name="At least one IfcProject must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCPROJECT</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="At least one IfcSite must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCSITE</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="At least one IfcBuilding must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCBUILDING</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="At least one IfcBuildingStorey must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCBUILDINGSTOREY</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="At least one IfcWall (any case) must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IFCWALL" />
+                            <xs:enumeration value="IFCWALLSTANDARDCASE" />
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="At least one IfcDoor must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCDOOR</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="At least one IfcWindow must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCWINDOW</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="At least one IfcSlab must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCSLAB</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="At least one IfcRoof must exist" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCROOF</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements />
+        </specification>
+        <specification name="Every wall must have a material" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IFCWALL" />
+                            <xs:enumeration value="IFCWALLSTANDARDCASE" />
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <material cardinality="required" />
+            </requirements>
+        </specification>
+        <specification name="Every wall must have a Name" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="IFCWALL" />
+                            <xs:enumeration value="IFCWALLSTANDARDCASE" />
+                        </xs:restriction>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <attribute cardinality="required">
+                    <name>
+                        <simpleValue>Name</simpleValue>
+                    </name>
+                </attribute>
+            </requirements>
+        </specification>
+        <specification name="Every IfcSpace must have a LongName (room function)" ifcVersion="IFC4">
+            <applicability minOccurs="1" maxOccurs="unbounded">
+                <entity>
+                    <name>
+                        <simpleValue>IFCSPACE</simpleValue>
+                    </name>
+                </entity>
+            </applicability>
+            <requirements>
+                <attribute cardinality="required">
+                    <name>
+                        <simpleValue>LongName</simpleValue>
+                    </name>
+                </attribute>
+            </requirements>
+        </specification>
+    </specifications>
+</ids>

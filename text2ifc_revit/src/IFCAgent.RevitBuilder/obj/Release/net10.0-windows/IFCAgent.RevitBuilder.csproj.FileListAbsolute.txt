@@ -1,0 +1,13 @@
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\IFCAgent.RevitBuilder.csproj.AssemblyReference.cache
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\IFCAgent.RevitBuilder.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\IFCAgent.RevitBuilder.AssemblyInfoInputs.cache
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\IFCAgent.RevitBuilder.AssemblyInfo.cs
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\IFCAgent.RevitBuilder.csproj.CoreCompileInputs.cache
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\bin\Release\net10.0-windows\IFCAgent.RevitBuilder.addin
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\bin\Release\net10.0-windows\IFCAgent.RevitBuilder.deps.json
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\bin\Release\net10.0-windows\IFCAgent.RevitBuilder.dll
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\bin\Release\net10.0-windows\IFCAgent.RevitBuilder.pdb
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\IFCAgent.RevitBuilder.dll
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\refint\IFCAgent.RevitBuilder.dll
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\IFCAgent.RevitBuilder.pdb
+C:\Users\huanm\Desktop\c#\IFC_Agent\text2ifc_revit\src\IFCAgent.RevitBuilder\obj\Release\net10.0-windows\ref\IFCAgent.RevitBuilder.dll

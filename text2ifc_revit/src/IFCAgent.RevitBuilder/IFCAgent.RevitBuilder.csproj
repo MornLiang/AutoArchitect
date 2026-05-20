@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>false</UseWindowsForms>
+    <UseWPF>false</UseWPF>
+    <PlatformTarget>x64</PlatformTarget>
+    <Nullable>enable</Nullable>
+    <LangVersion>12.0</LangVersion>
+    <AssemblyName>IFCAgent.RevitBuilder</AssemblyName>
+    <RootNamespace>IFCAgent.RevitBuilder</RootNamespace>
+    <Configurations>Debug;Release</Configurations>
+    <!-- Don't ship Revit runtime DLLs alongside our add-in -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <!--
+    Revit 2025+ ships its API DLLs in the install root (default
+    C:\Program Files\Autodesk\Revit 2025\).  Override RevitInstallPath
+    on the command line if your install lives elsewhere, e.g.
+        dotnet build /p:RevitInstallPath="D:\Autodesk\Revit 2025"
+  -->
+  <PropertyGroup>
+    <RevitInstallPath Condition="'$(RevitInstallPath)' == ''">C:\Program Files\Autodesk\Revit 2025</RevitInstallPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="RevitAPI">
+      <HintPath>$(RevitInstallPath)\RevitAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI">
+      <HintPath>$(RevitInstallPath)\RevitAPIUI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <!-- IFCExportOptions / IFCVersion live in RevitAPI.dll on Revit
+         2022+; no separate RevitAPIIFC reference is required. -->
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="IFCAgent.RevitBuilder.addin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

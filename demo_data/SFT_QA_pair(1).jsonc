@@ -1,0 +1,63 @@
+// Editing From IFC File
+{
+  "instruction": "Delete all door components in this IFC file and save the modified file.",
+  "input": "ifc/train/1px.ifc",
+  "output": "All door components have been removed from the IFC file. The modified IFC file has been saved as 1px_modified.ifc"
+}
+
+// Retrieving From IFC File
+{
+  "instruction": "How many floors does this building have?",
+  "input": "ifc/train/1px.ifc",
+  "output": "This building has only 1 floor."
+}
+
+{
+  "instruction": "What is the thickness of the exterior walls in this IFC file?",
+  "input": "ifc/train/1px.ifc",
+  "output": "The exterior walls in this IFC file have a thickness of 240mm. This information can be retrieved from the IfcWall components, where the wall type is defined as Basic Wall: 基本墙:外 - 240."
+}
+
+{
+  "instruction": "How many doors are there in this IFC file??",
+  "input": "ifc/train/1px.ifc",
+  "output": "There are 15 doors in this IFC file. All door components are classified as IfcDoor and can be retrieved using model.by_type('IfcDoor')."
+}
+
+{
+  "instruction": "What materials are assigned to the wall components in this IFC file?",
+  "input": "ifc/train/1px.ifc",
+  "output": "All wall components in this IFC file are assigned the Default Wall material, which is a placeholder with no real physical properties. The following issues were detected: \n -Thermal Resistance R = 0.0000, indicating no valid thermal data \n -Thermal Mass = 0.0000, indicating no valid heat storage data \n -No real material such as Concrete, Brick, or Reinforced Concrete has been assigned \n -This will result in inaccurate or missing material data upon IFC export, and will cause errors in energy simulation and cost estimation \n -It is recommended to replace Default Wall with a real material to ensure accurate thermal and structural analysis"
+}
+
+
+// Reasoning IFC File 
+{
+  "instruction": "What type of roof system does this building use?", // <Simple> When provide pictures
+  "input": "ifc/train/1px.ifc",
+  "output": "The building adopts a flat roof system. However, the roof component is misclassified as Generic Models with IFC Predefined Type set to CEILING, whereas it should be assigned as IfcRoof or IfcSlab. The Thermal Resistance R = 0.0000 and Thermal Mass = 0.0000, indicating no valid thermal data has been assigned. It is recommended to correct the IFC type to IfcRoof to ensure accurate data retrieval and energy analysis."
+}
+
+{
+  "instruction": "Does every room have at least one window for natural ventilation?", // <Simple>
+  "input": "ifc/train/1px.ifc",
+  "ouput": "No, not every room has a window for natural ventilation. The following issues were detected: \n -Several interior rooms have no IfcWindow assigned to their bounding walls \n -Spaces such as bathrooms and corridors are fully enclosed with no openings detected \n -This may not comply with building ventilation regulations, which typically require every habitable room to have a window-to-floor area ratio of at least 1:7 \n -It is recommended to review all IfcSpace instances and verify that each has at least one associated IfcWindow or IfcOpeningElement on an exterior wall"
+}
+
+{
+  "instruction": "Does this IFC file contain any components with incorrect IFC type assignments?", // <Hard>
+  "input": "ifc/train/1px.ifc",
+  "output": "Yes, the following issue were detected: \n -The roof component is classified as Generic Models with IFC Predefined Type set to CEILINE, whereas it should be assigned as IfcRoof or IfcSlab\n -It is recommended to correct the category to IfcRoof to ensure semantic accuracy and proper data retrieval"
+}
+
+{
+  "instruction": "What is the structural system of this building?", // <Hard>
+  "input": "ifc/train/1px.ifc",
+  "ouput": "Based on the IFC file analysis, this building adopts a load-bearing wall structural system. The following evidence supports this conclusion: \n -Only 3 IfcColumn instances are detected, which are decorative columns rather than structural ones \n -The primary lateral and vertical loads are carried by IfcWall components \n -No regular column grid pattern is identified, ruling out a frame structural system \n -The wall thickness is 240mm, consistent with load-bearing wall construction"
+}
+
+{
+  "instruction": "Is this building fully enclosed?",
+  "input": "ifc/train/1px.ifc",
+  "output": "No, this building is not fully enclosed. The central corridor area between the two main volumes is open on the sides, with only IfcRailing components serving as boundaries instead of full enclosure walls. The roof above the corridor is a cantilevered canopy with no surrounding walls, forming an open-air walkway or terrace. Only the left and right main volumes are fully enclosed with IfcWall components on all sides."  // <Simple> When provide pictures
+}

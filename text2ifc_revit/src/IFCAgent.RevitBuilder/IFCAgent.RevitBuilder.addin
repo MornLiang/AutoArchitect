@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <!-- Auto-fires when env var IFC_AGENT_GRAPH_JSON is set; this is the
+       path the Python launcher uses.  Stays inert otherwise, so the
+       add-in is safe to install for interactive Revit sessions. -->
+  <AddIn Type="Application">
+    <Name>IFCAgent.BuildOnStartup</Name>
+    <Assembly>IFCAgent.RevitBuilder.dll</Assembly>
+    <FullClassName>IFCAgent.RevitBuilder.BuildOnStartupApp</FullClassName>
+    <ClientId>0c4d2bba-1f9d-44ed-8e3c-2b8a5c1f8a72</ClientId>
+    <VendorId>IFCAGENT</VendorId>
+    <VendorDescription>IFC_Agent project</VendorDescription>
+  </AddIn>
+
+  <!-- Manual entry from the Add-Ins menu, for testing. -->
+  <AddIn Type="Command">
+    <Name>IFCAgent.BuildFromJson</Name>
+    <Text>Build IFC from BuildingGraph JSON</Text>
+    <Description>Build a Revit model from an IFC_Agent BuildingGraph JSON and export .rvt + .ifc.</Description>
+    <Assembly>IFCAgent.RevitBuilder.dll</Assembly>
+    <FullClassName>IFCAgent.RevitBuilder.BuildFromJsonCommand</FullClassName>
+    <ClientId>3d7a7a3b-2c5d-4a4f-9e72-3a8e9d4b1f01</ClientId>
+    <VendorId>IFCAGENT</VendorId>
+    <VendorDescription>IFC_Agent project</VendorDescription>
+    <VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+  </AddIn>
+</RevitAddIns>

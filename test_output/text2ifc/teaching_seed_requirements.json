@@ -1,0 +1,41 @@
+{
+  "building_type": "school",
+  "storey_count": 1,
+  "storey_height_mm": 3600,
+  "footprint": {
+    "shape": "rectangle",
+    "x_mm": 50000,
+    "y_mm": 25000
+  },
+  "element_targets": {
+    "walls": 19,
+    "doors": 14,
+    "windows": 22,
+    "columns": 0,
+    "slabs": 2,
+    "roofs": 1,
+    "railings": 2
+  },
+  "materials": {
+    "wall": "brick",
+    "slab": "concrete",
+    "roof": "concrete"
+  },
+  "layout_notes": [
+    "Central east-west corridor 3000 mm wide divides the building into north and south rows of rooms.",
+    "North row (west to east): stair_west, classroom_1, classroom_2, classroom_3, classroom_4, classroom_5, stair_east.",
+    "South row (west to east): classroom_6, classroom_7, mens_toilet, lobby, womens_toilet, classroom_8, classroom_9, classroom_10.",
+    "Lobby is open to the corridor on its north side, forming an entrance junction.",
+    "Each classroom approx. 7500 x 8500 mm, stairwells 3500 x 8500 mm, lobby 6000 x 8500 mm, toilets 4500 x 8500 mm.",
+    "Main entrance via 1800 mm double-leaf door on south facade into lobby.",
+    "Classrooms have single 1000 mm doors to corridor, toilets have 900 mm doors to lobby."
+  ],
+  "assumptions": [
+    "Wall thickness 200 mm throughout (load-bearing brick).",
+    "Lobby north side is open to the corridor (no wall segment) so circulation flows freely.",
+    "Toilet doors open into lobby, not directly into corridor.",
+    "No interior columns; all vertical structure is load-bearing masonry walls.",
+    "Flat concrete roof slab covers entire footprint with no overhangs.",
+    "Stairwell railings only interior, guarding stair openings."
+  ]
+}

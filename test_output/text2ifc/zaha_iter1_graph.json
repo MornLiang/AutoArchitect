@@ -1,0 +1,4134 @@
+{
+  "metadata": {
+    "name": "Inferred building",
+    "description": "Deterministically generated rooms-based graph",
+    "project_name": "Text2IFC",
+    "site_name": "Default Site",
+    "schema": "IFC4",
+    "length_unit": "MILLIMETRE"
+  },
+  "storeys": [
+    {
+      "id": "s1",
+      "name": "Ground Floor",
+      "elevation": 0.0,
+      "height": 3000.0,
+      "walls": [
+        {
+          "id": "s1-iw0",
+          "start": [
+            -50000.0,
+            11052.631578947374
+          ],
+          "end": [
+            -23913.04347826087,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw1",
+          "start": [
+            -23913.04347826087,
+            11052.631578947374
+          ],
+          "end": [
+            -2173.9130434782637,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw2",
+          "start": [
+            -2173.9130434782637,
+            11052.631578947374
+          ],
+          "end": [
+            15217.391304347824,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw3",
+          "start": [
+            15217.391304347824,
+            11052.631578947374
+          ],
+          "end": [
+            50000.0,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw4",
+          "start": [
+            -50000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            -25000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw5",
+          "start": [
+            -25000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            0.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw6",
+          "start": [
+            0.0,
+            -11052.63157894737
+          ],
+          "end": [
+            25000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw7",
+          "start": [
+            25000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            50000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw8",
+          "start": [
+            -23913.04347826087,
+            11052.631578947374
+          ],
+          "end": [
+            -23913.04347826087,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw9",
+          "start": [
+            -2173.9130434782637,
+            11052.631578947374
+          ],
+          "end": [
+            -2173.9130434782637,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw10",
+          "start": [
+            15217.391304347824,
+            11052.631578947374
+          ],
+          "end": [
+            15217.391304347824,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw11",
+          "start": [
+            -25000.0,
+            -35000.0
+          ],
+          "end": [
+            -25000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw12",
+          "start": [
+            0.0,
+            -35000.0
+          ],
+          "end": [
+            0.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw13",
+          "start": [
+            25000.0,
+            -35000.0
+          ],
+          "end": [
+            25000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-ew14",
+          "start": [
+            -50000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            -50000.0,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew15",
+          "start": [
+            50000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            50000.0,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew16",
+          "start": [
+            -50000.0,
+            35000.0
+          ],
+          "end": [
+            -23913.04347826087,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew17",
+          "start": [
+            -50000.0,
+            11052.631578947374
+          ],
+          "end": [
+            -50000.0,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew18",
+          "start": [
+            -23913.04347826087,
+            35000.0
+          ],
+          "end": [
+            -2173.9130434782637,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew19",
+          "start": [
+            -2173.9130434782637,
+            35000.0
+          ],
+          "end": [
+            15217.391304347824,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew20",
+          "start": [
+            15217.391304347824,
+            35000.0
+          ],
+          "end": [
+            50000.0,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew21",
+          "start": [
+            50000.0,
+            11052.631578947374
+          ],
+          "end": [
+            50000.0,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew22",
+          "start": [
+            -50000.0,
+            -35000.0
+          ],
+          "end": [
+            -25000.0,
+            -35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew23",
+          "start": [
+            -50000.0,
+            -35000.0
+          ],
+          "end": [
+            -50000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew24",
+          "start": [
+            -25000.0,
+            -35000.0
+          ],
+          "end": [
+            0.0,
+            -35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew25",
+          "start": [
+            0.0,
+            -35000.0
+          ],
+          "end": [
+            25000.0,
+            -35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew26",
+          "start": [
+            25000.0,
+            -35000.0
+          ],
+          "end": [
+            50000.0,
+            -35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew27",
+          "start": [
+            50000.0,
+            -35000.0
+          ],
+          "end": [
+            50000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        }
+      ],
+      "openings": [
+        {
+          "id": "s1-d1",
+          "host_wall": "s1-iw0",
+          "kind": "door",
+          "offset": 12593.478260869564,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d2",
+          "host_wall": "s1-iw1",
+          "kind": "door",
+          "offset": 10419.565217391304,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d3",
+          "host_wall": "s1-iw2",
+          "kind": "door",
+          "offset": 8245.652173913044,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d4",
+          "host_wall": "s1-iw3",
+          "kind": "door",
+          "offset": 16941.304347826088,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d5",
+          "host_wall": "s1-iw4",
+          "kind": "door",
+          "offset": 12050.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d6",
+          "host_wall": "s1-iw5",
+          "kind": "door",
+          "offset": 12050.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d7",
+          "host_wall": "s1-iw6",
+          "kind": "door",
+          "offset": 12050.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d8",
+          "host_wall": "s1-iw7",
+          "kind": "door",
+          "offset": 12050.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d9",
+          "host_wall": "s1-ew16",
+          "kind": "door",
+          "offset": 12593.478260869564,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-w1",
+          "host_wall": "s1-ew16",
+          "kind": "window",
+          "offset": 12443.478260869564,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w2",
+          "host_wall": "s1-ew20",
+          "kind": "window",
+          "offset": 16791.304347826088,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w3",
+          "host_wall": "s1-ew21",
+          "kind": "window",
+          "offset": 11373.684210526313,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        }
+      ],
+      "columns": [],
+      "slabs": [
+        {
+          "id": "s1-floor1",
+          "boundary": [
+            [
+              -50000.0,
+              -35000.0
+            ],
+            [
+              50000.0,
+              -35000.0
+            ],
+            [
+              50000.0,
+              35000.0
+            ],
+            [
+              -50000.0,
+              35000.0
+            ]
+          ],
+          "thickness": 200.0,
+          "elevation": 0,
+          "material": "Concrete",
+          "predefined_type": "FLOOR"
+        }
+      ],
+      "roofs": [],
+      "railings": [],
+      "spaces": [
+        {
+          "id": "corridor",
+          "name": "Corridor",
+          "function": "corridor",
+          "boundary": [
+            [
+              -50000.0,
+              -11052.63157894737
+            ],
+            [
+              50000.0,
+              -11052.63157894737
+            ],
+            [
+              50000.0,
+              11052.631578947374
+            ],
+            [
+              -50000.0,
+              11052.631578947374
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "+y",
+          "window_side": "-x"
+        },
+        {
+          "id": "lobby",
+          "name": "Lobby",
+          "function": "lobby",
+          "boundary": [
+            [
+              -50000.0,
+              11052.631578947374
+            ],
+            [
+              -23913.04347826087,
+              11052.631578947374
+            ],
+            [
+              -23913.04347826087,
+              35000.0
+            ],
+            [
+              -50000.0,
+              35000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "lobby_reception_desk",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Reception Desk",
+              "position": [
+                -36956.52173913043,
+                12002.631578947374
+              ],
+              "size": [
+                2000.0,
+                700.0,
+                1100.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "lobby_lobby_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Lobby Sofa",
+              "position": [
+                -36956.52173913043,
+                33975.0
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "bathroom",
+          "name": "Bathroom",
+          "function": "bathroom",
+          "boundary": [
+            [
+              -23913.04347826087,
+              11052.631578947374
+            ],
+            [
+              -2173.9130434782637,
+              11052.631578947374
+            ],
+            [
+              -2173.9130434782637,
+              35000.0
+            ],
+            [
+              -23913.04347826087,
+              35000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "bathroom_pan_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 1",
+              "position": [
+                -2603.9130434782637,
+                11352.631578947374
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 2",
+              "position": [
+                -2603.9130434782637,
+                17189.473684210534
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_3",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 3",
+              "position": [
+                -2603.9130434782637,
+                23026.315789473687
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_4",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 4",
+              "position": [
+                -2603.9130434782637,
+                28863.15789473684
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_5",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 5",
+              "position": [
+                -2603.9130434782637,
+                34700.0
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 1",
+              "position": [
+                -23608.04347826087,
+                14271.052631578954
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 2",
+              "position": [
+                -23608.04347826087,
+                20107.894736842107
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_3",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 3",
+              "position": [
+                -23608.04347826087,
+                25944.736842105267
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_4",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 4",
+              "position": [
+                -23608.04347826087,
+                31781.578947368427
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "service",
+          "name": "Service",
+          "function": "service",
+          "boundary": [
+            [
+              -2173.9130434782637,
+              11052.631578947374
+            ],
+            [
+              15217.391304347824,
+              11052.631578947374
+            ],
+            [
+              15217.391304347824,
+              35000.0
+            ],
+            [
+              -2173.9130434782637,
+              35000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "meeting",
+          "name": "Meeting Room",
+          "function": "meeting",
+          "boundary": [
+            [
+              15217.391304347824,
+              11052.631578947374
+            ],
+            [
+              50000.0,
+              11052.631578947374
+            ],
+            [
+              50000.0,
+              35000.0
+            ],
+            [
+              15217.391304347824,
+              35000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "meeting_table",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Meeting Table",
+              "position": [
+                32608.69565217392,
+                23026.315789473687
+              ],
+              "size": [
+                2400.0,
+                1200.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N1",
+              "position": [
+                31708.69565217392,
+                22076.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S1",
+              "position": [
+                31708.69565217392,
+                23976.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N2",
+              "position": [
+                32308.69565217392,
+                22076.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S2",
+              "position": [
+                32308.69565217392,
+                23976.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N3",
+              "position": [
+                32908.69565217392,
+                22076.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S3",
+              "position": [
+                32908.69565217392,
+                23976.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N4",
+              "position": [
+                33508.69565217392,
+                22076.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S4",
+              "position": [
+                33508.69565217392,
+                23976.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "office_n1",
+          "name": "Office N1",
+          "function": "office",
+          "boundary": [
+            [
+              -50000.0,
+              -35000.0
+            ],
+            [
+              -25000.0,
+              -35000.0
+            ],
+            [
+              -25000.0,
+              -11052.63157894737
+            ],
+            [
+              -50000.0,
+              -11052.63157894737
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "office_n1_odesk_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 1",
+              "position": [
+                -48400.0,
+                -33750.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 1",
+              "position": [
+                -48400.0,
+                -33150.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 2",
+              "position": [
+                -48400.0,
+                -32450.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 2",
+              "position": [
+                -48400.0,
+                -31850.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 3",
+              "position": [
+                -48400.0,
+                -31150.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 3",
+              "position": [
+                -48400.0,
+                -30550.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 4",
+              "position": [
+                -48400.0,
+                -29850.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 4",
+              "position": [
+                -48400.0,
+                -29250.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 5",
+              "position": [
+                -48400.0,
+                -28550.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 5",
+              "position": [
+                -48400.0,
+                -27950.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 6",
+              "position": [
+                -48400.0,
+                -27250.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 6",
+              "position": [
+                -48400.0,
+                -26650.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "office_s1",
+          "name": "Office S1",
+          "function": "office",
+          "boundary": [
+            [
+              -25000.0,
+              -35000.0
+            ],
+            [
+              0.0,
+              -35000.0
+            ],
+            [
+              0.0,
+              -11052.63157894737
+            ],
+            [
+              -25000.0,
+              -11052.63157894737
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "office_s1_odesk_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 1",
+              "position": [
+                -23400.0,
+                -33750.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 1",
+              "position": [
+                -23400.0,
+                -33150.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 2",
+              "position": [
+                -23400.0,
+                -32450.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 2",
+              "position": [
+                -23400.0,
+                -31850.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 3",
+              "position": [
+                -23400.0,
+                -31150.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 3",
+              "position": [
+                -23400.0,
+                -30550.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 4",
+              "position": [
+                -23400.0,
+                -29850.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 4",
+              "position": [
+                -23400.0,
+                -29250.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 5",
+              "position": [
+                -23400.0,
+                -28550.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 5",
+              "position": [
+                -23400.0,
+                -27950.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 6",
+              "position": [
+                -23400.0,
+                -27250.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 6",
+              "position": [
+                -23400.0,
+                -26650.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "office_n2",
+          "name": "Office N2",
+          "function": "office",
+          "boundary": [
+            [
+              0.0,
+              -35000.0
+            ],
+            [
+              25000.0,
+              -35000.0
+            ],
+            [
+              25000.0,
+              -11052.63157894737
+            ],
+            [
+              0.0,
+              -11052.63157894737
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "office_n2_odesk_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 1",
+              "position": [
+                1600.0,
+                -33750.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 1",
+              "position": [
+                1600.0,
+                -33150.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 2",
+              "position": [
+                1600.0,
+                -32450.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 2",
+              "position": [
+                1600.0,
+                -31850.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 3",
+              "position": [
+                1600.0,
+                -31150.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 3",
+              "position": [
+                1600.0,
+                -30550.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 4",
+              "position": [
+                1600.0,
+                -29850.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 4",
+              "position": [
+                1600.0,
+                -29250.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 5",
+              "position": [
+                1600.0,
+                -28550.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 5",
+              "position": [
+                1600.0,
+                -27950.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 6",
+              "position": [
+                1600.0,
+                -27250.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 6",
+              "position": [
+                1600.0,
+                -26650.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "office_s2",
+          "name": "Office S2",
+          "function": "office",
+          "boundary": [
+            [
+              25000.0,
+              -35000.0
+            ],
+            [
+              50000.0,
+              -35000.0
+            ],
+            [
+              50000.0,
+              -11052.63157894737
+            ],
+            [
+              25000.0,
+              -11052.63157894737
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "office_s2_odesk_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 1",
+              "position": [
+                26600.0,
+                -33750.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 1",
+              "position": [
+                26600.0,
+                -33150.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 2",
+              "position": [
+                26600.0,
+                -32450.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 2",
+              "position": [
+                26600.0,
+                -31850.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 3",
+              "position": [
+                26600.0,
+                -31150.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 3",
+              "position": [
+                26600.0,
+                -30550.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 4",
+              "position": [
+                26600.0,
+                -29850.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 4",
+              "position": [
+                26600.0,
+                -29250.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 5",
+              "position": [
+                26600.0,
+                -28550.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 5",
+              "position": [
+                26600.0,
+                -27950.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 6",
+              "position": [
+                26600.0,
+                -27250.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 6",
+              "position": [
+                26600.0,
+                -26650.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-y"
+        }
+      ],
+      "furniture": []
+    },
+    {
+      "id": "s2",
+      "name": "Storey 2",
+      "elevation": 3000.0,
+      "height": 3000.0,
+      "walls": [
+        {
+          "id": "s2-iw0",
+          "start": [
+            -50000.0,
+            11052.631578947374
+          ],
+          "end": [
+            -23913.04347826087,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw1",
+          "start": [
+            -23913.04347826087,
+            11052.631578947374
+          ],
+          "end": [
+            -2173.9130434782637,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw2",
+          "start": [
+            -2173.9130434782637,
+            11052.631578947374
+          ],
+          "end": [
+            15217.391304347824,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw3",
+          "start": [
+            15217.391304347824,
+            11052.631578947374
+          ],
+          "end": [
+            50000.0,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw4",
+          "start": [
+            -50000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            -25000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw5",
+          "start": [
+            -25000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            0.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw6",
+          "start": [
+            0.0,
+            -11052.63157894737
+          ],
+          "end": [
+            25000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw7",
+          "start": [
+            25000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            50000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw8",
+          "start": [
+            -23913.04347826087,
+            11052.631578947374
+          ],
+          "end": [
+            -23913.04347826087,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw9",
+          "start": [
+            -2173.9130434782637,
+            11052.631578947374
+          ],
+          "end": [
+            -2173.9130434782637,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw10",
+          "start": [
+            15217.391304347824,
+            11052.631578947374
+          ],
+          "end": [
+            15217.391304347824,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw11",
+          "start": [
+            -25000.0,
+            -35000.0
+          ],
+          "end": [
+            -25000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw12",
+          "start": [
+            0.0,
+            -35000.0
+          ],
+          "end": [
+            0.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw13",
+          "start": [
+            25000.0,
+            -35000.0
+          ],
+          "end": [
+            25000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s2-ew14",
+          "start": [
+            -50000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            -50000.0,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew15",
+          "start": [
+            50000.0,
+            -11052.63157894737
+          ],
+          "end": [
+            50000.0,
+            11052.631578947374
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew16",
+          "start": [
+            -50000.0,
+            35000.0
+          ],
+          "end": [
+            -23913.04347826087,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew17",
+          "start": [
+            -50000.0,
+            11052.631578947374
+          ],
+          "end": [
+            -50000.0,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew18",
+          "start": [
+            -23913.04347826087,
+            35000.0
+          ],
+          "end": [
+            -2173.9130434782637,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew19",
+          "start": [
+            -2173.9130434782637,
+            35000.0
+          ],
+          "end": [
+            15217.391304347824,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew20",
+          "start": [
+            15217.391304347824,
+            35000.0
+          ],
+          "end": [
+            50000.0,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew21",
+          "start": [
+            50000.0,
+            11052.631578947374
+          ],
+          "end": [
+            50000.0,
+            35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew22",
+          "start": [
+            -50000.0,
+            -35000.0
+          ],
+          "end": [
+            -25000.0,
+            -35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew23",
+          "start": [
+            -50000.0,
+            -35000.0
+          ],
+          "end": [
+            -50000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew24",
+          "start": [
+            -25000.0,
+            -35000.0
+          ],
+          "end": [
+            0.0,
+            -35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew25",
+          "start": [
+            0.0,
+            -35000.0
+          ],
+          "end": [
+            25000.0,
+            -35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew26",
+          "start": [
+            25000.0,
+            -35000.0
+          ],
+          "end": [
+            50000.0,
+            -35000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew27",
+          "start": [
+            50000.0,
+            -35000.0
+          ],
+          "end": [
+            50000.0,
+            -11052.63157894737
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        }
+      ],
+      "openings": [
+        {
+          "id": "s2-d1",
+          "host_wall": "s2-iw0",
+          "kind": "door",
+          "offset": 12593.478260869564,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d2",
+          "host_wall": "s2-iw1",
+          "kind": "door",
+          "offset": 10419.565217391304,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d3",
+          "host_wall": "s2-iw2",
+          "kind": "door",
+          "offset": 8245.652173913044,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d4",
+          "host_wall": "s2-iw3",
+          "kind": "door",
+          "offset": 16941.304347826088,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d5",
+          "host_wall": "s2-iw4",
+          "kind": "door",
+          "offset": 12050.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d6",
+          "host_wall": "s2-iw5",
+          "kind": "door",
+          "offset": 12050.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d7",
+          "host_wall": "s2-iw6",
+          "kind": "door",
+          "offset": 12050.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d8",
+          "host_wall": "s2-iw7",
+          "kind": "door",
+          "offset": 12050.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d9",
+          "host_wall": "s2-ew16",
+          "kind": "door",
+          "offset": 12593.478260869564,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-w1",
+          "host_wall": "s2-ew16",
+          "kind": "window",
+          "offset": 12443.478260869564,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w2",
+          "host_wall": "s2-ew20",
+          "kind": "window",
+          "offset": 16791.304347826088,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w3",
+          "host_wall": "s2-ew21",
+          "kind": "window",
+          "offset": 11373.684210526313,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        }
+      ],
+      "columns": [],
+      "slabs": [],
+      "roofs": [],
+      "railings": [],
+      "spaces": [
+        {
+          "id": "corridor",
+          "name": "Corridor",
+          "function": "corridor",
+          "boundary": [
+            [
+              -50000.0,
+              -11052.63157894737
+            ],
+            [
+              50000.0,
+              -11052.63157894737
+            ],
+            [
+              50000.0,
+              11052.631578947374
+            ],
+            [
+              -50000.0,
+              11052.631578947374
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "+y",
+          "window_side": "-x"
+        },
+        {
+          "id": "lobby",
+          "name": "Lobby",
+          "function": "lobby",
+          "boundary": [
+            [
+              -50000.0,
+              11052.631578947374
+            ],
+            [
+              -23913.04347826087,
+              11052.631578947374
+            ],
+            [
+              -23913.04347826087,
+              35000.0
+            ],
+            [
+              -50000.0,
+              35000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "lobby_reception_desk",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Reception Desk",
+              "position": [
+                -36956.52173913043,
+                12002.631578947374
+              ],
+              "size": [
+                2000.0,
+                700.0,
+                1100.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "lobby_lobby_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Lobby Sofa",
+              "position": [
+                -36956.52173913043,
+                33975.0
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "bathroom",
+          "name": "Bathroom",
+          "function": "bathroom",
+          "boundary": [
+            [
+              -23913.04347826087,
+              11052.631578947374
+            ],
+            [
+              -2173.9130434782637,
+              11052.631578947374
+            ],
+            [
+              -2173.9130434782637,
+              35000.0
+            ],
+            [
+              -23913.04347826087,
+              35000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "bathroom_pan_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 1",
+              "position": [
+                -2603.9130434782637,
+                11352.631578947374
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 2",
+              "position": [
+                -2603.9130434782637,
+                17189.473684210534
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_3",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 3",
+              "position": [
+                -2603.9130434782637,
+                23026.315789473687
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_4",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 4",
+              "position": [
+                -2603.9130434782637,
+                28863.15789473684
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_5",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 5",
+              "position": [
+                -2603.9130434782637,
+                34700.0
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 1",
+              "position": [
+                -23608.04347826087,
+                14271.052631578954
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 2",
+              "position": [
+                -23608.04347826087,
+                20107.894736842107
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_3",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 3",
+              "position": [
+                -23608.04347826087,
+                25944.736842105267
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_4",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 4",
+              "position": [
+                -23608.04347826087,
+                31781.578947368427
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "service",
+          "name": "Service",
+          "function": "service",
+          "boundary": [
+            [
+              -2173.9130434782637,
+              11052.631578947374
+            ],
+            [
+              15217.391304347824,
+              11052.631578947374
+            ],
+            [
+              15217.391304347824,
+              35000.0
+            ],
+            [
+              -2173.9130434782637,
+              35000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "meeting",
+          "name": "Meeting Room",
+          "function": "meeting",
+          "boundary": [
+            [
+              15217.391304347824,
+              11052.631578947374
+            ],
+            [
+              50000.0,
+              11052.631578947374
+            ],
+            [
+              50000.0,
+              35000.0
+            ],
+            [
+              15217.391304347824,
+              35000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "meeting_table",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Meeting Table",
+              "position": [
+                32608.69565217392,
+                23026.315789473687
+              ],
+              "size": [
+                2400.0,
+                1200.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N1",
+              "position": [
+                31708.69565217392,
+                22076.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S1",
+              "position": [
+                31708.69565217392,
+                23976.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N2",
+              "position": [
+                32308.69565217392,
+                22076.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S2",
+              "position": [
+                32308.69565217392,
+                23976.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N3",
+              "position": [
+                32908.69565217392,
+                22076.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S3",
+              "position": [
+                32908.69565217392,
+                23976.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N4",
+              "position": [
+                33508.69565217392,
+                22076.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S4",
+              "position": [
+                33508.69565217392,
+                23976.315789473687
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "office_n1",
+          "name": "Office N1",
+          "function": "office",
+          "boundary": [
+            [
+              -50000.0,
+              -35000.0
+            ],
+            [
+              -25000.0,
+              -35000.0
+            ],
+            [
+              -25000.0,
+              -11052.63157894737
+            ],
+            [
+              -50000.0,
+              -11052.63157894737
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "office_n1_odesk_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 1",
+              "position": [
+                -48400.0,
+                -33750.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 1",
+              "position": [
+                -48400.0,
+                -33150.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 2",
+              "position": [
+                -48400.0,
+                -32450.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 2",
+              "position": [
+                -48400.0,
+                -31850.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 3",
+              "position": [
+                -48400.0,
+                -31150.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 3",
+              "position": [
+                -48400.0,
+                -30550.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 4",
+              "position": [
+                -48400.0,
+                -29850.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 4",
+              "position": [
+                -48400.0,
+                -29250.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 5",
+              "position": [
+                -48400.0,
+                -28550.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 5",
+              "position": [
+                -48400.0,
+                -27950.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_odesk_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 6",
+              "position": [
+                -48400.0,
+                -27250.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n1_ochair_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 6",
+              "position": [
+                -48400.0,
+                -26650.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "office_s1",
+          "name": "Office S1",
+          "function": "office",
+          "boundary": [
+            [
+              -25000.0,
+              -35000.0
+            ],
+            [
+              0.0,
+              -35000.0
+            ],
+            [
+              0.0,
+              -11052.63157894737
+            ],
+            [
+              -25000.0,
+              -11052.63157894737
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "office_s1_odesk_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 1",
+              "position": [
+                -23400.0,
+                -33750.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 1",
+              "position": [
+                -23400.0,
+                -33150.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 2",
+              "position": [
+                -23400.0,
+                -32450.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 2",
+              "position": [
+                -23400.0,
+                -31850.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 3",
+              "position": [
+                -23400.0,
+                -31150.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 3",
+              "position": [
+                -23400.0,
+                -30550.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 4",
+              "position": [
+                -23400.0,
+                -29850.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 4",
+              "position": [
+                -23400.0,
+                -29250.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 5",
+              "position": [
+                -23400.0,
+                -28550.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 5",
+              "position": [
+                -23400.0,
+                -27950.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_odesk_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 6",
+              "position": [
+                -23400.0,
+                -27250.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s1_ochair_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 6",
+              "position": [
+                -23400.0,
+                -26650.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "office_n2",
+          "name": "Office N2",
+          "function": "office",
+          "boundary": [
+            [
+              0.0,
+              -35000.0
+            ],
+            [
+              25000.0,
+              -35000.0
+            ],
+            [
+              25000.0,
+              -11052.63157894737
+            ],
+            [
+              0.0,
+              -11052.63157894737
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "office_n2_odesk_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 1",
+              "position": [
+                1600.0,
+                -33750.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 1",
+              "position": [
+                1600.0,
+                -33150.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 2",
+              "position": [
+                1600.0,
+                -32450.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 2",
+              "position": [
+                1600.0,
+                -31850.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 3",
+              "position": [
+                1600.0,
+                -31150.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 3",
+              "position": [
+                1600.0,
+                -30550.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 4",
+              "position": [
+                1600.0,
+                -29850.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 4",
+              "position": [
+                1600.0,
+                -29250.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 5",
+              "position": [
+                1600.0,
+                -28550.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 5",
+              "position": [
+                1600.0,
+                -27950.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_odesk_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 6",
+              "position": [
+                1600.0,
+                -27250.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_n2_ochair_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 6",
+              "position": [
+                1600.0,
+                -26650.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "office_s2",
+          "name": "Office S2",
+          "function": "office",
+          "boundary": [
+            [
+              25000.0,
+              -35000.0
+            ],
+            [
+              50000.0,
+              -35000.0
+            ],
+            [
+              50000.0,
+              -11052.63157894737
+            ],
+            [
+              25000.0,
+              -11052.63157894737
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "office_s2_odesk_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 1",
+              "position": [
+                26600.0,
+                -33750.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 1",
+              "position": [
+                26600.0,
+                -33150.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 2",
+              "position": [
+                26600.0,
+                -32450.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 2",
+              "position": [
+                26600.0,
+                -31850.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 3",
+              "position": [
+                26600.0,
+                -31150.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 3",
+              "position": [
+                26600.0,
+                -30550.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 4",
+              "position": [
+                26600.0,
+                -29850.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 4",
+              "position": [
+                26600.0,
+                -29250.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 5",
+              "position": [
+                26600.0,
+                -28550.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_5",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 5",
+              "position": [
+                26600.0,
+                -27950.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_odesk_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Office Desk 6",
+              "position": [
+                26600.0,
+                -27250.0
+              ],
+              "size": [
+                1400.0,
+                700.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "office_s2_ochair_6",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Office Chair 6",
+              "position": [
+                26600.0,
+                -26650.0
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-y"
+        }
+      ],
+      "furniture": []
+    },
+    {
+      "id": "s3",
+      "name": "Roof Level",
+      "elevation": 6000.0,
+      "height": 0.0,
+      "walls": [],
+      "openings": [],
+      "columns": [],
+      "slabs": [],
+      "roofs": [
+        {
+          "id": "s3-roof1",
+          "boundary": [
+            [
+              -50000.0,
+              -35000.0
+            ],
+            [
+              50000.0,
+              -35000.0
+            ],
+            [
+              50000.0,
+              35000.0
+            ],
+            [
+              -50000.0,
+              35000.0
+            ]
+          ],
+          "thickness": 200.0,
+          "elevation": 0.0,
+          "material": "Concrete",
+          "pitch_deg": 0
+        }
+      ],
+      "railings": [],
+      "spaces": [],
+      "furniture": []
+    }
+  ]
+}

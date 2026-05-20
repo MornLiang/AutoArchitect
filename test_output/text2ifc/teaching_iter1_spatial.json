@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "name": "Teaching Building - Hand-crafted SpatialGraph",
+    "description": "High-fidelity SpatialGraph derived directly from the reference floor plan (教学楼一层平面图) by visual inspection. Used to bypass the Architect LLM stage because DeepSeek is not multimodal.",
+    "project_name": "Demo Teaching Building",
+    "site_name": "Default Site",
+    "schema": "IFC4",
+    "length_unit": "MILLIMETRE"
+  },
+  "footprint": {
+    "shape": "rectangle",
+    "x_mm": 50000.0,
+    "y_mm": 25000.0
+  },
+  "storeys": [
+    {
+      "id": "s1",
+      "name": "Ground Floor",
+      "elevation_mm": 0.0,
+      "height_mm": 3600.0,
+      "is_inhabited": true,
+      "rooms": [
+        {
+          "id": "corridor",
+          "function": "corridor",
+          "area_ratio": 0.12,
+          "adjacent_to": [
+            "stair_west",
+            "classroom_1",
+            "classroom_2",
+            "classroom_3",
+            "classroom_4",
+            "classroom_5",
+            "stair_east",
+            "classroom_6",
+            "classroom_7",
+            "mens_toilet",
+            "lobby",
+            "womens_toilet",
+            "classroom_8",
+            "classroom_9",
+            "classroom_10"
+          ],
+          "opening_to": [
+            "stair_west",
+            "classroom_1",
+            "classroom_2",
+            "classroom_3",
+            "classroom_4",
+            "classroom_5",
+            "stair_east",
+            "classroom_6",
+            "classroom_7",
+            "lobby",
+            "classroom_8",
+            "classroom_9",
+            "classroom_10"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "corridor"
+        },
+        {
+          "id": "stair_west",
+          "function": "stairwell",
+          "area_ratio": 0.025,
+          "adjacent_to": [
+            "corridor",
+            "classroom_1"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "stair_west"
+        },
+        {
+          "id": "classroom_1",
+          "function": "classroom",
+          "area_ratio": 0.078,
+          "adjacent_to": [
+            "corridor",
+            "stair_west",
+            "classroom_2"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_1"
+        },
+        {
+          "id": "classroom_2",
+          "function": "classroom",
+          "area_ratio": 0.078,
+          "adjacent_to": [
+            "corridor",
+            "classroom_1",
+            "classroom_3"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_2"
+        },
+        {
+          "id": "classroom_3",
+          "function": "classroom",
+          "area_ratio": 0.078,
+          "adjacent_to": [
+            "corridor",
+            "classroom_2",
+            "classroom_4"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_3"
+        },
+        {
+          "id": "classroom_4",
+          "function": "classroom",
+          "area_ratio": 0.078,
+          "adjacent_to": [
+            "corridor",
+            "classroom_3",
+            "classroom_5"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_4"
+        },
+        {
+          "id": "classroom_5",
+          "function": "classroom",
+          "area_ratio": 0.078,
+          "adjacent_to": [
+            "corridor",
+            "classroom_4",
+            "stair_east"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_5"
+        },
+        {
+          "id": "stair_east",
+          "function": "stairwell",
+          "area_ratio": 0.025,
+          "adjacent_to": [
+            "corridor",
+            "classroom_5"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "stair_east"
+        },
+        {
+          "id": "classroom_6",
+          "function": "classroom",
+          "area_ratio": 0.08,
+          "adjacent_to": [
+            "corridor",
+            "classroom_7"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_6"
+        },
+        {
+          "id": "classroom_7",
+          "function": "classroom",
+          "area_ratio": 0.08,
+          "adjacent_to": [
+            "corridor",
+            "classroom_6",
+            "mens_toilet"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_7"
+        },
+        {
+          "id": "mens_toilet",
+          "function": "toilet",
+          "area_ratio": 0.035,
+          "adjacent_to": [
+            "corridor",
+            "classroom_7",
+            "lobby"
+          ],
+          "opening_to": [
+            "lobby"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "mens_toilet"
+        },
+        {
+          "id": "lobby",
+          "function": "lobby",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "corridor",
+            "mens_toilet",
+            "womens_toilet"
+          ],
+          "opening_to": [
+            "corridor",
+            "mens_toilet",
+            "womens_toilet"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 1,
+          "name": "lobby"
+        },
+        {
+          "id": "womens_toilet",
+          "function": "toilet",
+          "area_ratio": 0.035,
+          "adjacent_to": [
+            "corridor",
+            "lobby",
+            "classroom_8"
+          ],
+          "opening_to": [
+            "lobby"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "womens_toilet"
+        },
+        {
+          "id": "classroom_8",
+          "function": "classroom",
+          "area_ratio": 0.053,
+          "adjacent_to": [
+            "corridor",
+            "womens_toilet",
+            "classroom_9"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_8"
+        },
+        {
+          "id": "classroom_9",
+          "function": "classroom",
+          "area_ratio": 0.053,
+          "adjacent_to": [
+            "corridor",
+            "classroom_8",
+            "classroom_10"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_9"
+        },
+        {
+          "id": "classroom_10",
+          "function": "classroom",
+          "area_ratio": 0.054,
+          "adjacent_to": [
+            "corridor",
+            "classroom_9"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_10"
+        }
+      ],
+      "layout_hint": "central_corridor",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 1,
+        "roofs": 0,
+        "railings": 2,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Brick",
+        "door_width_mm": 1000.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1800.0,
+        "window_height_mm": 1800.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": [
+        "Reference: 教学楼一层平面图 (single-storey school)",
+        "N row (top): stair_west + 5 classrooms + stair_east",
+        "S row (bottom): classroom_6 + classroom_7 + mens_toilet + lobby + womens_toilet + classroom_8..10",
+        "Corridor runs E-W between the two rows. Main entrance on south wall through lobby.",
+        "Area ratios chosen so BSP cut-point falls exactly between stair_east and classroom_6."
+      ]
+    },
+    {
+      "id": "s2",
+      "name": "Roof Level",
+      "elevation_mm": 3600.0,
+      "height_mm": 0.0,
+      "is_inhabited": false,
+      "rooms": [],
+      "layout_hint": "empty",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 0,
+        "roofs": 1,
+        "railings": 0,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Concrete",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": []
+    }
+  ]
+}

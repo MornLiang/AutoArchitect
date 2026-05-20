@@ -1,0 +1,106 @@
+"""Side-by-side 3D isometric view of iter1 (hand-crafted seed)
+and iter2 (DeepSeek-refined) of the teaching building."""
+from __future__ import annotations
+
+import math
+
+import ifcopenshell
+import ifcopenshell.geom as gm
+import matplotlib.pyplot as plt
+from matplotlib.collections import PolyCollection
+
+PAIRS = [
+    ("test_output/text2ifc/teaching_seed_iter1.ifc",
+     "(a) iter1 — hand-crafted SpatialGraph (no Architect LLM)"),
+    ("test_output/text2ifc/teaching_seed_iter2.ifc",
+     "(b) iter2 — DeepSeek Refiner→Architect on top of seed"),
+]
+OUT = "test_output/text2ifc/teaching_seed_axonometric.png"
+
+_THETA = math.radians(40)
+_PHI = math.radians(22)
+_COS_T, _SIN_T = math.cos(_THETA), math.sin(_THETA)
+_COS_P, _SIN_P = math.cos(_PHI), math.sin(_PHI)
+
+
+def _project(x, y, z):
+    xs = x * _COS_T - y * _SIN_T
+    ys = (x * _SIN_T + y * _COS_T) * _SIN_P + z * _COS_P
+    return xs, ys
+
+
+def _settings():
+    s = gm.settings()
+    s.set(s.USE_WORLD_COORDS, True)
+    return s
+
+
+def _faces(shape):
+    verts = shape.geometry.verts
+    faces = shape.geometry.faces
+    for i in range(0, len(faces), 3):
+        tri = []
+        for k in (faces[i], faces[i + 1], faces[i + 2]):
+            tri.append((verts[3 * k], verts[3 * k + 1], verts[3 * k + 2]))
+        yield tri
+
+
+STYLES = [
+    ("IfcSlab",                 "#cdb78a", 0.35),
+    ("IfcRoof",                 "#c08a5c", 0.40),
+    ("IfcWall",                 "#aaaaaa", 0.85),
+    ("IfcDoor",                 "#d04444", 1.0),
+    ("IfcWindow",               "#4a82c4", 0.95),
+    ("IfcRailing",              "#e0a040", 0.9),
+    ("IfcStairFlight",          "#a05a2c", 1.0),
+    ("IfcFurniture",            "#5b8c41", 1.0),
+    ("IfcSanitaryTerminal",     "#3a83bd", 1.0),
+    ("IfcBuildingElementProxy", "#222222", 0.95),
+]
+
+
+def _draw(ax, ifc_path, title):
+    model = ifcopenshell.open(ifc_path)
+    s = _settings()
+    all_xs, all_ys = [], []
+    for cls, color, alpha in STYLES:
+        polys = []
+        for el in model.by_type(cls):
+            try:
+                shape = gm.create_shape(s, el)
+            except Exception:
+                continue
+            for tri in _faces(shape):
+                proj = [_project(*p) for p in tri]
+                polys.append(proj)
+                for px, py in proj:
+                    all_xs.append(px); all_ys.append(py)
+        if polys:
+            ax.add_collection(PolyCollection(
+                polys, facecolor=color, edgecolor="#222",
+                linewidth=0.03, alpha=alpha,
+            ))
+    ax.set_aspect("equal")
+    ax.axis("off")
+    if all_xs:
+        pad = (max(all_xs) - min(all_xs)) * 0.03
+        ax.set_xlim(min(all_xs) - pad, max(all_xs) + pad)
+        ax.set_ylim(min(all_ys) - pad, max(all_ys) + pad)
+    ax.set_title(title, fontsize=11)
+
+
+def main():
+    fig, axes = plt.subplots(1, 2, figsize=(22, 9))
+    for ax, (path, title) in zip(axes, PAIRS):
+        _draw(ax, path, title)
+    fig.suptitle(
+        "Teaching building — 3D isometric: hand-crafted seed vs LLM-refined",
+        fontsize=13, fontweight="bold",
+    )
+    fig.tight_layout()
+    fig.savefig(OUT, dpi=140, bbox_inches="tight")
+    print(f"Saved → {OUT}")
+
+
+if __name__ == "__main__":
+    main()

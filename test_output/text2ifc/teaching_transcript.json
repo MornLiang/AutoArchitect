@@ -1,0 +1,52 @@
+{
+  "prompt": "A single-storey rectangular school teaching building, ground floor only.\n\nOverall dimensions and orientation\n- Footprint: 50000 mm (east-west, X) by 25000 mm (north-south, Y).\n- The main entrance is on the south facade (negative-Y side); north is up in\n  the reference floor plan.\n- Storey height: 3600 mm. Brick load-bearing walls 200 mm thick, concrete\n  slab and concrete flat roof.\n\nSpatial program — central corridor layout\n- A horizontal central corridor runs the full length of the building in the\n  east-west direction. It is about 3000 mm wide and separates the two rows\n  of rooms.\n- North row (5 cells, left to right): stairwell-W, classroom-1, classroom-2,\n  classroom-3, classroom-4, classroom-5, stairwell-E.\n  (Yes — the row has 7 cells: 5 classrooms in the middle plus a staircase at\n  each end.)\n- South row (left to right): classroom-6, classroom-7, mens-toilet,\n  lobby, womens-toilet, classroom-8, classroom-9, classroom-10.\n\nRoom sizes (approximate, the architect may adjust)\n- Each classroom is roughly 7500 mm wide by 8500 mm deep, enough to fit\n  desks for ~40 students.\n- Each stairwell is roughly 3500 mm by 8500 mm.\n- The lobby is roughly 6000 mm wide by 8500 mm deep and sits at the center\n  of the south facade, aligned with the main entrance.\n- The mens and womens toilets flank the lobby; each is roughly 4500 mm by\n  8500 mm.\n\nDoors\n- Every classroom has one single-leaf 1000 mm wide door opening into the\n  central corridor.\n- Each stairwell has one door into the corridor.\n- The mens and womens toilets each have one 900 mm door opening into the\n  lobby (or directly into the corridor near the lobby).\n- The lobby has a 1800 mm double-leaf main entrance door on the south\n  facade.\n- Total interior+exterior doors: about 14.\n\nWindows\n- Every classroom has two large 1800 x 1800 mm windows on its outer\n  facade (north for the upper row, south for the lower row).\n- The corridor has a horizontal band of windows on its short ends and\n  above the lobby entrance.\n- Toilets have small high-sill 900 x 600 mm windows on the south facade.\n- Total windows: about 22.\n\nOther\n- No interior columns (load-bearing brick walls only).\n- One flat roof slab covering the whole footprint, 200 mm thick.\n- One ground-floor slab.\n- Railings appear only inside the two stairwells (count as 2).\n\nThis description should be treated as a *reference layout*: the agent\nshould produce a SpatialGraph with rooms named lobby, corridor,\nclassroom_1 … classroom_10, mens_toilet, womens_toilet, stair_west,\nstair_east, and connect them as described above.",
+  "gt_path": null,
+  "iterations": [
+    {
+      "iteration": 1,
+      "requirements": {
+        "building_type": "Inferred building",
+        "storey_count": 1,
+        "storey_height_mm": 3000,
+        "footprint": {
+          "shape": "rectangle",
+          "x_mm": 10000,
+          "y_mm": 8000
+        },
+        "element_targets": {
+          "walls": 0,
+          "doors": 0,
+          "windows": 0,
+          "columns": 0,
+          "slabs": 1,
+          "roofs": 1,
+          "railings": 0
+        },
+        "materials": {
+          "wall": "Concrete",
+          "slab": "Concrete",
+          "roof": "Concrete"
+        },
+        "layout_notes": [],
+        "assumptions": [
+          "Parsed via deterministic regex; counts taken literally."
+        ]
+      },
+      "spatial_graph_path": "test_output/text2ifc\\teaching_iter1_spatial.json",
+      "graph_path": "test_output/text2ifc\\teaching_iter1_graph.json",
+      "ifc_path": "test_output/text2ifc\\teaching_iter1.ifc",
+      "score": 1.0,
+      "diff_summary": "(no GT provided)",
+      "refinement": "",
+      "ids_pass_rate": 1.0,
+      "ids_total_specs": 0,
+      "ids_failed_specs": 0,
+      "ids_summary": "(IDS skipped)",
+      "ids_html_path": "",
+      "ids_xml_path": ""
+    }
+  ],
+  "best_iteration": 1,
+  "best_score": 1.0,
+  "best_ifc_path": "test_output/text2ifc\\teaching_iter1.ifc"
+}

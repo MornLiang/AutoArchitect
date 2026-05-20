@@ -1,0 +1,425 @@
+{
+  "metadata": {
+    "name": "Inferred building",
+    "description": "Deterministically generated rooms-based graph",
+    "project_name": "Text2IFC",
+    "site_name": "Default Site",
+    "schema": "IFC4",
+    "length_unit": "MILLIMETRE"
+  },
+  "footprint": {
+    "shape": "rectangle",
+    "x_mm": 100000.0,
+    "y_mm": 70000.0
+  },
+  "storeys": [
+    {
+      "id": "s1",
+      "name": "Ground Floor",
+      "elevation_mm": 0.0,
+      "height_mm": 3000.0,
+      "is_inhabited": true,
+      "rooms": [
+        {
+          "id": "corridor",
+          "function": "corridor",
+          "area_ratio": 0.18,
+          "adjacent_to": [
+            "lobby",
+            "bathroom",
+            "service",
+            "meeting",
+            "office_n1",
+            "office_s1",
+            "office_n2",
+            "office_s2"
+          ],
+          "opening_to": [
+            "lobby",
+            "bathroom",
+            "service",
+            "meeting",
+            "office_n1",
+            "office_s1",
+            "office_n2",
+            "office_s2"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Corridor"
+        },
+        {
+          "id": "lobby",
+          "function": "lobby",
+          "area_ratio": 0.06,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 1,
+          "name": "Lobby"
+        },
+        {
+          "id": "bathroom",
+          "function": "bathroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Bathroom"
+        },
+        {
+          "id": "service",
+          "function": "service",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Service"
+        },
+        {
+          "id": "meeting",
+          "function": "meeting",
+          "area_ratio": 0.08,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "Meeting Room"
+        },
+        {
+          "id": "office_n1",
+          "function": "office",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Office N1"
+        },
+        {
+          "id": "office_s1",
+          "function": "office",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Office S1"
+        },
+        {
+          "id": "office_n2",
+          "function": "office",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Office N2"
+        },
+        {
+          "id": "office_s2",
+          "function": "office",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Office S2"
+        }
+      ],
+      "layout_hint": "central_corridor",
+      "elements": {
+        "walls": 4,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 1,
+        "roofs": 0,
+        "railings": 0,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Concrete",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": []
+    },
+    {
+      "id": "s2",
+      "name": "Storey 2",
+      "elevation_mm": 3000.0,
+      "height_mm": 3000.0,
+      "is_inhabited": true,
+      "rooms": [
+        {
+          "id": "corridor",
+          "function": "corridor",
+          "area_ratio": 0.18,
+          "adjacent_to": [
+            "lobby",
+            "bathroom",
+            "service",
+            "meeting",
+            "office_n1",
+            "office_s1",
+            "office_n2",
+            "office_s2"
+          ],
+          "opening_to": [
+            "lobby",
+            "bathroom",
+            "service",
+            "meeting",
+            "office_n1",
+            "office_s1",
+            "office_n2",
+            "office_s2"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Corridor"
+        },
+        {
+          "id": "lobby",
+          "function": "lobby",
+          "area_ratio": 0.06,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 1,
+          "name": "Lobby"
+        },
+        {
+          "id": "bathroom",
+          "function": "bathroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Bathroom"
+        },
+        {
+          "id": "service",
+          "function": "service",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Service"
+        },
+        {
+          "id": "meeting",
+          "function": "meeting",
+          "area_ratio": 0.08,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "Meeting Room"
+        },
+        {
+          "id": "office_n1",
+          "function": "office",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Office N1"
+        },
+        {
+          "id": "office_s1",
+          "function": "office",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Office S1"
+        },
+        {
+          "id": "office_n2",
+          "function": "office",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Office N2"
+        },
+        {
+          "id": "office_s2",
+          "function": "office",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "corridor"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "Office S2"
+        }
+      ],
+      "layout_hint": "central_corridor",
+      "elements": {
+        "walls": 4,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 0,
+        "roofs": 0,
+        "railings": 0,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Concrete",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": []
+    },
+    {
+      "id": "s3",
+      "name": "Roof Level",
+      "elevation_mm": 6000.0,
+      "height_mm": 0.0,
+      "is_inhabited": false,
+      "rooms": [],
+      "layout_hint": "empty",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 0,
+        "roofs": 1,
+        "railings": 0,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Concrete",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": []
+    }
+  ]
+}

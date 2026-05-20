@@ -1,0 +1,1 @@
+Create a basic 3D model of a four-story residential house with dimensions of 5 by 3 meters.

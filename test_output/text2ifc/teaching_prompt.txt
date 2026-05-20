@@ -1,0 +1,57 @@
+A single-storey rectangular school teaching building, ground floor only.
+
+Overall dimensions and orientation
+- Footprint: 50000 mm (east-west, X) by 25000 mm (north-south, Y).
+- The main entrance is on the south facade (negative-Y side); north is up in
+  the reference floor plan.
+- Storey height: 3600 mm. Brick load-bearing walls 200 mm thick, concrete
+  slab and concrete flat roof.
+
+Spatial program — central corridor layout
+- A horizontal central corridor runs the full length of the building in the
+  east-west direction. It is about 3000 mm wide and separates the two rows
+  of rooms.
+- North row (5 cells, left to right): stairwell-W, classroom-1, classroom-2,
+  classroom-3, classroom-4, classroom-5, stairwell-E.
+  (Yes — the row has 7 cells: 5 classrooms in the middle plus a staircase at
+  each end.)
+- South row (left to right): classroom-6, classroom-7, mens-toilet,
+  lobby, womens-toilet, classroom-8, classroom-9, classroom-10.
+
+Room sizes (approximate, the architect may adjust)
+- Each classroom is roughly 7500 mm wide by 8500 mm deep, enough to fit
+  desks for ~40 students.
+- Each stairwell is roughly 3500 mm by 8500 mm.
+- The lobby is roughly 6000 mm wide by 8500 mm deep and sits at the center
+  of the south facade, aligned with the main entrance.
+- The mens and womens toilets flank the lobby; each is roughly 4500 mm by
+  8500 mm.
+
+Doors
+- Every classroom has one single-leaf 1000 mm wide door opening into the
+  central corridor.
+- Each stairwell has one door into the corridor.
+- The mens and womens toilets each have one 900 mm door opening into the
+  lobby (or directly into the corridor near the lobby).
+- The lobby has a 1800 mm double-leaf main entrance door on the south
+  facade.
+- Total interior+exterior doors: about 14.
+
+Windows
+- Every classroom has two large 1800 x 1800 mm windows on its outer
+  facade (north for the upper row, south for the lower row).
+- The corridor has a horizontal band of windows on its short ends and
+  above the lobby entrance.
+- Toilets have small high-sill 900 x 600 mm windows on the south facade.
+- Total windows: about 22.
+
+Other
+- No interior columns (load-bearing brick walls only).
+- One flat roof slab covering the whole footprint, 200 mm thick.
+- One ground-floor slab.
+- Railings appear only inside the two stairwells (count as 2).
+
+This description should be treated as a *reference layout*: the agent
+should produce a SpatialGraph with rooms named lobby, corridor,
+classroom_1 … classroom_10, mens_toilet, womens_toilet, stair_west,
+stair_east, and connect them as described above.

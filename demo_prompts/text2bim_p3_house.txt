@@ -1,0 +1,1 @@
+Create a single-story residential house with a total floor area of 120 square meters. Include three bedrooms, two bathrooms, a kitchen, and a living room. The house should have a wooden pitched roof, and incorporate at least four windows and one main entrance door. Use the concrete walls.

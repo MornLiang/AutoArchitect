@@ -1,0 +1,46 @@
+{
+  "building_type": "single-storey rectangular school teaching building",
+  "storey_count": 1,
+  "storey_height_mm": 3600,
+  "footprint": {
+    "shape": "rectangle",
+    "x_mm": 50000,
+    "y_mm": 25000
+  },
+  "element_targets": {
+    "walls": 19,
+    "doors": 15,
+    "windows": 22,
+    "columns": 0,
+    "slabs": 2,
+    "roofs": 1,
+    "railings": 2
+  },
+  "materials": {
+    "wall": "brick",
+    "slab": "concrete",
+    "roof": "concrete"
+  },
+  "layout_notes": [
+    "Central east-west corridor 3000 mm wide runs full length, separating north and south rows of rooms.",
+    "North row (7 cells): stairwell-W, classroom-1, classroom-2, classroom-3, classroom-4, classroom-5, stairwell-E.",
+    "South row (8 cells): classroom-6, classroom-7, mens-toilet, lobby, womens-toilet, classroom-8, classroom-9, classroom-10.",
+    "Lobby positioned at centre of south facade, aligned with main entrance double-leaf door.",
+    "Toilets flank the lobby; each has a small high-sill window on south facade.",
+    "Classrooms each have two large windows on their outer facade (north for north row, south for south row).",
+    "Corridor has horizontal band of windows on short ends and above lobby entrance.",
+    "Stairwells at east and west ends of the north row, each with door to corridor and internal railings.",
+    "All structural walls are load-bearing brick, 200 mm thick; no interior columns.",
+    "One ground-floor concrete slab and one flat concrete roof slab, both 200 mm thick."
+  ],
+  "assumptions": [
+    "Total door count taken as 15 (10 classroom doors + 2 stair doors + 2 toilet doors + 1 lobby main entrance), though user note says 'about 14'.",
+    "Window count set to 22 as stated; calculated from program yields 25 (20 classroom + 3 corridor + 2 toilet), architect will adjust.",
+    "Number of walls derived from 4 external walls + 2 continuous corridor walls + 13 internal cross walls (6 north row, 7 south row).",
+    "External wall thicknesses included in footprint dimensions; internal partitions also 200 mm brick.",
+    "Stairwells contain no additional internal walls; railings modelled as two objects (one per stair).",
+    "Roof is a single flat slab covering the entire footprint; accounted as 1 roof object.",
+    "Floor slab and roof slab counted as two separate slab objects.",
+    "Room dimensions are approximate; architect may fine-tune to fit exact footprint and wall thicknesses."
+  ]
+}

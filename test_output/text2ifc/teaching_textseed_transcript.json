@@ -1,0 +1,131 @@
+{
+  "prompt": "A single-storey rectangular school teaching building, ground floor only.\n\nOverall dimensions and orientation\n- Footprint: 50000 mm (east-west, X) by 25000 mm (north-south, Y).\n- The main entrance is on the south facade (negative-Y side); north is up in\n  the reference floor plan.\n- Storey height: 3600 mm. Brick load-bearing walls 200 mm thick, concrete\n  slab and concrete flat roof.\n\nSpatial program — central corridor layout\n- A horizontal central corridor runs the full length of the building in the\n  east-west direction. It is about 3000 mm wide and separates the two rows\n  of rooms.\n- North row (5 cells, left to right): stairwell-W, classroom-1, classroom-2,\n  classroom-3, classroom-4, classroom-5, stairwell-E.\n  (Yes — the row has 7 cells: 5 classrooms in the middle plus a staircase at\n  each end.)\n- South row (left to right): classroom-6, classroom-7, mens-toilet,\n  lobby, womens-toilet, classroom-8, classroom-9, classroom-10.\n\nRoom sizes (approximate, the architect may adjust)\n- Each classroom is roughly 7500 mm wide by 8500 mm deep, enough to fit\n  desks for ~40 students.\n- Each stairwell is roughly 3500 mm by 8500 mm.\n- The lobby is roughly 6000 mm wide by 8500 mm deep and sits at the center\n  of the south facade, aligned with the main entrance.\n- The mens and womens toilets flank the lobby; each is roughly 4500 mm by\n  8500 mm.\n\nDoors\n- Every classroom has one single-leaf 1000 mm wide door opening into the\n  central corridor.\n- Each stairwell has one door into the corridor.\n- The mens and womens toilets each have one 900 mm door opening into the\n  lobby (or directly into the corridor near the lobby).\n- The lobby has a 1800 mm double-leaf main entrance door on the south\n  facade.\n- Total interior+exterior doors: about 14.\n\nWindows\n- Every classroom has two large 1800 x 1800 mm windows on its outer\n  facade (north for the upper row, south for the lower row).\n- The corridor has a horizontal band of windows on its short ends and\n  above the lobby entrance.\n- Toilets have small high-sill 900 x 600 mm windows on the south facade.\n- Total windows: about 22.\n\nOther\n- No interior columns (load-bearing brick walls only).\n- One flat roof slab covering the whole footprint, 200 mm thick.\n- One ground-floor slab.\n- Railings appear only inside the two stairwells (count as 2).\n\nThis description should be treated as a *reference layout*: the agent\nshould produce a SpatialGraph with rooms named lobby, corridor,\nclassroom_1 … classroom_10, mens_toilet, womens_toilet, stair_west,\nstair_east, and connect them as described above.",
+  "gt_path": null,
+  "iterations": [
+    {
+      "iteration": 1,
+      "requirements": {
+        "building_type": "single-storey rectangular school teaching building",
+        "storey_count": 1,
+        "storey_height_mm": 3600,
+        "footprint": {
+          "shape": "rectangle",
+          "x_mm": 50000,
+          "y_mm": 25000
+        },
+        "element_targets": {
+          "walls": 19,
+          "doors": 15,
+          "windows": 22,
+          "columns": 0,
+          "slabs": 2,
+          "roofs": 1,
+          "railings": 2
+        },
+        "materials": {
+          "wall": "brick",
+          "slab": "concrete",
+          "roof": "concrete"
+        },
+        "layout_notes": [
+          "Central east-west corridor 3000 mm wide runs full length, separating north and south rows of rooms.",
+          "North row (7 cells): stairwell-W, classroom-1, classroom-2, classroom-3, classroom-4, classroom-5, stairwell-E.",
+          "South row (8 cells): classroom-6, classroom-7, mens-toilet, lobby, womens-toilet, classroom-8, classroom-9, classroom-10.",
+          "Lobby positioned at centre of south facade, aligned with main entrance double-leaf door.",
+          "Toilets flank the lobby; each has a small high-sill window on south facade.",
+          "Classrooms each have two large windows on their outer facade (north for north row, south for south row).",
+          "Corridor has horizontal band of windows on short ends and above lobby entrance.",
+          "Stairwells at east and west ends of the north row, each with door to corridor and internal railings.",
+          "All structural walls are load-bearing brick, 200 mm thick; no interior columns.",
+          "One ground-floor concrete slab and one flat concrete roof slab, both 200 mm thick."
+        ],
+        "assumptions": [
+          "Total door count taken as 15 (10 classroom doors + 2 stair doors + 2 toilet doors + 1 lobby main entrance), though user note says 'about 14'.",
+          "Window count set to 22 as stated; calculated from program yields 25 (20 classroom + 3 corridor + 2 toilet), architect will adjust.",
+          "Number of walls derived from 4 external walls + 2 continuous corridor walls + 13 internal cross walls (6 north row, 7 south row).",
+          "External wall thicknesses included in footprint dimensions; internal partitions also 200 mm brick.",
+          "Stairwells contain no additional internal walls; railings modelled as two objects (one per stair).",
+          "Roof is a single flat slab covering the entire footprint; accounted as 1 roof object.",
+          "Floor slab and roof slab counted as two separate slab objects.",
+          "Room dimensions are approximate; architect may fine-tune to fit exact footprint and wall thicknesses."
+        ]
+      },
+      "spatial_graph_path": "test_output/text2ifc/teaching_textseed_iter1_spatial.json",
+      "graph_path": "test_output/text2ifc/teaching_textseed_iter1_graph.json",
+      "ifc_path": "test_output/text2ifc/teaching_textseed_iter1.ifc",
+      "score": 1.0,
+      "diff_summary": "(no GT provided)",
+      "refinement": "",
+      "ids_pass_rate": 1.0,
+      "ids_total_specs": 13,
+      "ids_failed_specs": 0,
+      "ids_summary": "0/13 IDS specifications failed:\n- [WARNING] Target count: storey_count: target=1, generated=2 (delta=+1)\n- [ERROR] Target count: walls: target=19, generated=49 (delta=+30)\n- [WARNING] Target count: doors: target=15, generated=16 (delta=+1)\n- [WARNING] Target count: windows: target=22, generated=26 (delta=+4)",
+      "ids_html_path": "",
+      "ids_xml_path": ""
+    },
+    {
+      "iteration": 2,
+      "requirements": {
+        "building_type": "single-storey rectangular school teaching building",
+        "storey_count": 1,
+        "storey_height_mm": 3600,
+        "footprint": {
+          "shape": "rectangle",
+          "x_mm": 50000,
+          "y_mm": 25000
+        },
+        "element_targets": {
+          "walls": 19,
+          "doors": 15,
+          "windows": 22,
+          "columns": 0,
+          "slabs": 2,
+          "roofs": 1,
+          "railings": 2
+        },
+        "materials": {
+          "wall": "brick",
+          "slab": "concrete",
+          "roof": "concrete"
+        },
+        "layout_notes": [
+          "Central east-west corridor 3000 mm wide runs full length, separating north and south rows of rooms.",
+          "North row (7 cells): stairwell-W, classroom-1, classroom-2, classroom-3, classroom-4, classroom-5, stairwell-E.",
+          "South row (8 cells): classroom-6, classroom-7, mens-toilet, lobby, womens-toilet, classroom-8, classroom-9, classroom-10.",
+          "Lobby positioned at centre of south facade, aligned with main entrance double-leaf door.",
+          "Toilets flank the lobby; each has a small high-sill window on south facade.",
+          "Classrooms each have two large windows on their outer facade (north for north row, south for south row).",
+          "Corridor has horizontal band of windows on short ends and above lobby entrance.",
+          "Stairwells at east and west ends of the north row, each with door to corridor and internal railings.",
+          "All structural walls are load-bearing brick, 200 mm thick; no interior columns.",
+          "One ground-floor concrete slab and one flat concrete roof slab, both 200 mm thick."
+        ],
+        "assumptions": [
+          "Total door count taken as 15 (10 classroom doors + 2 stair doors + 2 toilet doors + 1 lobby main entrance), though user note says 'about 14'.",
+          "Window count set to 22 as stated; calculated from program yields 25 (20 classroom + 3 corridor + 2 toilet), architect will adjust.",
+          "Number of walls derived from 4 external walls + 2 continuous corridor walls + 13 internal cross walls (6 north row, 7 south row).",
+          "External wall thicknesses included in footprint dimensions; internal partitions also 200 mm brick.",
+          "Stairwells contain no additional internal walls; railings modelled as two objects (one per stair).",
+          "Roof is a single flat slab covering the entire footprint; accounted as 1 roof object.",
+          "Floor slab and roof slab counted as two separate slab objects.",
+          "Room dimensions are approximate; architect may fine-tune to fit exact footprint and wall thicknesses."
+        ]
+      },
+      "spatial_graph_path": "test_output/text2ifc/teaching_textseed_iter2_spatial.json",
+      "graph_path": "test_output/text2ifc/teaching_textseed_iter2_graph.json",
+      "ifc_path": "test_output/text2ifc/teaching_textseed_iter2.ifc",
+      "score": 1.0,
+      "diff_summary": "(no GT provided)",
+      "refinement": "- Reduce wall count from 49 to exactly 19 by deleting non-essential or duplicate walls.\n- Set storey count to 1 by removing the extra storey and relocating all elements to the remaining storey.\n- Decrease window count from 26 to 22.\n- Reduce door count from 16 to 15.",
+      "ids_pass_rate": 1.0,
+      "ids_total_specs": 13,
+      "ids_failed_specs": 0,
+      "ids_summary": "0/13 IDS specifications failed:\n- [WARNING] Target count: storey_count: target=1, generated=2 (delta=+1)\n- [ERROR] Target count: walls: target=19, generated=49 (delta=+30)\n- [WARNING] Target count: slabs: target=2, generated=3 (delta=+1)",
+      "ids_html_path": "",
+      "ids_xml_path": ""
+    }
+  ],
+  "best_iteration": 2,
+  "best_score": 1.0,
+  "best_ifc_path": "test_output/text2ifc/teaching_textseed_iter2.ifc"
+}

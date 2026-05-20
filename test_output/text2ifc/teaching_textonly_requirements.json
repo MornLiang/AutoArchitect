@@ -1,0 +1,41 @@
+{
+  "building_type": "school",
+  "storey_count": 1,
+  "storey_height_mm": 3600,
+  "footprint": {
+    "shape": "rectangle",
+    "x_mm": 50000,
+    "y_mm": 25000
+  },
+  "element_targets": {
+    "walls": 19,
+    "doors": 15,
+    "windows": 22,
+    "columns": 0,
+    "slabs": 1,
+    "roofs": 1,
+    "railings": 2
+  },
+  "materials": {
+    "wall": "brick",
+    "slab": "concrete",
+    "roof": "concrete"
+  },
+  "layout_notes": [
+    "Central corridor running full length east-west, 3000 mm wide, connecting all rooms",
+    "North row: stair_west, classroom_1, classroom_2, classroom_3, classroom_4, classroom_5, stair_east",
+    "South row: classroom_6, classroom_7, mens_toilet, lobby, womens_toilet, classroom_8, classroom_9, classroom_10",
+    "Main entrance on south facade into lobby, aligned with central east-west position",
+    "Classrooms each have two 1800 x 1800 mm windows on outer facade; toilets have small 900 x 600 mm high-sill windows; corridor has horizontal window band at short ends and above lobby entrance",
+    "Doors: single-leaf 1000 mm for classrooms and stairwells, 900 mm for toilets, double-leaf 1800 mm main entrance",
+    "Load-bearing brick walls 200 mm thick throughout, no interior columns"
+  ],
+  "assumptions": [
+    "Room widths and depths are approximate; the architect may adjust them to fit the 50000 x 25000 mm footprint exactly",
+    "Total door count of 15 derived from detailed list: 10 classrooms, 2 stairwells, 2 toilets, and 1 main entrance double-leaf door",
+    "Window count of 22 assumes 20 classroom windows (2 per classroom) plus 2 toilet windows; corridor windows are additional and not counted in the target",
+    "Wall count of 19 estimated from 4 exterior walls, 2 continuous corridor walls (north and south with openings), and 13 transverse dividing walls between rooms/stairwells",
+    "Railings limited to 2 stairwells, no other interior or exterior railings",
+    "Ground-floor slab and flat roof slab both 200 mm concrete"
+  ]
+}

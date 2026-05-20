@@ -1,0 +1,381 @@
+{
+  "metadata": {
+    "name": "Single-Storey School Teaching Building",
+    "description": "Rectangular single-storey school with central east-west corridor, ten classrooms, two stairwells, lobby and toilets.",
+    "project_name": "School Project",
+    "site_name": "Default Site",
+    "schema": "IFC4",
+    "length_unit": "MILLIMETRE"
+  },
+  "footprint": {
+    "shape": "rectangle",
+    "x_mm": 50000.0,
+    "y_mm": 25000.0
+  },
+  "storeys": [
+    {
+      "id": "s1",
+      "name": "Ground Floor",
+      "elevation_mm": 0.0,
+      "height_mm": 3600.0,
+      "is_inhabited": true,
+      "rooms": [
+        {
+          "id": "corridor",
+          "function": "corridor",
+          "area_ratio": 0.12,
+          "adjacent_to": [
+            "stairwell_w",
+            "classroom_1",
+            "classroom_2",
+            "classroom_3",
+            "classroom_4",
+            "classroom_5",
+            "stairwell_e",
+            "classroom_6",
+            "classroom_7",
+            "toilet_men",
+            "lobby",
+            "toilet_women",
+            "classroom_8",
+            "classroom_9",
+            "classroom_10"
+          ],
+          "opening_to": [
+            "stairwell_w",
+            "classroom_1",
+            "classroom_2",
+            "classroom_3",
+            "classroom_4",
+            "classroom_5",
+            "stairwell_e",
+            "classroom_6",
+            "classroom_7",
+            "toilet_men",
+            "toilet_women",
+            "classroom_8",
+            "classroom_9",
+            "classroom_10"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "corridor"
+        },
+        {
+          "id": "stairwell_w",
+          "function": "stairwell",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "corridor",
+            "classroom_1"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "stairwell_w"
+        },
+        {
+          "id": "classroom_1",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "stairwell_w",
+            "classroom_2"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_1"
+        },
+        {
+          "id": "classroom_2",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "classroom_1",
+            "classroom_3"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_2"
+        },
+        {
+          "id": "classroom_3",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "classroom_2",
+            "classroom_4"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_3"
+        },
+        {
+          "id": "classroom_4",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "classroom_3",
+            "classroom_5"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_4"
+        },
+        {
+          "id": "classroom_5",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "classroom_4",
+            "stairwell_e"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_5"
+        },
+        {
+          "id": "stairwell_e",
+          "function": "stairwell",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "corridor",
+            "classroom_5"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "stairwell_e"
+        },
+        {
+          "id": "classroom_6",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "classroom_7"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_6"
+        },
+        {
+          "id": "classroom_7",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "classroom_6",
+            "toilet_men"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_7"
+        },
+        {
+          "id": "toilet_men",
+          "function": "toilet",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "corridor",
+            "classroom_7",
+            "lobby"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "toilet_men"
+        },
+        {
+          "id": "lobby",
+          "function": "lobby",
+          "area_ratio": 0.06,
+          "adjacent_to": [
+            "corridor",
+            "toilet_men",
+            "toilet_women"
+          ],
+          "opening_to": [],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 1,
+          "name": "lobby"
+        },
+        {
+          "id": "toilet_women",
+          "function": "toilet",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "corridor",
+            "lobby",
+            "classroom_8"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "toilet_women"
+        },
+        {
+          "id": "classroom_8",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "toilet_women",
+            "classroom_9"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_8"
+        },
+        {
+          "id": "classroom_9",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "classroom_8",
+            "classroom_10"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_9"
+        },
+        {
+          "id": "classroom_10",
+          "function": "classroom",
+          "area_ratio": 0.065,
+          "adjacent_to": [
+            "corridor",
+            "classroom_9"
+          ],
+          "opening_to": [
+            "corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "classroom_10"
+        }
+      ],
+      "layout_hint": "central_corridor",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 2,
+        "roofs": 0,
+        "railings": 2,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Brick",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": []
+    },
+    {
+      "id": "s2",
+      "name": "Roof Level",
+      "elevation_mm": 3600.0,
+      "height_mm": 0.0,
+      "is_inhabited": false,
+      "rooms": [],
+      "layout_hint": "empty",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 0,
+        "roofs": 1,
+        "railings": 0,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Brick",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": []
+    }
+  ]
+}

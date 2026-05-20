@@ -1,0 +1,1475 @@
+<!--
+    IfcTester - IDS based model auditing
+    Copyright (C) 2022 Dion Moult <dion@thinkmoult.com>
+
+    This file is part of IfcTester.
+
+    IfcTester is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    IfcTester is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with IfcTester.  If not, see <http://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang=>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="foobaro">
+    <title></title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Inconsolata|Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green: #97cc64;
+            --light-green: #b6cca1;
+            --red: #fb5a3e;
+            --light-red: #fbb4a8;
+        }
+        body { font-family: 'Arial', sans-serif; padding: 10px 40px; }
+        section { padding: 15px; border-radius: 5px; border: 1px solid #eee; margin-bottom: 15px; }
+        section>h2 { margin-top: 0px; }
+        span.time { color: #999; font-style: italic; float: right; }
+        span.step-time { float: right; color: #555; font-size: 0.8em; font-style: italic; }
+        span.item { padding: 5px; border-radius: 5px; margin-right: 5px; border: 1px solid #eee; }
+        span.item.pass, span.item.fail { color: #FFF; font-weight: bold; border: 0px; }
+        p.fail { background-color: #fb5a3e; padding: 5px; border-radius: 5px; color: #fff; }
+        p.unspecified { background-color: #994f00; padding: 5px; border-radius: 5px; color: #fff; }
+        p.skipped { background-color: #8b8d8f; padding: 5px; border-radius: 5px; color: #fff; }
+        p.description { background-color: #eee; border-radius: 5px; padding: 20px; margin-left: auto; margin-right: auto; display: inline-block; font-weight: bold;}
+        li { padding: 10px; font-family: monospace; border-radius: 5px; margin-bottom: 5px; }
+        li.pass { background-color: var(--light-green); color: #333; }
+        li.fail { background-color: var(--light-red); color: #900; }
+        li.unspecified { background-color: #ffd37f; color: #a30; }
+        li.skipped { background-color: #f5f5f5; color: #333; }
+        li p { margin-bottom: 0px; }
+        footer { color: #999; font-size: 0.8em; }
+        header { text-align: center; }
+        hr { margin: 20px; margin-left: 0px; margin-right: 0px;  border: none; border-top: 1px solid #ccc; }
+        summary { display: flex; cursor: pointer; }
+        summary::-webkit-details-marker { display: none; }
+        * {box-sizing:border-box}
+        .container { width: 100%; background-color: #ddd; border-radius: 5px}
+        .percent { text-align: left; padding-top: 5px; padding-left: 5px; padding-bottom: 5px; color: white; border-radius: 5px; white-space: nowrap; }
+        .pass { background-color: var(--green); }
+        .fail { background-color: var(--red); }
+        table { width: 100%; border-spacing: 0; border-radius: 5px; margin-top: 10px; }
+        th, td { padding: 5px; color: #000; }
+        table.pass { border-bottom: 2px solid var(--green); }
+        table.fail { border-bottom: 2px solid var(--red); }
+        table thead>tr { font-weight: bold; color: #000; }
+        table.pass tbody tr { border-bottom: 1px solid var(--green); }
+        table.fail tbody tr { border-bottom: 1px solid var(--red); }
+        tbody tr:nth-child(odd) { background-color: rgba(1, 1, 1, 0.05); }
+        tbody tr:nth-child(even) { background-color: rgba(1, 1, 1, 0.1); }
+        tbody tr:hover { background-color: rgba(0, 0, 0, 0); }
+        div.info { float: left; width: 30%; }
+        div.results { float: left; width: calc(70% - 20px); margin-left: 20px; padding: 20px; border-radius: 5px; background-color: #fafafa; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Text2IFC validation</h1>
+        <p><strong>2026-05-13 00:03:05</strong></p>
+    </header>
+    <h2>Summary</h2>
+    <div class="container">
+        <div class="pass percent" style="width: 100%;">100%</div>
+    </div>
+    <p>
+        <span class="item pass">Pass</span>
+        <span class="item">
+            Specifications passed: <strong>13</strong> / <strong>13</strong>
+        </span>
+        <span class="item">
+            Requirements passed: <strong>3</strong> / <strong>3</strong>
+        </span>
+        <span class="item">
+            Checks passed: <strong>114</strong> / <strong>114</strong>
+        </span>
+    </p>
+    <hr>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcProject must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>1</strong> / <strong>1</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCPROJECT data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcSite must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>1</strong> / <strong>1</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCSITE data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcBuilding must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>1</strong> / <strong>1</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCBUILDING data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcBuildingStorey must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>2</strong> / <strong>2</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCBUILDINGSTOREY data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcWall (any variant) must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>49</strong> / <strong>49</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All {&#x27;enumeration&#x27;: [&#x27;IFCWALL&#x27;, &#x27;IFCWALLSTANDARDCASE&#x27;]} data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcDoor must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>15</strong> / <strong>15</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCDOOR data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcWindow must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>22</strong> / <strong>22</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCWINDOW data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcSlab must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>3</strong> / <strong>3</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCSLAB data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcRoof must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>1</strong> / <strong>1</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCROOF data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>At least one IfcRailing must exist</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">N/A%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>0</strong> / <strong>0</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>2</strong> / <strong>2</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCRAILING data</li>
+            </ul>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>Every wall must have a material</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">100%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>49</strong> / <strong>49</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>49</strong> / <strong>49</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All {&#x27;enumeration&#x27;: [&#x27;IFCWALL&#x27;, &#x27;IFCWALLSTANDARDCASE&#x27;]} data</li>
+            </ul>
+            <p>
+                <strong>Requirements</strong>
+            </p>
+            <ol>
+                <li class="pass">
+                    <details>
+                        <summary>
+                            Shall have a material
+                        </summary>
+ 
+                        <table class="pass">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>PredefinedType</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>GlobalId</th>
+                                    <th>Tag</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw25</td>
+                                    <td>None</td>
+                                    <td>0VEgKh3Tn9QRBuhpnSEpTQ</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew34</td>
+                                    <td>None</td>
+                                    <td>1GVSbfU7nFbx0ZBMQgcOAn</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew36</td>
+                                    <td>None</td>
+                                    <td>12cf3wTMT9r8ACLW8AdvGn</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew45</td>
+                                    <td>None</td>
+                                    <td>0lgHDh_FXE2OBUZgD6TnG4</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw5</td>
+                                    <td>None</td>
+                                    <td>3eQva_LpP4qhlG0okeCkhC</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw7</td>
+                                    <td>None</td>
+                                    <td>06JMnNu2D5jB_n6Z4ewyss</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw16</td>
+                                    <td>None</td>
+                                    <td>35C$zxr3T9UPRSpfClBb6y</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw27</td>
+                                    <td>None</td>
+                                    <td>1Y8DbQYgfBTgdI_M7eY1NU</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew38</td>
+                                    <td>None</td>
+                                    <td>0nTqoM1x55u9J0Ntn1v1r5</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew47</td>
+                                    <td>None</td>
+                                    <td>3eY0pxDZz5qAIArchpgn5t</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw18</td>
+                                    <td>None</td>
+                                    <td>282xNCSHP9Hh0QKeafhokG</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew29</td>
+                                    <td>None</td>
+                                    <td>1BY_FAdU57N8srxk9jojRw</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew40</td>
+                                    <td>None</td>
+                                    <td>2lV1rbsGD6jwk752gD2hfi</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw9</td>
+                                    <td>None</td>
+                                    <td>08AZaaoCL2Lx$9zTWZIRzt</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw11</td>
+                                    <td>None</td>
+                                    <td>2j_7Vx4pT4UePbw6RLLMxB</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew42</td>
+                                    <td>None</td>
+                                    <td>2hHFCX8Gb8PQwrM9rc4556</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw20</td>
+                                    <td>None</td>
+                                    <td>0yi7VZGrDE8Pqt9BxGn_hc</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew31</td>
+                                    <td>None</td>
+                                    <td>2ub3Ue$Tv4pB9SDcB1rwUc</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw2</td>
+                                    <td>None</td>
+                                    <td>0eEjsYcGrE3vTd6i$oehiq</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw13</td>
+                                    <td>None</td>
+                                    <td>2vgGN$$TPCj8aeYvCFEa4N</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw24</td>
+                                    <td>None</td>
+                                    <td>0oSmLx2ATDhhncHdq2bXfz</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw22</td>
+                                    <td>None</td>
+                                    <td>3OyZvB5PvCZOIDaP74uZvg</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew33</td>
+                                    <td>None</td>
+                                    <td>2T4PdmOxXBReyZzcigAWEP</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew35</td>
+                                    <td>None</td>
+                                    <td>3FehdHPO52bxUHp1GBTpst</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew44</td>
+                                    <td>None</td>
+                                    <td>0OCDmaciD5GO_SftGcZuzj</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw4</td>
+                                    <td>None</td>
+                                    <td>0BzzRlGcb1mQGELgGGeaId</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw15</td>
+                                    <td>None</td>
+                                    <td>3sQDk7Srz3jxAG25W9Sksn</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw26</td>
+                                    <td>None</td>
+                                    <td>3X7eJZXtH3dv5nYI7N_XDA</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew46</td>
+                                    <td>None</td>
+                                    <td>3VytgH_onFphvRAGjouAaB</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew28</td>
+                                    <td>None</td>
+                                    <td>1fRi04ER5CQQfTswJ8PDuN</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew37</td>
+                                    <td>None</td>
+                                    <td>0NEdQaVEXFmwKI_e$axwnT</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew48</td>
+                                    <td>None</td>
+                                    <td>1zd_ZzJhHFIBYysukOqIqw</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw6</td>
+                                    <td>None</td>
+                                    <td>3f_jD2aLP7EAadh8myiR7T</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw17</td>
+                                    <td>None</td>
+                                    <td>1m8Sr7K$XEwf8rn5WD5dwP</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw12</td>
+                                    <td>None</td>
+                                    <td>3k1zChghHCPQ6ciqHHIDxX</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew39</td>
+                                    <td>None</td>
+                                    <td>16hrYVlnHDY9PbCyNWsogo</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw0</td>
+                                    <td>None</td>
+                                    <td>0ljjfSw112FRo2apsHtiY1</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw8</td>
+                                    <td>None</td>
+                                    <td>1i0IAJTKbDKxyvWlI$oGYZ</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw19</td>
+                                    <td>None</td>
+                                    <td>3y79VBbZL8LvlU7P0rDKl5</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew30</td>
+                                    <td>None</td>
+                                    <td>0s0jsiVkXCO86uXx0NLkBC</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw1</td>
+                                    <td>None</td>
+                                    <td>3CqJR3iDj6Bwpk8WUz3erf</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw21</td>
+                                    <td>None</td>
+                                    <td>1U82i2TOHE_P1c49kUO9Vp</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew32</td>
+                                    <td>None</td>
+                                    <td>1B1KCyb9zBY8hay_A2TiwV</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew41</td>
+                                    <td>None</td>
+                                    <td>1D52xH8UnDvPsiBRghp5XZ</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw10</td>
+                                    <td>None</td>
+                                    <td>3QIPVDzbf6JB4BOEupJDAX</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw23</td>
+                                    <td>None</td>
+                                    <td>1HpE0mqJfALQzFOQfcFlHj</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew43</td>
+                                    <td>None</td>
+                                    <td>0p7shyy1v6DBvRSjplsSlJ</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw3</td>
+                                    <td>None</td>
+                                    <td>1$OoeCZfn5yQPel9Gft$$Z</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw14</td>
+                                    <td>None</td>
+                                    <td>1bwrmvbHj99wximmwU7Vz_</td>
+                                    <td>None</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>Every wall must have a Name</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">100%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>49</strong> / <strong>49</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>49</strong> / <strong>49</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All {&#x27;enumeration&#x27;: [&#x27;IFCWALL&#x27;, &#x27;IFCWALLSTANDARDCASE&#x27;]} data</li>
+            </ul>
+            <p>
+                <strong>Requirements</strong>
+            </p>
+            <ol>
+                <li class="pass">
+                    <details>
+                        <summary>
+                            The Name shall be provided
+                        </summary>
+ 
+                        <table class="pass">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>PredefinedType</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>GlobalId</th>
+                                    <th>Tag</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw25</td>
+                                    <td>None</td>
+                                    <td>0VEgKh3Tn9QRBuhpnSEpTQ</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew34</td>
+                                    <td>None</td>
+                                    <td>1GVSbfU7nFbx0ZBMQgcOAn</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew36</td>
+                                    <td>None</td>
+                                    <td>12cf3wTMT9r8ACLW8AdvGn</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew45</td>
+                                    <td>None</td>
+                                    <td>0lgHDh_FXE2OBUZgD6TnG4</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw5</td>
+                                    <td>None</td>
+                                    <td>3eQva_LpP4qhlG0okeCkhC</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw7</td>
+                                    <td>None</td>
+                                    <td>06JMnNu2D5jB_n6Z4ewyss</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw16</td>
+                                    <td>None</td>
+                                    <td>35C$zxr3T9UPRSpfClBb6y</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw27</td>
+                                    <td>None</td>
+                                    <td>1Y8DbQYgfBTgdI_M7eY1NU</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew38</td>
+                                    <td>None</td>
+                                    <td>0nTqoM1x55u9J0Ntn1v1r5</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew47</td>
+                                    <td>None</td>
+                                    <td>3eY0pxDZz5qAIArchpgn5t</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw18</td>
+                                    <td>None</td>
+                                    <td>282xNCSHP9Hh0QKeafhokG</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew29</td>
+                                    <td>None</td>
+                                    <td>1BY_FAdU57N8srxk9jojRw</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew40</td>
+                                    <td>None</td>
+                                    <td>2lV1rbsGD6jwk752gD2hfi</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw9</td>
+                                    <td>None</td>
+                                    <td>08AZaaoCL2Lx$9zTWZIRzt</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw11</td>
+                                    <td>None</td>
+                                    <td>2j_7Vx4pT4UePbw6RLLMxB</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew42</td>
+                                    <td>None</td>
+                                    <td>2hHFCX8Gb8PQwrM9rc4556</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw20</td>
+                                    <td>None</td>
+                                    <td>0yi7VZGrDE8Pqt9BxGn_hc</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew31</td>
+                                    <td>None</td>
+                                    <td>2ub3Ue$Tv4pB9SDcB1rwUc</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw2</td>
+                                    <td>None</td>
+                                    <td>0eEjsYcGrE3vTd6i$oehiq</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw13</td>
+                                    <td>None</td>
+                                    <td>2vgGN$$TPCj8aeYvCFEa4N</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw24</td>
+                                    <td>None</td>
+                                    <td>0oSmLx2ATDhhncHdq2bXfz</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw22</td>
+                                    <td>None</td>
+                                    <td>3OyZvB5PvCZOIDaP74uZvg</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew33</td>
+                                    <td>None</td>
+                                    <td>2T4PdmOxXBReyZzcigAWEP</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew35</td>
+                                    <td>None</td>
+                                    <td>3FehdHPO52bxUHp1GBTpst</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew44</td>
+                                    <td>None</td>
+                                    <td>0OCDmaciD5GO_SftGcZuzj</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw4</td>
+                                    <td>None</td>
+                                    <td>0BzzRlGcb1mQGELgGGeaId</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw15</td>
+                                    <td>None</td>
+                                    <td>3sQDk7Srz3jxAG25W9Sksn</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw26</td>
+                                    <td>None</td>
+                                    <td>3X7eJZXtH3dv5nYI7N_XDA</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew46</td>
+                                    <td>None</td>
+                                    <td>3VytgH_onFphvRAGjouAaB</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew28</td>
+                                    <td>None</td>
+                                    <td>1fRi04ER5CQQfTswJ8PDuN</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew37</td>
+                                    <td>None</td>
+                                    <td>0NEdQaVEXFmwKI_e$axwnT</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew48</td>
+                                    <td>None</td>
+                                    <td>1zd_ZzJhHFIBYysukOqIqw</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw6</td>
+                                    <td>None</td>
+                                    <td>3f_jD2aLP7EAadh8myiR7T</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw17</td>
+                                    <td>None</td>
+                                    <td>1m8Sr7K$XEwf8rn5WD5dwP</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw12</td>
+                                    <td>None</td>
+                                    <td>3k1zChghHCPQ6ciqHHIDxX</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew39</td>
+                                    <td>None</td>
+                                    <td>16hrYVlnHDY9PbCyNWsogo</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw0</td>
+                                    <td>None</td>
+                                    <td>0ljjfSw112FRo2apsHtiY1</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw8</td>
+                                    <td>None</td>
+                                    <td>1i0IAJTKbDKxyvWlI$oGYZ</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw19</td>
+                                    <td>None</td>
+                                    <td>3y79VBbZL8LvlU7P0rDKl5</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew30</td>
+                                    <td>None</td>
+                                    <td>0s0jsiVkXCO86uXx0NLkBC</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw1</td>
+                                    <td>None</td>
+                                    <td>3CqJR3iDj6Bwpk8WUz3erf</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw21</td>
+                                    <td>None</td>
+                                    <td>1U82i2TOHE_P1c49kUO9Vp</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew32</td>
+                                    <td>None</td>
+                                    <td>1B1KCyb9zBY8hay_A2TiwV</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew41</td>
+                                    <td>None</td>
+                                    <td>1D52xH8UnDvPsiBRghp5XZ</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw10</td>
+                                    <td>None</td>
+                                    <td>3QIPVDzbf6JB4BOEupJDAX</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw23</td>
+                                    <td>None</td>
+                                    <td>1HpE0mqJfALQzFOQfcFlHj</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-ew43</td>
+                                    <td>None</td>
+                                    <td>0p7shyy1v6DBvRSjplsSlJ</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw3</td>
+                                    <td>None</td>
+                                    <td>1$OoeCZfn5yQPel9Gft$$Z</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcWallStandardCase</td>
+                                    <td>None</td>
+                                    <td>Wall-s1-iw14</td>
+                                    <td>None</td>
+                                    <td>1bwrmvbHj99wximmwU7Vz_</td>
+                                    <td>None</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <section class="specification" style="clear: both; overflow: hidden;">
+        <div class="info">
+            <h2>Every IfcSpace must have a LongName (room function)</h2>
+
+            <div class="container">
+                <div class="
+                
+                pass
+                percent" style="width: 100%;">100%</div>
+            </div>
+            <p>
+                <span class="item pass">Required: Pass</span>
+                <span class="item">
+                    Checks passed: <strong>16</strong> / <strong>16</strong>
+                </span>
+                <span class="item">
+                    Elements passed: <strong>16</strong> / <strong>16</strong>
+                </span>
+            </p>
+        </div>
+        <div class="results">
+            <p>
+                <strong>Applicability</strong>
+            </p>
+            <ul>
+                <li>All IFCSPACE data</li>
+            </ul>
+            <p>
+                <strong>Requirements</strong>
+            </p>
+            <ol>
+                <li class="pass">
+                    <details>
+                        <summary>
+                            The LongName shall be provided
+                        </summary>
+ 
+                        <table class="pass">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>PredefinedType</th>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>GlobalId</th>
+                                    <th>Tag</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_4</td>
+                                    <td>None</td>
+                                    <td>29c8Lx4XP50QAig6f_5H1m</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_6</td>
+                                    <td>None</td>
+                                    <td>2jD80o9cHE2xCfeLuw$U0D</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_9</td>
+                                    <td>None</td>
+                                    <td>2MGP9_yCH9yxEDzWvEkxUY</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-lobby</td>
+                                    <td>None</td>
+                                    <td>3R_ZiLRl1CZhYzXXLC_PIu</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-toilet_women</td>
+                                    <td>None</td>
+                                    <td>0KKkJMpb95sPDo2dnC_GHR</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_8</td>
+                                    <td>None</td>
+                                    <td>13hsKux8z8BxVxOh6bSivC</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_7</td>
+                                    <td>None</td>
+                                    <td>1fWSdoT$P4CwimVBqVk2Cz</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_3</td>
+                                    <td>None</td>
+                                    <td>3ByZFVReX9SBbXM7taQgEh</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-stairwell_w</td>
+                                    <td>None</td>
+                                    <td>1$RBx8099D0fx$KcxelgDP</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_2</td>
+                                    <td>None</td>
+                                    <td>1GWa$jog9AtfIzXyQxlK0x</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_1</td>
+                                    <td>None</td>
+                                    <td>1hW6LwqcD6ou_WEmhlxwtK</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_10</td>
+                                    <td>None</td>
+                                    <td>2gWqulx490_fMCb5dEAsL5</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-stairwell_e</td>
+                                    <td>None</td>
+                                    <td>1Uzck$UvrEdA5jUyO_QJmb</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-classroom_5</td>
+                                    <td>None</td>
+                                    <td>07t1KB20L8JOQvcT_YXR$E</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-corridor</td>
+                                    <td>None</td>
+                                    <td>0aiMWuucDELRrZzKKehaKA</td>
+                                    <td>None</td>
+                                </tr>
+                                <tr>
+                                    <td>IfcSpace</td>
+                                    <td>None</td>
+                                    <td>Space-toilet_men</td>
+                                    <td>None</td>
+                                    <td>1XW7SvCAX3oPC6XNJoiJFJ</td>
+                                    <td>None</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </details>
+                </li>
+            </ol>
+        </div>
+    </section>
+    <hr>
+    <footer>
+        <p>
+            Report by the <a href="https://bonsaibim.org/">Bonsai</a> and <a href="http://ifcopenshell.org/">IfcOpenShell</a>.
+        </p>
+    </footer>
+</body>
+</html>
