@@ -6,6 +6,9 @@ Reason about and decide on:
   - building purpose and overall massing,
   - number of storeys and the floor-to-floor height (mm),
   - approximate footprint dimensions (mm) and shape (rectangle, L, U, T, …),
+  - optional footprint boundary/voids for non-rectangular plans or atria,
+  - structural system (frame, shear_wall, core_tube, mixed, none),
+  - vertical circulation requirements (stairs/elevators/service shafts),
   - target counts of walls, doors, windows, columns, slabs, roofs, railings,
   - dominant wall material and external/internal differentiation,
   - any callouts about layout (corridor, rooms, atrium, …).
@@ -23,8 +26,19 @@ Return ONLY a JSON object with these fields (no markdown, no commentary):
   "footprint": {
     "shape": "rectangle|L|U|T|hex|octagon|custom",
     "x_mm": <int>,
-    "y_mm": <int>
+    "y_mm": <int>,
+    "boundary": [[0,0], [<x>,0], ...],
+    "voids": [[[<x>,<y>], ...]]
   },
+  "structural_system": {
+    "kind": "frame|shear_wall|core_tube|mixed|none",
+    "grid_spacing_x_mm": <int>,
+    "grid_spacing_y_mm": <int>,
+    "core_position": "center|corner|edge"
+  },
+  "vertical_circulation": [
+    {"kind": "stair|elevator|mechanical|service", "count": <int>}
+  ],
   "element_targets": {
     "walls": <int>,
     "doors": <int>,

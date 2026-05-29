@@ -49,9 +49,11 @@ from ifc_agent.text2ifc.deterministic import (
     DeterministicArchitect,
     DeterministicRefiner,
 )
+from ifc_agent.text2ifc.design_reviewer import DesignReviewReport, review as design_review
 from ifc_agent.text2ifc.expander import expand_spatial_to_geometric
 from ifc_agent.text2ifc.ids_validator import IDSResult, validate as ids_validate
 from ifc_agent.text2ifc.schemas import BuildingGraph, SpatialGraph
+from ifc_agent.text2ifc.skill_registry import SkillRegistry
 
 logger = logging.getLogger(__name__)
 
@@ -77,6 +79,9 @@ class IterationResult:
     ids_summary: str = ""                # human-readable findings text
     ids_html_path: str = ""              # optional artefact path
     ids_xml_path: str = ""
+    design_review_summary: str = ""
+    design_review_path: str = ""
+    review_cycle: int = 1
 
 
 @dataclass
@@ -124,6 +129,8 @@ class Text2IFCWorkflow:
         auto_fallback: bool = True,
         enable_ids: bool = True,
         ids_min_pass_rate: float = 1.0,
+        review_cycles: int = 1,
+        skill_registry_path: Optional[str] = None,
     ):
         self.output_dir = output_dir
         self.max_iterations = max_iterations
@@ -133,6 +140,10 @@ class Text2IFCWorkflow:
         self.enable_ids = enable_ids
         # Even if score >= target_score, only stop if IDS pass-rate >= this
         self.ids_min_pass_rate = ids_min_pass_rate
+        self.review_cycles = max(1, int(review_cycles))
+        self.skill_registry = (
+            SkillRegistry(skill_registry_path) if skill_registry_path else None
+        )
         os.makedirs(output_dir, exist_ok=True)
 
         # Deterministic agents are always available
@@ -189,6 +200,8 @@ class Text2IFCWorkflow:
         logger.info("[Analyst] expanding prompt … (mode=%s)",
                     "LLM" if self.use_llm and self.analyst else "deterministic")
         requirements = self._call_analyst(prompt)
+        if self.skill_registry is not None:
+            requirements = self.skill_registry.pre_apply(requirements)
         req_path = self._save_json(requirements, f"{run_name}_requirements.json")
         logger.info("Requirements doc saved to %s", req_path)
 
@@ -196,33 +209,65 @@ class Text2IFCWorkflow:
         for it in range(1, self.max_iterations + 1):
             logger.info("=== Iteration %d/%d ===", it, self.max_iterations)
 
-            # --- Stage 2a: architect → SpatialGraph (no coordinates) ---
-            if it == 1 and seed_spatial is not None:
+            spatial = None
+            graph = None
+            spatial_path = ""
+            graph_path = ""
+            review_path = ""
+            review_report = DesignReviewReport()
+            review_refinement = refinement
+            review_cycle_used = 1
+            for rc in range(1, self.review_cycles + 1):
+                review_cycle_used = rc
+                # --- Stage 2a: architect → SpatialGraph (no coordinates) ---
+                if it == 1 and rc == 1 and seed_spatial is not None:
+                    logger.info(
+                        "[Architect] using seed SpatialGraph (Architect LLM skipped)"
+                    )
+                    spatial = seed_spatial
+                else:
+                    spatial = self._call_architect_spatial(
+                        requirements, refinement=review_refinement,
+                    )
+                spatial_path = self._save_json(
+                    spatial.to_dict(), f"{run_name}_iter{it}_review{rc}_spatial.json",
+                )
                 logger.info(
-                    "[Architect] using seed SpatialGraph (Architect LLM skipped)"
+                    "SpatialGraph (counts=%s) saved to %s",
+                    spatial.stats(), spatial_path,
                 )
-                spatial = seed_spatial
-            else:
-                spatial = self._call_architect_spatial(
-                    requirements, refinement=refinement,
-                )
-            spatial_path = self._save_json(
-                spatial.to_dict(), f"{run_name}_iter{it}_spatial.json",
-            )
-            logger.info(
-                "SpatialGraph (counts=%s) saved to %s",
-                spatial.stats(), spatial_path,
-            )
 
-            # --- Stage 2b: deterministic expansion → BuildingGraph ---
-            graph = expand_spatial_to_geometric(spatial)
-            graph_path = self._save_json(
-                graph.to_dict(), f"{run_name}_iter{it}_graph.json",
-            )
-            logger.info(
-                "BuildingGraph (counts=%s) saved to %s",
-                graph.stats(), graph_path,
-            )
+                # --- Stage 2b: deterministic expansion → BuildingGraph ---
+                graph = expand_spatial_to_geometric(spatial)
+                graph_path = self._save_json(
+                    graph.to_dict(), f"{run_name}_iter{it}_review{rc}_graph.json",
+                )
+                logger.info(
+                    "BuildingGraph (counts=%s) saved to %s",
+                    graph.stats(), graph_path,
+                )
+                review_report = design_review(spatial, graph)
+                review_path = self._save_json(
+                    review_report.to_dict(),
+                    f"{run_name}_iter{it}_review{rc}_design_review.json",
+                )
+                logger.info(
+                    "Design review: errors=%d warnings=%d saved to %s",
+                    review_report.failed_checks,
+                    review_report.warning_checks,
+                    review_path,
+                )
+                if review_report.clean:
+                    break
+                if self.skill_registry is not None:
+                    for issue in review_report.issues:
+                        self.skill_registry.mint_from_issue(issue, requirements)
+                    self.skill_registry.save()
+                if rc < self.review_cycles:
+                    review_refinement = self._call_refiner(review_report.to_text())
+
+            assert spatial is not None and graph is not None
+            review_summary = review_report.to_text()
 
             # --- Stage 3: build IFC ---
             ifc_path = os.path.join(self.output_dir, f"{run_name}_iter{it}.ifc")
@@ -240,6 +285,9 @@ class Text2IFCWorkflow:
                     score=0.0,
                     diff_summary=f"BUILDER FAILED: {exc}",
                     refinement=refinement,
+                    design_review_summary=review_summary,
+                    design_review_path=review_path,
+                    review_cycle=review_cycle_used,
                 ))
                 refinement = (
                     f"The previous build failed with: {exc}. "
@@ -275,6 +323,9 @@ class Text2IFCWorkflow:
                     score=report.score,
                     diff_summary=diff_summary,
                     refinement=refinement,
+                    design_review_summary=review_summary,
+                    design_review_path=review_path,
+                    review_cycle=review_cycle_used,
                     **self._ids_to_kwargs(ids_result),
                 )
                 result.iterations.append(iter_res)
@@ -297,7 +348,7 @@ class Text2IFCWorkflow:
                 # --- Stage 5: refiner produces feedback for next iter ---
                 if it < self.max_iterations:
                     combined = self._combine_diff_and_ids(
-                        diff_summary, ids_result,
+                        diff_summary + "\n" + review_summary, ids_result,
                     )
                     refinement = self._call_refiner(combined)
                     logger.info("Refinement: %s", refinement[:200])
@@ -317,6 +368,9 @@ class Text2IFCWorkflow:
                     score=ids_result.pass_rate(),
                     diff_summary="(no GT provided)",
                     refinement=refinement,
+                    design_review_summary=review_summary,
+                    design_review_path=review_path,
+                    review_cycle=review_cycle_used,
                     **self._ids_to_kwargs(ids_result),
                 )
                 result.iterations.append(iter_res)
@@ -334,7 +388,7 @@ class Text2IFCWorkflow:
                     )
                     break
                 if it < self.max_iterations:
-                    combined = self._combine_diff_and_ids("", ids_result)
+                    combined = self._combine_diff_and_ids(review_summary, ids_result)
                     refinement = self._call_refiner(combined)
                     logger.info("Refinement: %s", refinement[:200])
                 else:

@@ -1,0 +1,35 @@
+{
+  "building_type": "Inferred building",
+  "storey_count": 1,
+  "storey_height_mm": 3000,
+  "footprint": {
+    "shape": "rectangle",
+    "x_mm": 10000,
+    "y_mm": 8000
+  },
+  "structural_system": {
+    "kind": "frame",
+    "grid_spacing_x_mm": 6000,
+    "grid_spacing_y_mm": 6000,
+    "core_position": "center"
+  },
+  "vertical_circulation": [],
+  "element_targets": {
+    "walls": 0,
+    "doors": 0,
+    "windows": 0,
+    "columns": 0,
+    "slabs": 1,
+    "roofs": 0,
+    "railings": 0
+  },
+  "materials": {
+    "wall": "Concrete",
+    "slab": "Concrete",
+    "roof": "Concrete"
+  },
+  "layout_notes": [],
+  "assumptions": [
+    "Parsed via deterministic regex; counts taken literally."
+  ]
+}

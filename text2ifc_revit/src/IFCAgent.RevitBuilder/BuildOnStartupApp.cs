@@ -2,6 +2,7 @@ using System;
 using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB.Events;
 using Autodesk.Revit.UI;
+using IFCAgent.RevitBuilder.Runtime;
 
 namespace IFCAgent.RevitBuilder;
 
@@ -25,6 +26,8 @@ public sealed class BuildOnStartupApp : IExternalApplication
         if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable("IFC_AGENT_GRAPH_JSON")))
             return Result.Succeeded;
 
+        DialogGuard.IsRunning = true;
+        DialogGuard.Register(app);
         app.ControlledApplication.ApplicationInitialized += OnAppInitialized;
         return Result.Succeeded;
     }

@@ -1,0 +1,139 @@
+{
+  "passed_checks": 46,
+  "failed_checks": 0,
+  "warning_checks": 12,
+  "issues": [
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s1",
+      "affected_room": "vestibule_left",
+      "metric_value": 0.02,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s1",
+      "affected_room": "vestibule_right",
+      "metric_value": 0.02,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s1",
+      "affected_room": "left_corridor",
+      "metric_value": 0.05,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s1",
+      "affected_room": "right_corridor",
+      "metric_value": 0.05,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s1",
+      "affected_room": "service_corridor",
+      "metric_value": 0.03,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s2",
+      "affected_room": "vestibule_left",
+      "metric_value": 0.02,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s2",
+      "affected_room": "vestibule_right",
+      "metric_value": 0.02,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s2",
+      "affected_room": "left_corridor",
+      "metric_value": 0.05,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s2",
+      "affected_room": "right_corridor",
+      "metric_value": 0.05,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "CORRIDOR_TOO_NARROW",
+      "message": "Corridor area ratio suggests width below 1.5m",
+      "affected_storey": "s2",
+      "affected_room": "service_corridor",
+      "metric_value": 0.03,
+      "metric_target": 0.12,
+      "fix_hint": "Set corridor.area_ratio >= 0.12"
+    },
+    {
+      "category": "structure",
+      "severity": "warning",
+      "rule_id": "COLUMNS_TOO_SPARSE",
+      "message": "Frame/mixed structural system has sparse columns",
+      "affected_storey": "",
+      "affected_room": "",
+      "metric_value": 1.05,
+      "metric_target": 3,
+      "fix_hint": "Increase element_targets.columns or reduce grid spacing"
+    },
+    {
+      "category": "code",
+      "severity": "warning",
+      "rule_id": "EXTERIOR_ROOM_NO_WINDOW",
+      "message": "Exterior room has no windows",
+      "affected_storey": "s1",
+      "affected_room": "lobby",
+      "metric_value": 0,
+      "metric_target": 1,
+      "fix_hint": "Set n_windows >= 1"
+    }
+  ]
+}

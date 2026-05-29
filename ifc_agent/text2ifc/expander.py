@@ -31,6 +31,8 @@ from ifc_agent.text2ifc.schemas import (
     BuildingGraph,
     BuildingMetadata,
     ColumnNode,
+    Footprint,
+    FurnitureNode,
     OpeningNode,
     Point2D,
     RailingNode,
@@ -40,6 +42,7 @@ from ifc_agent.text2ifc.schemas import (
     SpaceNode,
     SpatialGraph,
     SpatialStorey,
+    StructuralSystem,
     StoreyElements,
     StoreyNode,
     WallNode,
@@ -209,6 +212,99 @@ def _exterior_edges_of_rect(r: _Rect, *, fx: float, fy: float,
     return out
 
 
+def _polygon_area(poly: list[Point2D]) -> float:
+    if len(poly) < 3:
+        return 0.0
+    acc = 0.0
+    for i, p in enumerate(poly):
+        q = poly[(i + 1) % len(poly)]
+        acc += p[0] * q[1] - q[0] * p[1]
+    return abs(acc) * 0.5
+
+
+def _point_in_poly(p: Point2D, poly: list[Point2D]) -> bool:
+    """Ray-casting point-in-polygon test."""
+    if len(poly) < 3:
+        return True
+    x, y = p
+    inside = False
+    j = len(poly) - 1
+    for i in range(len(poly)):
+        xi, yi = poly[i]
+        xj, yj = poly[j]
+        if ((yi > y) != (yj > y)):
+            x_cross = (xj - xi) * (y - yi) / ((yj - yi) or 1e-9) + xi
+            if x < x_cross:
+                inside = not inside
+        j = i
+    return inside
+
+
+def _default_boundary(fp: Footprint) -> list[Point2D]:
+    fx, fy = float(fp.x_mm), float(fp.y_mm)
+    shape = fp.shape.lower()
+    if fp.boundary:
+        return list(fp.boundary)
+    if shape == "l":
+        return [(0, 0), (fx, 0), (fx, fy * 0.45), (fx * 0.55, fy * 0.45),
+                (fx * 0.55, fy), (0, fy)]
+    if shape == "u":
+        return [(0, 0), (fx, 0), (fx, fy), (fx * 0.65, fy),
+                (fx * 0.65, fy * 0.40), (fx * 0.35, fy * 0.40),
+                (fx * 0.35, fy), (0, fy)]
+    if shape == "t":
+        return [(0, 0), (fx, 0), (fx, fy * 0.35), (fx * 0.62, fy * 0.35),
+                (fx * 0.62, fy), (fx * 0.38, fy), (fx * 0.38, fy * 0.35),
+                (0, fy * 0.35)]
+    if shape in {"hex", "octagon"}:
+        n = 6 if shape == "hex" else 8
+        cx, cy = fx * 0.5, fy * 0.5
+        rx, ry = fx * 0.5, fy * 0.5
+        return [
+            (cx + rx * math.cos(2 * math.pi * i / n + math.pi / n),
+             cy + ry * math.sin(2 * math.pi * i / n + math.pi / n))
+            for i in range(n)
+        ]
+    return [(0, 0), (fx, 0), (fx, fy), (0, fy)]
+
+
+def _effective_footprint(sg: SpatialGraph, sp: SpatialStorey) -> Footprint:
+    return sp.footprint_override or sg.footprint
+
+
+def _polygon_bsp_partition(
+    rooms: list[RoomNode],
+    fp: Footprint,
+    *,
+    min_room_dim: float = 1500.0,
+) -> dict[str, _Rect]:
+    rects = _bsp_partition(rooms, float(fp.x_mm), float(fp.y_mm),
+                           min_room_dim=min_room_dim)
+    boundary = _default_boundary(fp)
+    voids = fp.voids
+    if fp.shape.lower() == "rectangle" and not fp.boundary and not voids:
+        return rects
+    filtered: dict[str, _Rect] = {}
+    for rid, rect in rects.items():
+        center = (rect.cx, rect.cy)
+        if not _point_in_poly(center, boundary):
+            continue
+        if any(_point_in_poly(center, void) for void in voids):
+            continue
+        filtered[rid] = rect
+    if filtered:
+        return filtered
+    # Degenerate custom footprints should not make the whole building blank.
+    return rects
+
+
+def _footprint_area(fp: Footprint) -> float:
+    area = _polygon_area(_default_boundary(fp)) or float(fp.x_mm) * float(fp.y_mm)
+    for void in fp.voids:
+        area -= _polygon_area(void)
+    return max(0.0, area)
+
+
 # ---------------------------------------------------------------------------
 # BSP room partitioning
 # ---------------------------------------------------------------------------
@@ -330,11 +426,11 @@ def expand_spatial_to_geometric(sg: SpatialGraph,
         layout from element counts.  This keeps backward compatibility
         with older SpatialGraph JSONs.
     """
-    fx = float(sg.footprint.x_mm)
-    fy = float(sg.footprint.y_mm)
-
     storeys: list[StoreyNode] = []
     for sp in sg.storeys:
+        fp = _effective_footprint(sg, sp)
+        fx = float(fp.x_mm)
+        fy = float(fp.y_mm)
         sn = StoreyNode(
             id=str(sp.id),
             name=str(sp.name),
@@ -342,9 +438,10 @@ def expand_spatial_to_geometric(sg: SpatialGraph,
             height=float(sp.height_mm),
         )
         if sp.is_inhabited and sp.rooms:
-            _layout_storey_from_rooms(sn, sp, fx=fx, fy=fy)
+            _layout_storey_from_rooms(sn, sp, fp=fp, structural=sg.structural_system)
         else:
-            _layout_storey_from_counts(sn, sp, fx=fx, fy=fy)
+            _layout_storey_from_counts(sn, sp, fp=fp, structural=sg.structural_system)
+        _emit_shafts(sn, sp, sg.shafts)
         if centered:
             _recenter_storey(sn, dx=-fx / 2.0, dy=-fy / 2.0)
         storeys.append(sn)
@@ -394,10 +491,16 @@ def _recenter_storey(storey: StoreyNode, *, dx: float, dy: float) -> None:
 # Rooms-driven layout (preferred path)
 # ---------------------------------------------------------------------------
 
-def _layout_storey_from_rooms(storey: StoreyNode, sp: SpatialStorey,
-                              *, fx: float, fy: float) -> None:
+def _layout_storey_from_rooms(
+    storey: StoreyNode,
+    sp: SpatialStorey,
+    *,
+    fp: Footprint,
+    structural: StructuralSystem,
+) -> None:
     el = sp.elements
-    rects = _bsp_partition(sp.rooms, fx, fy)
+    fx, fy = float(fp.x_mm), float(fp.y_mm)
+    rects = _polygon_bsp_partition(sp.rooms, fp)
     room_by_id = {r.id: r for r in sp.rooms}
 
     # --- Collect wall segments ---
@@ -580,10 +683,10 @@ def _layout_storey_from_rooms(storey: StoreyNode, sp: SpatialStorey,
     # --- Columns: at room-corner intersections (most architecturally
     # meaningful), then fall back to a regular grid if there aren't enough
     # candidates.
-    _emit_columns(storey, sp, fx=fx, fy=fy, rects=rects)
+    _emit_columns(storey, sp, fx=fx, fy=fy, rects=rects, structural=structural)
 
     # --- Slabs / Roofs / Railings ---
-    _emit_slabs_and_roofs(storey, sp, fx=fx, fy=fy)
+    _emit_slabs_and_roofs(storey, sp, fp=fp)
     _emit_railings(storey, sp, perim=[wall_lookup[w] for ids in
                                        exterior_wall_ids_by_room.values()
                                        for w in ids])
@@ -621,21 +724,27 @@ def _layout_storey_from_rooms(storey: StoreyNode, sp: SpatialStorey,
 # Legacy counts-driven layout (fallback when no rooms are given)
 # ---------------------------------------------------------------------------
 
-def _layout_storey_from_counts(storey: StoreyNode, sp: SpatialStorey,
-                               *, fx: float, fy: float) -> None:
+def _layout_storey_from_counts(
+    storey: StoreyNode,
+    sp: SpatialStorey,
+    *,
+    fp: Footprint,
+    structural: StructuralSystem,
+) -> None:
     el = sp.elements
     hint = sp.layout_hint.lower().strip()
+    fx, fy = float(fp.x_mm), float(fp.y_mm)
 
     if hint == "empty" or not sp.is_inhabited or el.walls <= 0:
-        _emit_slabs_and_roofs(storey, sp, fx=fx, fy=fy)
+        _emit_slabs_and_roofs(storey, sp, fp=fp)
         return
 
     perim = _emit_perimeter_walls(storey, sp, fx=fx, fy=fy)
     _emit_interior_walls(storey, sp, fx=fx, fy=fy, perim_count=len(perim))
     _trim_or_pad_walls(storey, sp, fx=fx, fy=fy)
     _emit_openings(storey, sp)
-    _emit_columns(storey, sp, fx=fx, fy=fy)
-    _emit_slabs_and_roofs(storey, sp, fx=fx, fy=fy)
+    _emit_columns(storey, sp, fx=fx, fy=fy, structural=structural)
+    _emit_slabs_and_roofs(storey, sp, fp=fp)
     _emit_railings(storey, sp, perim=perim)
 
 
@@ -774,16 +883,33 @@ def _emit_openings(storey: StoreyNode, sp: SpatialStorey) -> None:
 def _emit_columns(
     storey: StoreyNode, sp: SpatialStorey, *,
     fx: float, fy: float, rects: Optional[dict[str, _Rect]] = None,
+    structural: Optional[StructuralSystem] = None,
 ) -> None:
     el = sp.elements
+    system = structural or StructuralSystem()
+    kind = (sp.structural_system_override or system.kind or "frame").lower()
     n = el.columns
+    if kind in {"frame", "mixed"} and n <= 0:
+        gx = max(1500.0, float(system.grid_spacing_x_mm))
+        gy = max(1500.0, float(system.grid_spacing_y_mm))
+        n = max(0, (max(1, int(fx // gx)) + 1) * (max(1, int(fy // gy)) + 1))
+    elif kind == "core_tube" and n <= 0:
+        n = 8
+    elif kind == "shear_wall" and n <= 0:
+        n = 0
     if n <= 0:
         return
+
+    if kind in {"core_tube", "mixed"}:
+        cx0, cx1 = fx * 0.42, fx * 0.58
+        cy0, cy1 = fy * 0.38, fy * 0.62
+        candidates = [(cx0, cy0), (cx1, cy0), (cx1, cy1), (cx0, cy1)]
+    else:
+        candidates = []
 
     # If we have rooms, try to drop columns at the interior corners of
     # the partition (i.e. where 3+ rectangles meet) for architectural
     # plausibility.  Fall back to a regular grid otherwise.
-    candidates: list[tuple[float, float]] = []
     if rects:
         xs: set[float] = set()
         ys: set[float] = set()
@@ -794,7 +920,9 @@ def _emit_columns(
         ys.discard(0.0); ys.discard(fy)
         for x in sorted(xs):
             for y in sorted(ys):
-                candidates.append((x, y))
+                p = (x, y)
+                if p not in candidates:
+                    candidates.append(p)
 
     if len(candidates) < n:
         side = int(math.sqrt(n)) or 1
@@ -820,10 +948,10 @@ def _emit_columns(
 
 
 def _emit_slabs_and_roofs(
-    storey: StoreyNode, sp: SpatialStorey, *, fx: float, fy: float,
+    storey: StoreyNode, sp: SpatialStorey, *, fp: Footprint,
 ) -> None:
     el = sp.elements
-    boundary: list[Point2D] = [(0, 0), (fx, 0), (fx, fy), (0, fy)]
+    boundary: list[Point2D] = _default_boundary(fp)
     for k in range(el.slabs):
         storey.slabs.append(SlabNode(
             id=f"{storey.id}-floor{k + 1}",
@@ -842,6 +970,68 @@ def _emit_slabs_and_roofs(
             material=el.roof_material,
             pitch_deg=0,
         ))
+
+
+def _emit_shafts(
+    storey: StoreyNode,
+    sp: SpatialStorey,
+    shafts,
+) -> None:
+    """Materialise each declared shaft as simple enclosure walls plus a
+    stair/elevator proxy.  This is intentionally conservative: the IFC
+    builder already supports proxy furniture objects, while enclosure walls
+    make the shaft visible in downstream geometry and validation.
+    """
+    selected = []
+    explicit = set(sp.shaft_ids)
+    for sh in shafts:
+        if explicit and sh.id not in explicit:
+            continue
+        if sh.storey_ids and sp.id not in sh.storey_ids:
+            continue
+        selected.append(sh)
+    for idx, sh in enumerate(selected):
+        poly = sh.footprint
+        if not poly:
+            sx, sy = sh.shaft_mm
+            offset = idx * (sx + 800.0)
+            poly = [(500.0 + offset, 500.0),
+                    (500.0 + offset + sx, 500.0),
+                    (500.0 + offset + sx, 500.0 + sy),
+                    (500.0 + offset, 500.0 + sy)]
+        for k, p0 in enumerate(poly):
+            p1 = poly[(k + 1) % len(poly)]
+            storey.walls.append(WallNode(
+                id=f"{storey.id}-{sh.id}-wall{k + 1}",
+                start=p0,
+                end=p1,
+                height=storey.height,
+                thickness=sh.wall_thickness_mm,
+                material=sh.material,
+                is_external=False,
+            ))
+        cx = sum(p[0] for p in poly) / len(poly)
+        cy = sum(p[1] for p in poly) / len(poly)
+        if sh.kind == "stair":
+            storey.furniture.append(FurnitureNode(
+                id=f"{storey.id}-{sh.id}-stair",
+                ifc_class="IfcStair",
+                predefined_type="STRAIGHT_RUN_STAIR",
+                name=f"{sh.id} Stair",
+                position=(cx, cy),
+                size=(sh.shaft_mm[0] * 0.8, sh.shaft_mm[1] * 0.8, storey.height),
+                material=sh.material,
+            ))
+        elif sh.kind == "elevator":
+            storey.furniture.append(FurnitureNode(
+                id=f"{storey.id}-{sh.id}-elevator",
+                ifc_class="IfcBuildingElementProxy",
+                predefined_type="ELEVATOR",
+                name=f"{sh.id} Elevator",
+                position=(cx, cy),
+                size=(sh.shaft_mm[0] * 0.75, sh.shaft_mm[1] * 0.75, storey.height),
+                material="Steel",
+            ))
 
 
 def _emit_railings(

@@ -1,0 +1,1170 @@
+{
+  "metadata": {
+    "name": "French Classical Mansion",
+    "description": "A symmetrical hôtel particulier with central peristyle, grand salon, and two wings containing reception rooms and private apartments, featuring two grand staircases and a service stair.",
+    "project_name": "Hôtel Particulier",
+    "site_name": "Default Site",
+    "schema": "IFC4",
+    "length_unit": "MILLIMETRE"
+  },
+  "footprint": {
+    "shape": "custom",
+    "x_mm": 35082.0,
+    "y_mm": 32439.0,
+    "boundary": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        11541.0,
+        0.0
+      ],
+      [
+        14541.0,
+        -3000.0
+      ],
+      [
+        17541.0,
+        -6000.0
+      ],
+      [
+        20541.0,
+        -3000.0
+      ],
+      [
+        23541.0,
+        0.0
+      ],
+      [
+        35082.0,
+        0.0
+      ],
+      [
+        35082.0,
+        21439.0
+      ],
+      [
+        23541.0,
+        21439.0
+      ],
+      [
+        20541.0,
+        23439.0
+      ],
+      [
+        17541.0,
+        26439.0
+      ],
+      [
+        14541.0,
+        23439.0
+      ],
+      [
+        11541.0,
+        21439.0
+      ],
+      [
+        0.0,
+        21439.0
+      ]
+    ],
+    "voids": []
+  },
+  "storeys": [
+    {
+      "id": "s1",
+      "name": "Ground Floor",
+      "elevation_mm": 0.0,
+      "height_mm": 4500.0,
+      "is_inhabited": true,
+      "rooms": [
+        {
+          "id": "lobby",
+          "function": "lobby",
+          "area_ratio": 0.09,
+          "adjacent_to": [
+            "vestibule_left",
+            "vestibule_right",
+            "livingroom"
+          ],
+          "opening_to": [
+            "vestibule_left",
+            "vestibule_right",
+            "livingroom"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 3,
+          "name": "lobby",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "livingroom",
+          "function": "livingroom",
+          "area_ratio": 0.18,
+          "adjacent_to": [
+            "lobby",
+            "vestibule_left",
+            "vestibule_right",
+            "service_corridor"
+          ],
+          "opening_to": [
+            "lobby",
+            "vestibule_left",
+            "vestibule_right",
+            "service_corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 5,
+          "n_external_doors": 2,
+          "name": "livingroom",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "vestibule_left",
+          "function": "corridor",
+          "area_ratio": 0.02,
+          "adjacent_to": [
+            "lobby",
+            "livingroom",
+            "left_corridor"
+          ],
+          "opening_to": [
+            "lobby",
+            "livingroom",
+            "left_corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "vestibule_left",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "vestibule_right",
+          "function": "corridor",
+          "area_ratio": 0.02,
+          "adjacent_to": [
+            "lobby",
+            "livingroom",
+            "right_corridor"
+          ],
+          "opening_to": [
+            "lobby",
+            "livingroom",
+            "right_corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "vestibule_right",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_corridor",
+          "function": "corridor",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "vestibule_left",
+            "left_stairwell",
+            "assembly",
+            "antechamber_left",
+            "cabinet_left",
+            "bedroom_left"
+          ],
+          "opening_to": [
+            "vestibule_left",
+            "left_stairwell",
+            "assembly",
+            "antechamber_left",
+            "cabinet_left",
+            "bedroom_left"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "left_corridor",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "right_corridor",
+          "function": "corridor",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "vestibule_right",
+            "right_stairwell",
+            "dining",
+            "billiard",
+            "social",
+            "cabinet_right"
+          ],
+          "opening_to": [
+            "vestibule_right",
+            "right_stairwell",
+            "dining",
+            "billiard",
+            "social",
+            "cabinet_right"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "right_corridor",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_stairwell",
+          "function": "stairwell",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "left_corridor",
+            "bedroom_left"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "bedroom_left"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "left_stairwell",
+          "shaft_id": "stair_left",
+          "is_core": true
+        },
+        {
+          "id": "right_stairwell",
+          "function": "stairwell",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "right_corridor",
+            "social"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "social"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "right_stairwell",
+          "shaft_id": "stair_right",
+          "is_core": true
+        },
+        {
+          "id": "service_corridor",
+          "function": "corridor",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "livingroom",
+            "service_stairwell",
+            "office",
+            "garderobe"
+          ],
+          "opening_to": [
+            "livingroom",
+            "service_stairwell",
+            "office",
+            "garderobe"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "service_corridor",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "service_stairwell",
+          "function": "stairwell",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "service_corridor"
+          ],
+          "opening_to": [
+            "service_corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "service_stairwell",
+          "shaft_id": "service_stair",
+          "is_core": true
+        },
+        {
+          "id": "office",
+          "function": "office",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "service_corridor",
+            "garderobe"
+          ],
+          "opening_to": [
+            "service_corridor",
+            "garderobe"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 1,
+          "name": "office",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "garderobe",
+          "function": "storage",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "service_corridor",
+            "office"
+          ],
+          "opening_to": [
+            "service_corridor",
+            "office"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "garderobe",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "assembly",
+          "function": "meeting",
+          "area_ratio": 0.07,
+          "adjacent_to": [
+            "left_corridor",
+            "antechamber_left"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "antechamber_left"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 2,
+          "name": "assembly",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "antechamber_left",
+          "function": "livingroom",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "left_corridor",
+            "assembly",
+            "cabinet_left"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "assembly",
+            "cabinet_left"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "antechamber_left",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "cabinet_left",
+          "function": "office",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "left_corridor",
+            "antechamber_left",
+            "bedroom_left"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "antechamber_left",
+            "bedroom_left"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "cabinet_left",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "bedroom_left",
+          "function": "bedroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "left_corridor",
+            "cabinet_left",
+            "left_stairwell"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "cabinet_left",
+            "left_stairwell"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 1,
+          "name": "bedroom_left",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "dining",
+          "function": "diningroom",
+          "area_ratio": 0.07,
+          "adjacent_to": [
+            "right_corridor",
+            "billiard"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "billiard"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 2,
+          "name": "dining",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "billiard",
+          "function": "livingroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "right_corridor",
+            "dining",
+            "social"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "dining",
+            "social"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "billiard",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "social",
+          "function": "livingroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "right_corridor",
+            "billiard",
+            "cabinet_right",
+            "right_stairwell"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "billiard",
+            "cabinet_right",
+            "right_stairwell"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 1,
+          "name": "social",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "cabinet_right",
+          "function": "office",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "right_corridor",
+            "social"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "social"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "cabinet_right",
+          "shaft_id": "",
+          "is_core": false
+        }
+      ],
+      "layout_hint": "central_corridor",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 6,
+        "slabs": 1,
+        "roofs": 0,
+        "railings": 3,
+        "wall_thickness_mm": 300.0,
+        "wall_material": "Stone",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": [],
+      "shaft_ids": [
+        "stair_left",
+        "stair_right",
+        "service_stair"
+      ],
+      "structural_system_override": null,
+      "footprint_override": null
+    },
+    {
+      "id": "s2",
+      "name": "First Floor",
+      "elevation_mm": 4500.0,
+      "height_mm": 4500.0,
+      "is_inhabited": true,
+      "rooms": [
+        {
+          "id": "reception",
+          "function": "reception",
+          "area_ratio": 0.09,
+          "adjacent_to": [
+            "vestibule_left",
+            "vestibule_right",
+            "livingroom"
+          ],
+          "opening_to": [
+            "vestibule_left",
+            "vestibule_right",
+            "livingroom"
+          ],
+          "has_external_facade": true,
+          "n_windows": 5,
+          "n_external_doors": 0,
+          "name": "reception",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "livingroom",
+          "function": "livingroom",
+          "area_ratio": 0.19,
+          "adjacent_to": [
+            "reception",
+            "vestibule_left",
+            "vestibule_right",
+            "service_corridor"
+          ],
+          "opening_to": [
+            "reception",
+            "vestibule_left",
+            "vestibule_right",
+            "service_corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 5,
+          "n_external_doors": 2,
+          "name": "livingroom",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "vestibule_left",
+          "function": "corridor",
+          "area_ratio": 0.02,
+          "adjacent_to": [
+            "reception",
+            "livingroom",
+            "left_corridor"
+          ],
+          "opening_to": [
+            "reception",
+            "livingroom",
+            "left_corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "vestibule_left",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "vestibule_right",
+          "function": "corridor",
+          "area_ratio": 0.02,
+          "adjacent_to": [
+            "reception",
+            "livingroom",
+            "right_corridor"
+          ],
+          "opening_to": [
+            "reception",
+            "livingroom",
+            "right_corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "vestibule_right",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_corridor",
+          "function": "corridor",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "vestibule_left",
+            "left_stairwell",
+            "livingroom_left_front",
+            "antechamber_left",
+            "cabinet_left",
+            "bedroom_left_rear",
+            "bathroom_left"
+          ],
+          "opening_to": [
+            "vestibule_left",
+            "left_stairwell",
+            "livingroom_left_front",
+            "antechamber_left",
+            "cabinet_left",
+            "bedroom_left_rear",
+            "bathroom_left"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "left_corridor",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "right_corridor",
+          "function": "corridor",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "vestibule_right",
+            "right_stairwell",
+            "livingroom_right_front",
+            "antechamber_right",
+            "cabinet_right",
+            "bedroom_right_rear",
+            "bathroom_right"
+          ],
+          "opening_to": [
+            "vestibule_right",
+            "right_stairwell",
+            "livingroom_right_front",
+            "antechamber_right",
+            "cabinet_right",
+            "bedroom_right_rear",
+            "bathroom_right"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "right_corridor",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_stairwell",
+          "function": "stairwell",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "left_corridor",
+            "bedroom_left_rear"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "bedroom_left_rear"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "left_stairwell",
+          "shaft_id": "stair_left",
+          "is_core": true
+        },
+        {
+          "id": "right_stairwell",
+          "function": "stairwell",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "right_corridor",
+            "bedroom_right_rear"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "bedroom_right_rear"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "right_stairwell",
+          "shaft_id": "stair_right",
+          "is_core": true
+        },
+        {
+          "id": "service_corridor",
+          "function": "corridor",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "livingroom",
+            "service_stairwell",
+            "service_room"
+          ],
+          "opening_to": [
+            "livingroom",
+            "service_stairwell",
+            "service_room"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "service_corridor",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "service_stairwell",
+          "function": "stairwell",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "service_corridor"
+          ],
+          "opening_to": [
+            "service_corridor"
+          ],
+          "has_external_facade": false,
+          "n_windows": 0,
+          "n_external_doors": 0,
+          "name": "service_stairwell",
+          "shaft_id": "service_stair",
+          "is_core": true
+        },
+        {
+          "id": "service_room",
+          "function": "service",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "service_corridor"
+          ],
+          "opening_to": [
+            "service_corridor"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "service_room",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "livingroom_left_front",
+          "function": "livingroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "left_corridor",
+            "antechamber_left"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "antechamber_left"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 1,
+          "name": "livingroom_left_front",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "antechamber_left",
+          "function": "livingroom",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "left_corridor",
+            "livingroom_left_front",
+            "cabinet_left"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "livingroom_left_front",
+            "cabinet_left"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "antechamber_left",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "cabinet_left",
+          "function": "office",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "left_corridor",
+            "antechamber_left",
+            "bedroom_left_rear"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "antechamber_left",
+            "bedroom_left_rear"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "cabinet_left",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "bedroom_left_rear",
+          "function": "bedroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "left_corridor",
+            "cabinet_left",
+            "bathroom_left",
+            "left_stairwell"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "cabinet_left",
+            "bathroom_left",
+            "left_stairwell"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 1,
+          "name": "bedroom_left_rear",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "bathroom_left",
+          "function": "bathroom",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "left_corridor",
+            "bedroom_left_rear"
+          ],
+          "opening_to": [
+            "left_corridor",
+            "bedroom_left_rear"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "bathroom_left",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "livingroom_right_front",
+          "function": "livingroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "right_corridor",
+            "antechamber_right"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "antechamber_right"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 1,
+          "name": "livingroom_right_front",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "antechamber_right",
+          "function": "livingroom",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "right_corridor",
+            "livingroom_right_front",
+            "cabinet_right"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "livingroom_right_front",
+            "cabinet_right"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "antechamber_right",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "cabinet_right",
+          "function": "office",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "right_corridor",
+            "antechamber_right",
+            "bedroom_right_rear"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "antechamber_right",
+            "bedroom_right_rear"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "cabinet_right",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "bedroom_right_rear",
+          "function": "bedroom",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "right_corridor",
+            "cabinet_right",
+            "bathroom_right",
+            "right_stairwell"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "cabinet_right",
+            "bathroom_right",
+            "right_stairwell"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 1,
+          "name": "bedroom_right_rear",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "bathroom_right",
+          "function": "bathroom",
+          "area_ratio": 0.03,
+          "adjacent_to": [
+            "right_corridor",
+            "bedroom_right_rear"
+          ],
+          "opening_to": [
+            "right_corridor",
+            "bedroom_right_rear"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "bathroom_right",
+          "shaft_id": "",
+          "is_core": false
+        }
+      ],
+      "layout_hint": "central_corridor",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 6,
+        "slabs": 1,
+        "roofs": 0,
+        "railings": 3,
+        "wall_thickness_mm": 300.0,
+        "wall_material": "Stone",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": [],
+      "shaft_ids": [
+        "stair_left",
+        "stair_right",
+        "service_stair"
+      ],
+      "structural_system_override": null,
+      "footprint_override": null
+    },
+    {
+      "id": "s3",
+      "name": "Roof Level",
+      "elevation_mm": 9000.0,
+      "height_mm": 0.0,
+      "is_inhabited": false,
+      "rooms": [],
+      "layout_hint": "empty",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 0,
+        "roofs": 3,
+        "railings": 0,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Concrete",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": [],
+      "shaft_ids": [],
+      "structural_system_override": null,
+      "footprint_override": null
+    }
+  ],
+  "shafts": [
+    {
+      "id": "stair_left",
+      "kind": "stair",
+      "storey_ids": [
+        "s1",
+        "s2"
+      ],
+      "footprint": [
+        [
+          3000.0,
+          8000.0
+        ],
+        [
+          6000.0,
+          8000.0
+        ],
+        [
+          6000.0,
+          14000.0
+        ],
+        [
+          3000.0,
+          14000.0
+        ]
+      ],
+      "shaft_mm": [
+        3000.0,
+        6000.0
+      ],
+      "wall_thickness_mm": 300.0,
+      "material": "Stone"
+    },
+    {
+      "id": "stair_right",
+      "kind": "stair",
+      "storey_ids": [
+        "s1",
+        "s2"
+      ],
+      "footprint": [
+        [
+          29082.0,
+          8000.0
+        ],
+        [
+          32082.0,
+          8000.0
+        ],
+        [
+          32082.0,
+          14000.0
+        ],
+        [
+          29082.0,
+          14000.0
+        ]
+      ],
+      "shaft_mm": [
+        3000.0,
+        6000.0
+      ],
+      "wall_thickness_mm": 300.0,
+      "material": "Stone"
+    },
+    {
+      "id": "service_stair",
+      "kind": "service",
+      "storey_ids": [
+        "s1",
+        "s2"
+      ],
+      "footprint": [
+        [
+          16541.0,
+          16000.0
+        ],
+        [
+          18541.0,
+          16000.0
+        ],
+        [
+          18541.0,
+          20000.0
+        ],
+        [
+          16541.0,
+          20000.0
+        ]
+      ],
+      "shaft_mm": [
+        2000.0,
+        4000.0
+      ],
+      "wall_thickness_mm": 300.0,
+      "material": "Stone"
+    }
+  ],
+  "structural_system": {
+    "kind": "mixed",
+    "grid_spacing_x_mm": 3000.0,
+    "grid_spacing_y_mm": 4000.0,
+    "core_position": "center"
+  }
+}

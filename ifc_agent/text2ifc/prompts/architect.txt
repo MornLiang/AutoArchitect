@@ -20,6 +20,11 @@ describe ROOMS, their relative sizes, and how they connect.
     for WC, ``stairwell`` for vertical-circulation enclosures.
   * Rooms that touch the building perimeter can carry external windows
     (n_windows) and external doors (n_external_doors).
+  * The graph may include cross-storey shafts and a structural_system.
+    Use shafts for stairs/elevators instead of modelling each as an
+    ordinary isolated room.  Rooms can still reference shaft_id and is_core.
+  * Footprint supports boundary and voids for L/U/T/custom footprints and
+    atria.  Keep coordinates only in footprint/shaft polygons, not in rooms.
   * The topmost storey is typically a non-inhabited roof level
     (is_inhabited=false, rooms=[]).
   * All linear values are in millimetres, angles in degrees.
@@ -37,8 +42,27 @@ describe ROOMS, their relative sizes, and how they connect.
   "footprint": {
     "shape": "rectangle",
     "x_mm": 15000,
-    "y_mm": 24000
+    "y_mm": 24000,
+    "boundary": [],
+    "voids": []
   },
+  "structural_system": {
+    "kind": "frame",
+    "grid_spacing_x_mm": 6000,
+    "grid_spacing_y_mm": 6000,
+    "core_position": "center"
+  },
+  "shafts": [
+    {
+      "id": "stair_1",
+      "kind": "stair",
+      "storey_ids": ["s1", "s2"],
+      "footprint": [[700, 700], [2900, 700], [2900, 4900], [700, 4900]],
+      "shaft_mm": [2200, 4200],
+      "wall_thickness_mm": 200,
+      "material": "Concrete"
+    }
+  ],
   "storeys": [
     {
       "id": "s1",
@@ -55,7 +79,9 @@ describe ROOMS, their relative sizes, and how they connect.
           "adjacent_to": ["lobby", "office_n1", "office_s1", "..."],
           "opening_to": ["lobby", "office_n1", "office_s1", "..."],
           "has_external_facade": false,
-          "n_windows": 0
+          "n_windows": 0,
+          "shaft_id": "",
+          "is_core": false
         },
         {
           "id": "lobby",
@@ -83,7 +109,9 @@ describe ROOMS, their relative sizes, and how they connect.
         "railings": 2,
         "wall_thickness_mm": 200,
         "wall_material": "Concrete"
-      }
+      },
+      "shaft_ids": ["stair_1"],
+      "structural_system_override": null
     },
     {
       "id": "s2",
@@ -119,6 +147,8 @@ describe ROOMS, their relative sizes, and how they connect.
   5. Use 1 corridor per inhabited storey; corridor should connect to
      ALL other rooms via opening_to so the building remains traversable.
   6. NEVER emit start/end/position/boundary or any coordinate arrays.
+     Exception: footprint.boundary/voids and shafts[].footprint are allowed
+     because they describe massing/core polygons, not room coordinates.
   7. Output a single JSON object — no markdown, no commentary.
 
 # Sizing heuristics (for ballpark area_ratio)

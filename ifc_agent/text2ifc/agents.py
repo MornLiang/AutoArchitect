@@ -205,6 +205,15 @@ def _autorepair_spatial(sg: dict, requirements: dict | None = None) -> dict:
     req_fp = req.get("footprint", {}) or {}
     fp.setdefault("x_mm", req_fp.get("x_mm", 10000))
     fp.setdefault("y_mm", req_fp.get("y_mm", 8000))
+    fp.setdefault("boundary", req_fp.get("boundary", []))
+    fp.setdefault("voids", req_fp.get("voids", []))
+    sg.setdefault("structural_system", req.get("structural_system", {
+        "kind": "frame",
+        "grid_spacing_x_mm": 6000,
+        "grid_spacing_y_mm": 6000,
+        "core_position": "center",
+    }))
+    sg.setdefault("shafts", [])
 
     storeys = sg.get("storeys") or []
     if not isinstance(storeys, list) or not storeys:
@@ -219,6 +228,7 @@ def _autorepair_spatial(sg: dict, requirements: dict | None = None) -> dict:
         s.setdefault("elevation_mm", idx * storey_height)
         s.setdefault("height_mm", storey_height)
         s.setdefault("notes", [])
+        s.setdefault("shaft_ids", [])
 
         # Common LLM key-name mistakes
         if "elevation" in s and "elevation_mm" not in s:
@@ -242,6 +252,7 @@ def _autorepair_spatial(sg: dict, requirements: dict | None = None) -> dict:
         for k in ("walls", "doors", "windows", "columns",
                   "slabs", "roofs", "railings"):
             elems.setdefault(k, 0)
+        elems.setdefault("wall_thickness_mm", 200)
 
     return sg
 
@@ -260,6 +271,8 @@ def _autorepair_rooms(rooms: list[dict]) -> None:
         r.setdefault("has_external_facade", False)
         r.setdefault("n_windows", 0)
         r.setdefault("n_external_doors", 0)
+        r.setdefault("shaft_id", "")
+        r.setdefault("is_core", False)
         by_id[rid] = r
 
     # Symmetrise adjacency

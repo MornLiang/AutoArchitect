@@ -5,6 +5,7 @@ using Autodesk.Revit.ApplicationServices;
 using Autodesk.Revit.DB;
 using IFCAgent.RevitBuilder.Builders;
 using IFCAgent.RevitBuilder.Export;
+using IFCAgent.RevitBuilder.Runtime;
 using IFCAgent.RevitBuilder.Schemas;
 
 namespace IFCAgent.RevitBuilder;
@@ -28,25 +29,31 @@ public static class Pipeline
 
         var ctx = new BuildContext { Doc = doc, Graph = graph };
 
-        using (var tx = new Transaction(doc, "IFCAgent.Build"))
+        RequireCommitted(doc, "project", () => ProjectBuilder.Apply(ctx));
+        foreach (var storey in graph.Storeys)
         {
-            tx.Start();
+            Level? level = null;
+            RequireCommitted(doc, $"level:{storey.Id}",
+                () => level = LevelBuilder.GetOrCreate(ctx, storey));
+            if (level == null)
+                throw new InvalidOperationException($"Failed to create level {storey.Id}.");
 
-            ProjectBuilder.Apply(ctx);
-            foreach (var storey in graph.Storeys)
-            {
-                var level = LevelBuilder.GetOrCreate(ctx, storey);
-                WallBuilder.BuildAll(ctx, storey, level);
-                OpeningBuilder.BuildAll(ctx, storey, level);
-                ColumnBuilder.BuildAll(ctx, storey, level);
-                FloorBuilder.BuildAll(ctx, storey, level);
-                RoofBuilder.BuildAll(ctx, storey, level);
-                RailingBuilder.BuildAll(ctx, storey, level);
-                SpaceBuilder.BuildAll(ctx, storey, level);
-                FurnitureBuilder.BuildAll(ctx, storey, level);
-            }
-
-            tx.Commit();
+            RequireCommitted(doc, $"walls:{storey.Id}",
+                () => WallBuilder.BuildAll(ctx, storey, level));
+            RequireCommitted(doc, $"openings:{storey.Id}",
+                () => OpeningBuilder.BuildAll(ctx, storey, level));
+            RequireCommitted(doc, $"columns:{storey.Id}",
+                () => ColumnBuilder.BuildAll(ctx, storey, level));
+            RequireCommitted(doc, $"floors:{storey.Id}",
+                () => FloorBuilder.BuildAll(ctx, storey, level));
+            RequireCommitted(doc, $"roofs:{storey.Id}",
+                () => RoofBuilder.BuildAll(ctx, storey, level));
+            RequireCommitted(doc, $"railings:{storey.Id}",
+                () => RailingBuilder.BuildAll(ctx, storey, level));
+            RequireCommitted(doc, $"spaces:{storey.Id}",
+                () => SpaceBuilder.BuildAll(ctx, storey, level));
+            RequireCommitted(doc, $"furniture:{storey.Id}",
+                () => FurnitureBuilder.BuildAll(ctx, storey, level));
         }
 
         Directory.CreateDirectory(Path.GetDirectoryName(rvtOut)!);
@@ -80,5 +87,12 @@ public static class Pipeline
             File.WriteAllText(path!, body);
         }
         catch { /* best-effort; don't mask the real exit */ }
+    }
+
+    private static void RequireCommitted(Document doc, string actionId, Action action)
+    {
+        var result = SafeTransaction.Run(doc, actionId, action);
+        if (result.Status != "committed")
+            throw new InvalidOperationException(result.ToJson());
     }
 }

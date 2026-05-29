@@ -1,0 +1,4575 @@
+{
+  "metadata": {
+    "name": "French Classical Mansion",
+    "description": "A symmetrical hôtel particulier with central peristyle, grand salon, and two wings containing reception rooms and private apartments, featuring two grand staircases and a service stair.",
+    "project_name": "Hôtel Particulier",
+    "site_name": "Default Site",
+    "schema": "IFC4",
+    "length_unit": "MILLIMETRE"
+  },
+  "storeys": [
+    {
+      "id": "s1",
+      "name": "Ground Floor",
+      "elevation": 0.0,
+      "height": 4500.0,
+      "walls": [
+        {
+          "id": "s1-iw0",
+          "start": [
+            -17541.0,
+            -750.0
+          ],
+          "end": [
+            -15348.375,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw1",
+          "start": [
+            -15348.375,
+            -750.0
+          ],
+          "end": [
+            -13155.75,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw2",
+          "start": [
+            -13155.75,
+            -750.0
+          ],
+          "end": [
+            -10963.125000000002,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw3",
+          "start": [
+            -10963.125000000002,
+            -750.0
+          ],
+          "end": [
+            -5847.000000000002,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw4",
+          "start": [
+            -5847.000000000002,
+            -750.0
+          ],
+          "end": [
+            -2923.500000000002,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw5",
+          "start": [
+            -2923.500000000002,
+            -750.0
+          ],
+          "end": [
+            -730.8750000000036,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw6",
+          "start": [
+            -730.8750000000036,
+            -750.0
+          ],
+          "end": [
+            2923.4999999999964,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw7",
+          "start": [
+            2923.4999999999964,
+            -750.0
+          ],
+          "end": [
+            8039.624999999996,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw8",
+          "start": [
+            8039.624999999996,
+            -750.0
+          ],
+          "end": [
+            11693.999999999996,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw9",
+          "start": [
+            11693.999999999996,
+            -750.0
+          ],
+          "end": [
+            15348.375,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw10",
+          "start": [
+            15348.375,
+            -750.0
+          ],
+          "end": [
+            17541.0,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw11",
+          "start": [
+            -15348.375,
+            -16219.5
+          ],
+          "end": [
+            -15348.375,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw12",
+          "start": [
+            -13155.75,
+            -16219.5
+          ],
+          "end": [
+            -13155.75,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw13",
+          "start": [
+            -10963.125000000002,
+            -16219.5
+          ],
+          "end": [
+            -10963.125000000002,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw14",
+          "start": [
+            -5847.000000000002,
+            -16219.5
+          ],
+          "end": [
+            -5847.000000000002,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw15",
+          "start": [
+            -2923.500000000002,
+            -16219.5
+          ],
+          "end": [
+            -2923.500000000002,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw16",
+          "start": [
+            -730.8750000000036,
+            -16219.5
+          ],
+          "end": [
+            -730.8750000000036,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw17",
+          "start": [
+            2923.4999999999964,
+            -16219.5
+          ],
+          "end": [
+            2923.4999999999964,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw18",
+          "start": [
+            8039.624999999996,
+            -16219.5
+          ],
+          "end": [
+            8039.624999999996,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw19",
+          "start": [
+            11693.999999999996,
+            -16219.5
+          ],
+          "end": [
+            11693.999999999996,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw20",
+          "start": [
+            15348.375,
+            -16219.5
+          ],
+          "end": [
+            15348.375,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-ew21",
+          "start": [
+            -17541.0,
+            -750.0
+          ],
+          "end": [
+            -17541.0,
+            750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew22",
+          "start": [
+            17541.0,
+            -750.0
+          ],
+          "end": [
+            17541.0,
+            750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew23",
+          "start": [
+            -17541.0,
+            -16219.5
+          ],
+          "end": [
+            -15348.375,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew24",
+          "start": [
+            -17541.0,
+            -16219.5
+          ],
+          "end": [
+            -17541.0,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew25",
+          "start": [
+            -15348.375,
+            -16219.5
+          ],
+          "end": [
+            -13155.75,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew26",
+          "start": [
+            -13155.75,
+            -16219.5
+          ],
+          "end": [
+            -10963.125000000002,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew27",
+          "start": [
+            -10963.125000000002,
+            -16219.5
+          ],
+          "end": [
+            -5847.000000000002,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew28",
+          "start": [
+            -5847.000000000002,
+            -16219.5
+          ],
+          "end": [
+            -2923.500000000002,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew29",
+          "start": [
+            -2923.500000000002,
+            -16219.5
+          ],
+          "end": [
+            -730.8750000000036,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew30",
+          "start": [
+            -730.8750000000036,
+            -16219.5
+          ],
+          "end": [
+            2923.4999999999964,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew31",
+          "start": [
+            2923.4999999999964,
+            -16219.5
+          ],
+          "end": [
+            8039.624999999996,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew32",
+          "start": [
+            8039.624999999996,
+            -16219.5
+          ],
+          "end": [
+            11693.999999999996,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew33",
+          "start": [
+            11693.999999999996,
+            -16219.5
+          ],
+          "end": [
+            15348.375,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew34",
+          "start": [
+            15348.375,
+            -16219.5
+          ],
+          "end": [
+            17541.0,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew35",
+          "start": [
+            17541.0,
+            -16219.5
+          ],
+          "end": [
+            17541.0,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s1-stair_left-wall1",
+          "start": [
+            -14541.0,
+            -8219.5
+          ],
+          "end": [
+            -11541.0,
+            -8219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-stair_left-wall2",
+          "start": [
+            -11541.0,
+            -8219.5
+          ],
+          "end": [
+            -11541.0,
+            -2219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-stair_left-wall3",
+          "start": [
+            -11541.0,
+            -2219.5
+          ],
+          "end": [
+            -14541.0,
+            -2219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-stair_left-wall4",
+          "start": [
+            -14541.0,
+            -2219.5
+          ],
+          "end": [
+            -14541.0,
+            -8219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-stair_right-wall1",
+          "start": [
+            11541.0,
+            -8219.5
+          ],
+          "end": [
+            14541.0,
+            -8219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-stair_right-wall2",
+          "start": [
+            14541.0,
+            -8219.5
+          ],
+          "end": [
+            14541.0,
+            -2219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-stair_right-wall3",
+          "start": [
+            14541.0,
+            -2219.5
+          ],
+          "end": [
+            11541.0,
+            -2219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-stair_right-wall4",
+          "start": [
+            11541.0,
+            -2219.5
+          ],
+          "end": [
+            11541.0,
+            -8219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-service_stair-wall1",
+          "start": [
+            -1000.0,
+            -219.5
+          ],
+          "end": [
+            1000.0,
+            -219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-service_stair-wall2",
+          "start": [
+            1000.0,
+            -219.5
+          ],
+          "end": [
+            1000.0,
+            3780.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-service_stair-wall3",
+          "start": [
+            1000.0,
+            3780.5
+          ],
+          "end": [
+            -1000.0,
+            3780.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s1-service_stair-wall4",
+          "start": [
+            -1000.0,
+            3780.5
+          ],
+          "end": [
+            -1000.0,
+            -219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        }
+      ],
+      "openings": [
+        {
+          "id": "s1-d1",
+          "host_wall": "s1-iw12",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d2",
+          "host_wall": "s1-iw14",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d3",
+          "host_wall": "s1-iw15",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d4",
+          "host_wall": "s1-iw16",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d5",
+          "host_wall": "s1-iw18",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d6",
+          "host_wall": "s1-iw19",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d7",
+          "host_wall": "s1-iw20",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d8",
+          "host_wall": "s1-ew25",
+          "kind": "door",
+          "offset": 646.3124999999998,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d9",
+          "host_wall": "s1-ew27",
+          "kind": "door",
+          "offset": 2108.0625,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d10",
+          "host_wall": "s1-ew27",
+          "kind": "door",
+          "offset": 2108.0625,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d11",
+          "host_wall": "s1-ew30",
+          "kind": "door",
+          "offset": 1377.1875,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d12",
+          "host_wall": "s1-ew31",
+          "kind": "door",
+          "offset": 2108.0625,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d13",
+          "host_wall": "s1-ew31",
+          "kind": "door",
+          "offset": 2108.0625,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d14",
+          "host_wall": "s1-ew33",
+          "kind": "door",
+          "offset": 1377.1875000000018,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-w1",
+          "host_wall": "s1-ew25",
+          "kind": "window",
+          "offset": 130.87499999999977,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w2",
+          "host_wall": "s1-ew25",
+          "kind": "window",
+          "offset": 861.7499999999995,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w3",
+          "host_wall": "s1-ew26",
+          "kind": "window",
+          "offset": 130.87499999999966,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w4",
+          "host_wall": "s1-ew26",
+          "kind": "window",
+          "offset": 861.7499999999993,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w5",
+          "host_wall": "s1-ew27",
+          "kind": "window",
+          "offset": 679.03125,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w6",
+          "host_wall": "s1-ew27",
+          "kind": "window",
+          "offset": 1958.0625,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w7",
+          "host_wall": "s1-ew27",
+          "kind": "window",
+          "offset": 3237.09375,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w8",
+          "host_wall": "s1-ew28",
+          "kind": "window",
+          "offset": 374.5,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w9",
+          "host_wall": "s1-ew28",
+          "kind": "window",
+          "offset": 1349.0,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w10",
+          "host_wall": "s1-ew29",
+          "kind": "window",
+          "offset": 130.87499999999932,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w11",
+          "host_wall": "s1-ew29",
+          "kind": "window",
+          "offset": 861.7499999999986,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w12",
+          "host_wall": "s1-ew30",
+          "kind": "window",
+          "offset": 313.59375,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w13",
+          "host_wall": "s1-ew30",
+          "kind": "window",
+          "offset": 1227.1875,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w14",
+          "host_wall": "s1-ew30",
+          "kind": "window",
+          "offset": 2140.78125,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w15",
+          "host_wall": "s1-ew31",
+          "kind": "window",
+          "offset": 679.03125,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w16",
+          "host_wall": "s1-ew31",
+          "kind": "window",
+          "offset": 1958.0625,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w17",
+          "host_wall": "s1-ew31",
+          "kind": "window",
+          "offset": 3237.09375,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w18",
+          "host_wall": "s1-ew32",
+          "kind": "window",
+          "offset": 618.125,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w19",
+          "host_wall": "s1-ew32",
+          "kind": "window",
+          "offset": 1836.25,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w20",
+          "host_wall": "s1-ew33",
+          "kind": "window",
+          "offset": 313.5937500000009,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w21",
+          "host_wall": "s1-ew33",
+          "kind": "window",
+          "offset": 1227.1875000000018,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w22",
+          "host_wall": "s1-ew33",
+          "kind": "window",
+          "offset": 2140.7812500000027,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w23",
+          "host_wall": "s1-ew34",
+          "kind": "window",
+          "offset": 496.3125,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w24",
+          "host_wall": "s1-ew35",
+          "kind": "window",
+          "offset": 7134.75,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        }
+      ],
+      "columns": [
+        {
+          "id": "s1-c1",
+          "position": [
+            -2806.5600000000013,
+            -3892.6800000000003
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s1-c2",
+          "position": [
+            2806.5599999999977,
+            -3892.6800000000003
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s1-c3",
+          "position": [
+            2806.5599999999977,
+            3892.6800000000003
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s1-c4",
+          "position": [
+            -2806.5600000000013,
+            3892.6800000000003
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s1-c5",
+          "position": [
+            -15348.375,
+            -750.0
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s1-c6",
+          "position": [
+            -15348.375,
+            750.0
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        }
+      ],
+      "slabs": [
+        {
+          "id": "s1-floor1",
+          "boundary": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -6000.0,
+              -16219.5
+            ],
+            [
+              -3000.0,
+              -19219.5
+            ],
+            [
+              0.0,
+              -22219.5
+            ],
+            [
+              3000.0,
+              -19219.5
+            ],
+            [
+              6000.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              5219.5
+            ],
+            [
+              6000.0,
+              5219.5
+            ],
+            [
+              3000.0,
+              7219.5
+            ],
+            [
+              0.0,
+              10219.5
+            ],
+            [
+              -3000.0,
+              7219.5
+            ],
+            [
+              -6000.0,
+              5219.5
+            ],
+            [
+              -17541.0,
+              5219.5
+            ]
+          ],
+          "thickness": 200.0,
+          "elevation": 0,
+          "material": "Concrete",
+          "predefined_type": "FLOOR"
+        }
+      ],
+      "roofs": [],
+      "railings": [
+        {
+          "id": "s1-rail1",
+          "polyline": [
+            [
+              -17541.0,
+              -750.0
+            ],
+            [
+              -17541.0,
+              750.0
+            ]
+          ],
+          "height": 1100.0,
+          "elevation": 0,
+          "material": "Steel"
+        },
+        {
+          "id": "s1-rail2",
+          "polyline": [
+            [
+              17541.0,
+              -750.0
+            ],
+            [
+              17541.0,
+              750.0
+            ]
+          ],
+          "height": 1100.0,
+          "elevation": 0,
+          "material": "Steel"
+        },
+        {
+          "id": "s1-rail3",
+          "polyline": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -15348.375,
+              -16219.5
+            ]
+          ],
+          "height": 1100.0,
+          "elevation": 0,
+          "material": "Steel"
+        }
+      ],
+      "spaces": [
+        {
+          "id": "vestibule_left",
+          "name": "vestibule_left",
+          "function": "corridor",
+          "boundary": [
+            [
+              -17541.0,
+              -750.0
+            ],
+            [
+              17541.0,
+              -750.0
+            ],
+            [
+              17541.0,
+              750.0
+            ],
+            [
+              -17541.0,
+              750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "",
+          "window_side": "-x"
+        },
+        {
+          "id": "service_stairwell",
+          "name": "service_stairwell",
+          "function": "stairwell",
+          "boundary": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -15348.375,
+              -16219.5
+            ],
+            [
+              -15348.375,
+              -750.0
+            ],
+            [
+              -17541.0,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "service_stairwell_flight_up",
+              "ifc_class": "IfcStairFlight",
+              "predefined_type": "STRAIGHT",
+              "name": "Stair Flight Up",
+              "position": [
+                -16842.84375,
+                -8484.75
+              ],
+              "size": [
+                996.3124999999998,
+                3600.0,
+                1500.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Concrete"
+            },
+            {
+              "id": "service_stairwell_flight_dn",
+              "ifc_class": "IfcStairFlight",
+              "predefined_type": "STRAIGHT",
+              "name": "Stair Flight Down",
+              "position": [
+                -16046.53125,
+                -8484.75
+              ],
+              "size": [
+                996.3124999999998,
+                3600.0,
+                1500.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Concrete"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-x"
+        },
+        {
+          "id": "office",
+          "name": "office",
+          "function": "office",
+          "boundary": [
+            [
+              -15348.375,
+              -16219.5
+            ],
+            [
+              -13155.75,
+              -16219.5
+            ],
+            [
+              -13155.75,
+              -750.0
+            ],
+            [
+              -15348.375,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "+x",
+          "window_side": "-y"
+        },
+        {
+          "id": "garderobe",
+          "name": "garderobe",
+          "function": "storage",
+          "boundary": [
+            [
+              -13155.75,
+              -16219.5
+            ],
+            [
+              -10963.125000000002,
+              -16219.5
+            ],
+            [
+              -10963.125000000002,
+              -750.0
+            ],
+            [
+              -13155.75,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "assembly",
+          "name": "assembly",
+          "function": "meeting",
+          "boundary": [
+            [
+              -10963.125000000002,
+              -16219.5
+            ],
+            [
+              -5847.000000000002,
+              -16219.5
+            ],
+            [
+              -5847.000000000002,
+              -750.0
+            ],
+            [
+              -10963.125000000002,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "assembly_table",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Meeting Table",
+              "position": [
+                -8405.062500000002,
+                -8484.75
+              ],
+              "size": [
+                2400.0,
+                1200.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "assembly_mchair_n_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N1",
+              "position": [
+                -9305.062500000002,
+                -9434.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "assembly_mchair_s_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S1",
+              "position": [
+                -9305.062500000002,
+                -7534.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "assembly_mchair_n_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N2",
+              "position": [
+                -8705.062500000002,
+                -9434.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "assembly_mchair_s_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S2",
+              "position": [
+                -8705.062500000002,
+                -7534.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "assembly_mchair_n_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N3",
+              "position": [
+                -8105.062500000002,
+                -9434.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "assembly_mchair_s_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S3",
+              "position": [
+                -8105.062500000002,
+                -7534.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "assembly_mchair_n_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N4",
+              "position": [
+                -7505.062500000002,
+                -9434.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "assembly_mchair_s_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S4",
+              "position": [
+                -7505.062500000002,
+                -7534.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+x",
+          "window_side": "-y"
+        },
+        {
+          "id": "antechamber_left",
+          "name": "antechamber_left",
+          "function": "livingroom",
+          "boundary": [
+            [
+              -5847.000000000002,
+              -16219.5
+            ],
+            [
+              -2923.500000000002,
+              -16219.5
+            ],
+            [
+              -2923.500000000002,
+              -750.0
+            ],
+            [
+              -5847.000000000002,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "antechamber_left_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Sofa",
+              "position": [
+                -4385.250000000002,
+                -15194.5
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            },
+            {
+              "id": "antechamber_left_coffee",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Coffee Table",
+              "position": [
+                -4385.250000000002,
+                -8484.75
+              ],
+              "size": [
+                1200.0,
+                600.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "cabinet_left",
+          "name": "cabinet_left",
+          "function": "office",
+          "boundary": [
+            [
+              -2923.500000000002,
+              -16219.5
+            ],
+            [
+              -730.8750000000036,
+              -16219.5
+            ],
+            [
+              -730.8750000000036,
+              -750.0
+            ],
+            [
+              -2923.500000000002,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "bedroom_left",
+          "name": "bedroom_left",
+          "function": "bedroom",
+          "boundary": [
+            [
+              -730.8750000000036,
+              -16219.5
+            ],
+            [
+              2923.4999999999964,
+              -16219.5
+            ],
+            [
+              2923.4999999999964,
+              -750.0
+            ],
+            [
+              -730.8750000000036,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "bedroom_left_bed",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "BED",
+              "name": "Bed",
+              "position": [
+                1096.3124999999964,
+                -14819.5
+              ],
+              "size": [
+                1800.0,
+                2000.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "bedroom_left_wardrobe",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SHELF",
+              "name": "Wardrobe",
+              "position": [
+                2573.4999999999964,
+                -8484.75
+              ],
+              "size": [
+                600.0,
+                1800.0,
+                2200.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "dining",
+          "name": "dining",
+          "function": "diningroom",
+          "boundary": [
+            [
+              2923.4999999999964,
+              -16219.5
+            ],
+            [
+              8039.624999999996,
+              -16219.5
+            ],
+            [
+              8039.624999999996,
+              -750.0
+            ],
+            [
+              2923.4999999999964,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "dining_dining_table",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Dining Table",
+              "position": [
+                5481.562499999996,
+                -8484.75
+              ],
+              "size": [
+                1600.0,
+                800.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "dining_dchair_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Dining Chair 1",
+              "position": [
+                4948.229166666664,
+                -9234.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "dining_dchair_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Dining Chair 2",
+              "position": [
+                6014.8958333333285,
+                -9234.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "dining_dchair_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Dining Chair 3",
+              "position": [
+                4948.229166666664,
+                -7734.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "dining_dchair_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Dining Chair 4",
+              "position": [
+                6014.8958333333285,
+                -7734.75
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+x",
+          "window_side": "-y"
+        },
+        {
+          "id": "billiard",
+          "name": "billiard",
+          "function": "livingroom",
+          "boundary": [
+            [
+              8039.624999999996,
+              -16219.5
+            ],
+            [
+              11693.999999999996,
+              -16219.5
+            ],
+            [
+              11693.999999999996,
+              -750.0
+            ],
+            [
+              8039.624999999996,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "billiard_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Sofa",
+              "position": [
+                9866.812499999996,
+                -15194.5
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            },
+            {
+              "id": "billiard_coffee",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Coffee Table",
+              "position": [
+                9866.812499999996,
+                -8484.75
+              ],
+              "size": [
+                1200.0,
+                600.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "social",
+          "name": "social",
+          "function": "livingroom",
+          "boundary": [
+            [
+              11693.999999999996,
+              -16219.5
+            ],
+            [
+              15348.375,
+              -16219.5
+            ],
+            [
+              15348.375,
+              -750.0
+            ],
+            [
+              11693.999999999996,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "social_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Sofa",
+              "position": [
+                13521.1875,
+                -15194.5
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            },
+            {
+              "id": "social_coffee",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Coffee Table",
+              "position": [
+                13521.1875,
+                -8484.75
+              ],
+              "size": [
+                1200.0,
+                600.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "cabinet_right",
+          "name": "cabinet_right",
+          "function": "office",
+          "boundary": [
+            [
+              15348.375,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -750.0
+            ],
+            [
+              15348.375,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "-x",
+          "window_side": "+x"
+        }
+      ],
+      "furniture": [
+        {
+          "id": "s1-stair_left-stair",
+          "ifc_class": "IfcStair",
+          "predefined_type": "STRAIGHT_RUN_STAIR",
+          "name": "stair_left Stair",
+          "position": [
+            -13041.0,
+            -5219.5
+          ],
+          "size": [
+            2400.0,
+            4800.0,
+            4500.0
+          ],
+          "rot_z_deg": 0.0,
+          "elevation": 0.0,
+          "material": "Stone"
+        },
+        {
+          "id": "s1-stair_right-stair",
+          "ifc_class": "IfcStair",
+          "predefined_type": "STRAIGHT_RUN_STAIR",
+          "name": "stair_right Stair",
+          "position": [
+            13041.0,
+            -5219.5
+          ],
+          "size": [
+            2400.0,
+            4800.0,
+            4500.0
+          ],
+          "rot_z_deg": 0.0,
+          "elevation": 0.0,
+          "material": "Stone"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "name": "First Floor",
+      "elevation": 4500.0,
+      "height": 4500.0,
+      "walls": [
+        {
+          "id": "s2-iw0",
+          "start": [
+            -17541.0,
+            -750.0
+          ],
+          "end": [
+            -15253.04347826087,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw1",
+          "start": [
+            -15253.04347826087,
+            -750.0
+          ],
+          "end": [
+            -12965.08695652174,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw2",
+          "start": [
+            -12965.08695652174,
+            -750.0
+          ],
+          "end": [
+            -9151.82608695652,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw3",
+          "start": [
+            -9151.82608695652,
+            -750.0
+          ],
+          "end": [
+            -6101.217391304346,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw4",
+          "start": [
+            -6101.217391304346,
+            -750.0
+          ],
+          "end": [
+            -3813.260869565216,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw5",
+          "start": [
+            -3813.260869565216,
+            -750.0
+          ],
+          "end": [
+            0.0,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw6",
+          "start": [
+            0.0,
+            -750.0
+          ],
+          "end": [
+            2287.956521739132,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw7",
+          "start": [
+            2287.956521739132,
+            -750.0
+          ],
+          "end": [
+            6101.217391304352,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw8",
+          "start": [
+            6101.217391304352,
+            -750.0
+          ],
+          "end": [
+            9151.826086956527,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw9",
+          "start": [
+            9151.826086956527,
+            -750.0
+          ],
+          "end": [
+            11439.78260869566,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw10",
+          "start": [
+            11439.78260869566,
+            -750.0
+          ],
+          "end": [
+            15253.043478260879,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw11",
+          "start": [
+            15253.043478260879,
+            -750.0
+          ],
+          "end": [
+            17541.0,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw12",
+          "start": [
+            -15253.04347826087,
+            -16219.5
+          ],
+          "end": [
+            -15253.04347826087,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw13",
+          "start": [
+            -12965.08695652174,
+            -16219.5
+          ],
+          "end": [
+            -12965.08695652174,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw14",
+          "start": [
+            -9151.82608695652,
+            -16219.5
+          ],
+          "end": [
+            -9151.82608695652,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw15",
+          "start": [
+            -6101.217391304346,
+            -16219.5
+          ],
+          "end": [
+            -6101.217391304346,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw16",
+          "start": [
+            -3813.260869565216,
+            -16219.5
+          ],
+          "end": [
+            -3813.260869565216,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw17",
+          "start": [
+            0.0,
+            -16219.5
+          ],
+          "end": [
+            0.0,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw18",
+          "start": [
+            2287.956521739132,
+            -16219.5
+          ],
+          "end": [
+            2287.956521739132,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw19",
+          "start": [
+            6101.217391304352,
+            -16219.5
+          ],
+          "end": [
+            6101.217391304352,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw20",
+          "start": [
+            9151.826086956527,
+            -16219.5
+          ],
+          "end": [
+            9151.826086956527,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw21",
+          "start": [
+            11439.78260869566,
+            -16219.5
+          ],
+          "end": [
+            11439.78260869566,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-iw22",
+          "start": [
+            15253.043478260879,
+            -16219.5
+          ],
+          "end": [
+            15253.043478260879,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-ew23",
+          "start": [
+            -17541.0,
+            -750.0
+          ],
+          "end": [
+            -17541.0,
+            750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew24",
+          "start": [
+            17541.0,
+            -750.0
+          ],
+          "end": [
+            17541.0,
+            750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew25",
+          "start": [
+            -17541.0,
+            -16219.5
+          ],
+          "end": [
+            -15253.04347826087,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew26",
+          "start": [
+            -17541.0,
+            -16219.5
+          ],
+          "end": [
+            -17541.0,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew27",
+          "start": [
+            -15253.04347826087,
+            -16219.5
+          ],
+          "end": [
+            -12965.08695652174,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew28",
+          "start": [
+            -12965.08695652174,
+            -16219.5
+          ],
+          "end": [
+            -9151.82608695652,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew29",
+          "start": [
+            -9151.82608695652,
+            -16219.5
+          ],
+          "end": [
+            -6101.217391304346,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew30",
+          "start": [
+            -6101.217391304346,
+            -16219.5
+          ],
+          "end": [
+            -3813.260869565216,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew31",
+          "start": [
+            -3813.260869565216,
+            -16219.5
+          ],
+          "end": [
+            0.0,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew32",
+          "start": [
+            0.0,
+            -16219.5
+          ],
+          "end": [
+            2287.956521739132,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew33",
+          "start": [
+            2287.956521739132,
+            -16219.5
+          ],
+          "end": [
+            6101.217391304352,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew34",
+          "start": [
+            6101.217391304352,
+            -16219.5
+          ],
+          "end": [
+            9151.826086956527,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew35",
+          "start": [
+            9151.826086956527,
+            -16219.5
+          ],
+          "end": [
+            11439.78260869566,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew36",
+          "start": [
+            11439.78260869566,
+            -16219.5
+          ],
+          "end": [
+            15253.043478260879,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew37",
+          "start": [
+            15253.043478260879,
+            -16219.5
+          ],
+          "end": [
+            17541.0,
+            -16219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-ew38",
+          "start": [
+            17541.0,
+            -16219.5
+          ],
+          "end": [
+            17541.0,
+            -750.0
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": true
+        },
+        {
+          "id": "s2-stair_left-wall1",
+          "start": [
+            -14541.0,
+            -8219.5
+          ],
+          "end": [
+            -11541.0,
+            -8219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-stair_left-wall2",
+          "start": [
+            -11541.0,
+            -8219.5
+          ],
+          "end": [
+            -11541.0,
+            -2219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-stair_left-wall3",
+          "start": [
+            -11541.0,
+            -2219.5
+          ],
+          "end": [
+            -14541.0,
+            -2219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-stair_left-wall4",
+          "start": [
+            -14541.0,
+            -2219.5
+          ],
+          "end": [
+            -14541.0,
+            -8219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-stair_right-wall1",
+          "start": [
+            11541.0,
+            -8219.5
+          ],
+          "end": [
+            14541.0,
+            -8219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-stair_right-wall2",
+          "start": [
+            14541.0,
+            -8219.5
+          ],
+          "end": [
+            14541.0,
+            -2219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-stair_right-wall3",
+          "start": [
+            14541.0,
+            -2219.5
+          ],
+          "end": [
+            11541.0,
+            -2219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-stair_right-wall4",
+          "start": [
+            11541.0,
+            -2219.5
+          ],
+          "end": [
+            11541.0,
+            -8219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-service_stair-wall1",
+          "start": [
+            -1000.0,
+            -219.5
+          ],
+          "end": [
+            1000.0,
+            -219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-service_stair-wall2",
+          "start": [
+            1000.0,
+            -219.5
+          ],
+          "end": [
+            1000.0,
+            3780.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-service_stair-wall3",
+          "start": [
+            1000.0,
+            3780.5
+          ],
+          "end": [
+            -1000.0,
+            3780.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        },
+        {
+          "id": "s2-service_stair-wall4",
+          "start": [
+            -1000.0,
+            3780.5
+          ],
+          "end": [
+            -1000.0,
+            -219.5
+          ],
+          "thickness": 300.0,
+          "height": 4500.0,
+          "material": "Stone",
+          "is_external": false
+        }
+      ],
+      "openings": [
+        {
+          "id": "s2-d1",
+          "host_wall": "s2-iw14",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d2",
+          "host_wall": "s2-iw15",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d3",
+          "host_wall": "s2-iw16",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d4",
+          "host_wall": "s2-iw17",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d5",
+          "host_wall": "s2-iw19",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d6",
+          "host_wall": "s2-iw20",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d7",
+          "host_wall": "s2-iw21",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d8",
+          "host_wall": "s2-iw22",
+          "kind": "door",
+          "offset": 7284.75,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d9",
+          "host_wall": "s2-ew28",
+          "kind": "door",
+          "offset": 1456.6304347826094,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d10",
+          "host_wall": "s2-ew31",
+          "kind": "door",
+          "offset": 1456.630434782608,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d11",
+          "host_wall": "s2-ew33",
+          "kind": "door",
+          "offset": 1456.6304347826099,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-d12",
+          "host_wall": "s2-ew36",
+          "kind": "door",
+          "offset": 1456.6304347826099,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s2-w1",
+          "host_wall": "s2-ew27",
+          "kind": "window",
+          "offset": 162.6521739130435,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w2",
+          "host_wall": "s2-ew27",
+          "kind": "window",
+          "offset": 925.304347826087,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w3",
+          "host_wall": "s2-ew28",
+          "kind": "window",
+          "offset": 353.3152173913047,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w4",
+          "host_wall": "s2-ew28",
+          "kind": "window",
+          "offset": 1306.6304347826094,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w5",
+          "host_wall": "s2-ew28",
+          "kind": "window",
+          "offset": 2259.945652173914,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w6",
+          "host_wall": "s2-ew29",
+          "kind": "window",
+          "offset": 925.304347826087,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w7",
+          "host_wall": "s2-ew30",
+          "kind": "window",
+          "offset": 162.65217391304327,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w8",
+          "host_wall": "s2-ew30",
+          "kind": "window",
+          "offset": 925.3043478260865,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w9",
+          "host_wall": "s2-ew31",
+          "kind": "window",
+          "offset": 353.31521739130403,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w10",
+          "host_wall": "s2-ew31",
+          "kind": "window",
+          "offset": 1306.630434782608,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w11",
+          "host_wall": "s2-ew31",
+          "kind": "window",
+          "offset": 2259.945652173912,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w12",
+          "host_wall": "s2-ew32",
+          "kind": "window",
+          "offset": 543.9782608695659,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w13",
+          "host_wall": "s2-ew33",
+          "kind": "window",
+          "offset": 353.31521739130494,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w14",
+          "host_wall": "s2-ew33",
+          "kind": "window",
+          "offset": 1306.6304347826099,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w15",
+          "host_wall": "s2-ew33",
+          "kind": "window",
+          "offset": 2259.945652173915,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w16",
+          "host_wall": "s2-ew34",
+          "kind": "window",
+          "offset": 925.3043478260879,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w17",
+          "host_wall": "s2-ew35",
+          "kind": "window",
+          "offset": 162.65217391304395,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w18",
+          "host_wall": "s2-ew35",
+          "kind": "window",
+          "offset": 925.3043478260879,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w19",
+          "host_wall": "s2-ew36",
+          "kind": "window",
+          "offset": 353.31521739130494,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w20",
+          "host_wall": "s2-ew36",
+          "kind": "window",
+          "offset": 1306.6304347826099,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w21",
+          "host_wall": "s2-ew36",
+          "kind": "window",
+          "offset": 2259.945652173915,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s2-w22",
+          "host_wall": "s2-ew37",
+          "kind": "window",
+          "offset": 543.9782608695605,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        }
+      ],
+      "columns": [
+        {
+          "id": "s2-c1",
+          "position": [
+            -2806.5600000000013,
+            -3892.6800000000003
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s2-c2",
+          "position": [
+            2806.5599999999977,
+            -3892.6800000000003
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s2-c3",
+          "position": [
+            2806.5599999999977,
+            3892.6800000000003
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s2-c4",
+          "position": [
+            -2806.5600000000013,
+            3892.6800000000003
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s2-c5",
+          "position": [
+            -15253.04347826087,
+            -750.0
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s2-c6",
+          "position": [
+            -15253.04347826087,
+            750.0
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 4500.0,
+          "material": "Concrete"
+        }
+      ],
+      "slabs": [
+        {
+          "id": "s2-floor1",
+          "boundary": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -6000.0,
+              -16219.5
+            ],
+            [
+              -3000.0,
+              -19219.5
+            ],
+            [
+              0.0,
+              -22219.5
+            ],
+            [
+              3000.0,
+              -19219.5
+            ],
+            [
+              6000.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              5219.5
+            ],
+            [
+              6000.0,
+              5219.5
+            ],
+            [
+              3000.0,
+              7219.5
+            ],
+            [
+              0.0,
+              10219.5
+            ],
+            [
+              -3000.0,
+              7219.5
+            ],
+            [
+              -6000.0,
+              5219.5
+            ],
+            [
+              -17541.0,
+              5219.5
+            ]
+          ],
+          "thickness": 200.0,
+          "elevation": 0,
+          "material": "Concrete",
+          "predefined_type": "FLOOR"
+        }
+      ],
+      "roofs": [],
+      "railings": [
+        {
+          "id": "s2-rail1",
+          "polyline": [
+            [
+              -17541.0,
+              -750.0
+            ],
+            [
+              -17541.0,
+              750.0
+            ]
+          ],
+          "height": 1100.0,
+          "elevation": 0,
+          "material": "Steel"
+        },
+        {
+          "id": "s2-rail2",
+          "polyline": [
+            [
+              17541.0,
+              -750.0
+            ],
+            [
+              17541.0,
+              750.0
+            ]
+          ],
+          "height": 1100.0,
+          "elevation": 0,
+          "material": "Steel"
+        },
+        {
+          "id": "s2-rail3",
+          "polyline": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -15253.04347826087,
+              -16219.5
+            ]
+          ],
+          "height": 1100.0,
+          "elevation": 0,
+          "material": "Steel"
+        }
+      ],
+      "spaces": [
+        {
+          "id": "vestibule_left",
+          "name": "vestibule_left",
+          "function": "corridor",
+          "boundary": [
+            [
+              -17541.0,
+              -750.0
+            ],
+            [
+              17541.0,
+              -750.0
+            ],
+            [
+              17541.0,
+              750.0
+            ],
+            [
+              -17541.0,
+              750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "",
+          "window_side": "-x"
+        },
+        {
+          "id": "service_stairwell",
+          "name": "service_stairwell",
+          "function": "stairwell",
+          "boundary": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -15253.04347826087,
+              -16219.5
+            ],
+            [
+              -15253.04347826087,
+              -750.0
+            ],
+            [
+              -17541.0,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "service_stairwell_flight_up",
+              "ifc_class": "IfcStairFlight",
+              "predefined_type": "STRAIGHT",
+              "name": "Stair Flight Up",
+              "position": [
+                -16819.010869565216,
+                -8484.75
+              ],
+              "size": [
+                1043.9782608695652,
+                3600.0,
+                1500.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Concrete"
+            },
+            {
+              "id": "service_stairwell_flight_dn",
+              "ifc_class": "IfcStairFlight",
+              "predefined_type": "STRAIGHT",
+              "name": "Stair Flight Down",
+              "position": [
+                -15975.032608695652,
+                -8484.75
+              ],
+              "size": [
+                1043.9782608695652,
+                3600.0,
+                1500.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Concrete"
+            }
+          ],
+          "door_side": "+y",
+          "window_side": "-x"
+        },
+        {
+          "id": "service_room",
+          "name": "service_room",
+          "function": "service",
+          "boundary": [
+            [
+              -15253.04347826087,
+              -16219.5
+            ],
+            [
+              -12965.08695652174,
+              -16219.5
+            ],
+            [
+              -12965.08695652174,
+              -750.0
+            ],
+            [
+              -15253.04347826087,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "livingroom_left_front",
+          "name": "livingroom_left_front",
+          "function": "livingroom",
+          "boundary": [
+            [
+              -12965.08695652174,
+              -16219.5
+            ],
+            [
+              -9151.82608695652,
+              -16219.5
+            ],
+            [
+              -9151.82608695652,
+              -750.0
+            ],
+            [
+              -12965.08695652174,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "livingroom_left_front_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Sofa",
+              "position": [
+                -11058.45652173913,
+                -15194.5
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            },
+            {
+              "id": "livingroom_left_front_coffee",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Coffee Table",
+              "position": [
+                -11058.45652173913,
+                -8484.75
+              ],
+              "size": [
+                1200.0,
+                600.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+x",
+          "window_side": "-y"
+        },
+        {
+          "id": "antechamber_left",
+          "name": "antechamber_left",
+          "function": "livingroom",
+          "boundary": [
+            [
+              -9151.82608695652,
+              -16219.5
+            ],
+            [
+              -6101.217391304346,
+              -16219.5
+            ],
+            [
+              -6101.217391304346,
+              -750.0
+            ],
+            [
+              -9151.82608695652,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "antechamber_left_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Sofa",
+              "position": [
+                -7626.521739130432,
+                -15194.5
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            },
+            {
+              "id": "antechamber_left_coffee",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Coffee Table",
+              "position": [
+                -7626.521739130432,
+                -8484.75
+              ],
+              "size": [
+                1200.0,
+                600.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "cabinet_left",
+          "name": "cabinet_left",
+          "function": "office",
+          "boundary": [
+            [
+              -6101.217391304346,
+              -16219.5
+            ],
+            [
+              -3813.260869565216,
+              -16219.5
+            ],
+            [
+              -3813.260869565216,
+              -750.0
+            ],
+            [
+              -6101.217391304346,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "bedroom_left_rear",
+          "name": "bedroom_left_rear",
+          "function": "bedroom",
+          "boundary": [
+            [
+              -3813.260869565216,
+              -16219.5
+            ],
+            [
+              0.0,
+              -16219.5
+            ],
+            [
+              0.0,
+              -750.0
+            ],
+            [
+              -3813.260869565216,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "bedroom_left_rear_bed",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "BED",
+              "name": "Bed",
+              "position": [
+                -1906.630434782608,
+                -14819.5
+              ],
+              "size": [
+                1800.0,
+                2000.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "bedroom_left_rear_wardrobe",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SHELF",
+              "name": "Wardrobe",
+              "position": [
+                -350.0,
+                -8484.75
+              ],
+              "size": [
+                600.0,
+                1800.0,
+                2200.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "bathroom_left",
+          "name": "bathroom_left",
+          "function": "bathroom",
+          "boundary": [
+            [
+              0.0,
+              -16219.5
+            ],
+            [
+              2287.956521739132,
+              -16219.5
+            ],
+            [
+              2287.956521739132,
+              -750.0
+            ],
+            [
+              0.0,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "bathroom_left_pan_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 1",
+              "position": [
+                1857.9565217391319,
+                -15919.5
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_left_pan_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 2",
+              "position": [
+                1857.9565217391319,
+                -12202.125
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_left_pan_3",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 3",
+              "position": [
+                1857.9565217391319,
+                -8484.75
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_left_pan_4",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 4",
+              "position": [
+                1857.9565217391319,
+                -4767.375
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_left_pan_5",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 5",
+              "position": [
+                1857.9565217391319,
+                -1050.0
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_left_basin_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 1",
+              "position": [
+                305.0,
+                -14060.8125
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_left_basin_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 2",
+              "position": [
+                305.0,
+                -10343.4375
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_left_basin_3",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 3",
+              "position": [
+                305.0,
+                -6626.0625
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_left_basin_4",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 4",
+              "position": [
+                305.0,
+                -2908.6875
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "livingroom_right_front",
+          "name": "livingroom_right_front",
+          "function": "livingroom",
+          "boundary": [
+            [
+              2287.956521739132,
+              -16219.5
+            ],
+            [
+              6101.217391304352,
+              -16219.5
+            ],
+            [
+              6101.217391304352,
+              -750.0
+            ],
+            [
+              2287.956521739132,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "livingroom_right_front_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Sofa",
+              "position": [
+                4194.586956521744,
+                -15194.5
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            },
+            {
+              "id": "livingroom_right_front_coffee",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Coffee Table",
+              "position": [
+                4194.586956521744,
+                -8484.75
+              ],
+              "size": [
+                1200.0,
+                600.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "+x",
+          "window_side": "-y"
+        },
+        {
+          "id": "antechamber_right",
+          "name": "antechamber_right",
+          "function": "livingroom",
+          "boundary": [
+            [
+              6101.217391304352,
+              -16219.5
+            ],
+            [
+              9151.826086956527,
+              -16219.5
+            ],
+            [
+              9151.826086956527,
+              -750.0
+            ],
+            [
+              6101.217391304352,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "antechamber_right_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Sofa",
+              "position": [
+                7626.5217391304395,
+                -15194.5
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            },
+            {
+              "id": "antechamber_right_coffee",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Coffee Table",
+              "position": [
+                7626.5217391304395,
+                -8484.75
+              ],
+              "size": [
+                1200.0,
+                600.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "cabinet_right",
+          "name": "cabinet_right",
+          "function": "office",
+          "boundary": [
+            [
+              9151.826086956527,
+              -16219.5
+            ],
+            [
+              11439.78260869566,
+              -16219.5
+            ],
+            [
+              11439.78260869566,
+              -750.0
+            ],
+            [
+              9151.826086956527,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "bedroom_right_rear",
+          "name": "bedroom_right_rear",
+          "function": "bedroom",
+          "boundary": [
+            [
+              11439.78260869566,
+              -16219.5
+            ],
+            [
+              15253.043478260879,
+              -16219.5
+            ],
+            [
+              15253.043478260879,
+              -750.0
+            ],
+            [
+              11439.78260869566,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "bedroom_right_rear_bed",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "BED",
+              "name": "Bed",
+              "position": [
+                13346.413043478271,
+                -14819.5
+              ],
+              "size": [
+                1800.0,
+                2000.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "bedroom_right_rear_wardrobe",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SHELF",
+              "name": "Wardrobe",
+              "position": [
+                14903.043478260879,
+                -8484.75
+              ],
+              "size": [
+                600.0,
+                1800.0,
+                2200.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "-y"
+        },
+        {
+          "id": "bathroom_right",
+          "name": "bathroom_right",
+          "function": "bathroom",
+          "boundary": [
+            [
+              15253.043478260879,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -750.0
+            ],
+            [
+              15253.043478260879,
+              -750.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 4500.0,
+          "furniture": [
+            {
+              "id": "bathroom_right_pan_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 1",
+              "position": [
+                17111.0,
+                -15919.5
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_right_pan_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 2",
+              "position": [
+                17111.0,
+                -12202.125
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_right_pan_3",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 3",
+              "position": [
+                17111.0,
+                -8484.75
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_right_pan_4",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 4",
+              "position": [
+                17111.0,
+                -4767.375
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_right_pan_5",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 5",
+              "position": [
+                17111.0,
+                -1050.0
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_right_basin_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 1",
+              "position": [
+                15558.043478260879,
+                -14060.8125
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_right_basin_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 2",
+              "position": [
+                15558.043478260879,
+                -10343.4375
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_right_basin_3",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 3",
+              "position": [
+                15558.043478260879,
+                -6626.0625
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_right_basin_4",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 4",
+              "position": [
+                15558.043478260879,
+                -2908.6875
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            }
+          ],
+          "door_side": "-x",
+          "window_side": "+x"
+        }
+      ],
+      "furniture": [
+        {
+          "id": "s2-stair_left-stair",
+          "ifc_class": "IfcStair",
+          "predefined_type": "STRAIGHT_RUN_STAIR",
+          "name": "stair_left Stair",
+          "position": [
+            -13041.0,
+            -5219.5
+          ],
+          "size": [
+            2400.0,
+            4800.0,
+            4500.0
+          ],
+          "rot_z_deg": 0.0,
+          "elevation": 0.0,
+          "material": "Stone"
+        },
+        {
+          "id": "s2-stair_right-stair",
+          "ifc_class": "IfcStair",
+          "predefined_type": "STRAIGHT_RUN_STAIR",
+          "name": "stair_right Stair",
+          "position": [
+            13041.0,
+            -5219.5
+          ],
+          "size": [
+            2400.0,
+            4800.0,
+            4500.0
+          ],
+          "rot_z_deg": 0.0,
+          "elevation": 0.0,
+          "material": "Stone"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "name": "Roof Level",
+      "elevation": 9000.0,
+      "height": 0.0,
+      "walls": [],
+      "openings": [],
+      "columns": [],
+      "slabs": [],
+      "roofs": [
+        {
+          "id": "s3-roof1",
+          "boundary": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -6000.0,
+              -16219.5
+            ],
+            [
+              -3000.0,
+              -19219.5
+            ],
+            [
+              0.0,
+              -22219.5
+            ],
+            [
+              3000.0,
+              -19219.5
+            ],
+            [
+              6000.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              5219.5
+            ],
+            [
+              6000.0,
+              5219.5
+            ],
+            [
+              3000.0,
+              7219.5
+            ],
+            [
+              0.0,
+              10219.5
+            ],
+            [
+              -3000.0,
+              7219.5
+            ],
+            [
+              -6000.0,
+              5219.5
+            ],
+            [
+              -17541.0,
+              5219.5
+            ]
+          ],
+          "thickness": 200.0,
+          "elevation": 0.0,
+          "material": "Concrete",
+          "pitch_deg": 0
+        },
+        {
+          "id": "s3-roof2",
+          "boundary": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -6000.0,
+              -16219.5
+            ],
+            [
+              -3000.0,
+              -19219.5
+            ],
+            [
+              0.0,
+              -22219.5
+            ],
+            [
+              3000.0,
+              -19219.5
+            ],
+            [
+              6000.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              5219.5
+            ],
+            [
+              6000.0,
+              5219.5
+            ],
+            [
+              3000.0,
+              7219.5
+            ],
+            [
+              0.0,
+              10219.5
+            ],
+            [
+              -3000.0,
+              7219.5
+            ],
+            [
+              -6000.0,
+              5219.5
+            ],
+            [
+              -17541.0,
+              5219.5
+            ]
+          ],
+          "thickness": 200.0,
+          "elevation": 0.0,
+          "material": "Concrete",
+          "pitch_deg": 0
+        },
+        {
+          "id": "s3-roof3",
+          "boundary": [
+            [
+              -17541.0,
+              -16219.5
+            ],
+            [
+              -6000.0,
+              -16219.5
+            ],
+            [
+              -3000.0,
+              -19219.5
+            ],
+            [
+              0.0,
+              -22219.5
+            ],
+            [
+              3000.0,
+              -19219.5
+            ],
+            [
+              6000.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              -16219.5
+            ],
+            [
+              17541.0,
+              5219.5
+            ],
+            [
+              6000.0,
+              5219.5
+            ],
+            [
+              3000.0,
+              7219.5
+            ],
+            [
+              0.0,
+              10219.5
+            ],
+            [
+              -3000.0,
+              7219.5
+            ],
+            [
+              -6000.0,
+              5219.5
+            ],
+            [
+              -17541.0,
+              5219.5
+            ]
+          ],
+          "thickness": 200.0,
+          "elevation": 0.0,
+          "material": "Concrete",
+          "pitch_deg": 0
+        }
+      ],
+      "railings": [],
+      "spaces": [],
+      "furniture": []
+    }
+  ]
+}

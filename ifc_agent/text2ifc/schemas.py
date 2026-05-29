@@ -162,6 +162,29 @@ class Footprint:
     shape: str = "rectangle"      # rectangle | L | U | T | hex | octagon | custom
     x_mm: float = 10000.0
     y_mm: float = 8000.0
+    boundary: list[Point2D] = field(default_factory=list)
+    voids: list[list[Point2D]] = field(default_factory=list)
+
+
+@dataclass
+class VerticalShaft:
+    """A cross-storey shaft for stairs, elevators, service or mechanical use."""
+    id: str
+    kind: str = "stair"           # stair | elevator | mechanical | service
+    storey_ids: list[str] = field(default_factory=list)
+    footprint: list[Point2D] = field(default_factory=list)
+    shaft_mm: tuple[float, float] = (2000.0, 3000.0)
+    wall_thickness_mm: float = 200.0
+    material: str = "Concrete"
+
+
+@dataclass
+class StructuralSystem:
+    """High-level structural strategy used by the deterministic expander."""
+    kind: str = "frame"           # frame | shear_wall | core_tube | mixed | none
+    grid_spacing_x_mm: float = 6000.0
+    grid_spacing_y_mm: float = 6000.0
+    core_position: str = "center"  # center | corner | edge
 
 
 @dataclass
@@ -216,6 +239,8 @@ class RoomNode:
     n_windows: int = 0                 # windows on this room's exterior wall(s)
     n_external_doors: int = 0          # doors to the OUTSIDE (e.g. main entry)
     name: str = ""                     # optional display name
+    shaft_id: str = ""                 # set when this semantic room belongs to a shaft
+    is_core: bool = False              # structural / vertical-circulation core marker
 
     def display_name(self) -> str:
         return self.name or self.id
@@ -246,6 +271,9 @@ class SpatialStorey:
     # doors / windows derived from rooms).
     elements: StoreyElements = field(default_factory=StoreyElements)
     notes: list[str] = field(default_factory=list)
+    shaft_ids: list[str] = field(default_factory=list)
+    structural_system_override: Optional[str] = None
+    footprint_override: Optional[Footprint] = None
 
 
 @dataclass
@@ -259,6 +287,8 @@ class SpatialGraph:
     metadata: BuildingMetadata = field(default_factory=BuildingMetadata)
     footprint: Footprint = field(default_factory=Footprint)
     storeys: list[SpatialStorey] = field(default_factory=list)
+    shafts: list[VerticalShaft] = field(default_factory=list)
+    structural_system: StructuralSystem = field(default_factory=StructuralSystem)
 
     # -- Serialisation -----------------------------------------------------
 
@@ -276,11 +306,18 @@ class SpatialGraph:
             shape=str(fp_raw.get("shape", "rectangle")),
             x_mm=float(fp_raw.get("x_mm", 10000.0)),
             y_mm=float(fp_raw.get("y_mm", 8000.0)),
+            boundary=_coerce_optional_poly(fp_raw.get("boundary")),
+            voids=[_tuplist(v) for v in (fp_raw.get("voids") or [])],
         )
+        ss = _coerce_structural_system(data.get("structural_system") or {})
+        shafts = [_coerce_vertical_shaft(x) for x in (data.get("shafts") or [])]
         storeys: list[SpatialStorey] = []
         for s in data.get("storeys", []) or []:
             elems = _coerce_storey_elements(s.get("elements", {}) or {})
             rooms = [_coerce_room(r) for r in (s.get("rooms") or [])]
+            fp_override = None
+            if isinstance(s.get("footprint_override"), dict):
+                fp_override = _coerce_footprint(s.get("footprint_override") or {})
             storeys.append(SpatialStorey(
                 id=str(s.get("id") or s.get("name") or "storey"),
                 name=str(s.get("name", "Storey")),
@@ -291,8 +328,20 @@ class SpatialGraph:
                 elements=elems,
                 layout_hint=str(s.get("layout_hint", "central_corridor")),
                 notes=list(s.get("notes", []) or []),
+                shaft_ids=[str(x) for x in (s.get("shaft_ids") or [])],
+                structural_system_override=(
+                    str(s["structural_system_override"])
+                    if s.get("structural_system_override") else None
+                ),
+                footprint_override=fp_override,
             ))
-        return cls(metadata=meta, footprint=fp, storeys=storeys)
+        return cls(
+            metadata=meta,
+            footprint=fp,
+            storeys=storeys,
+            shafts=shafts,
+            structural_system=ss,
+        )
 
     @classmethod
     def from_json(cls, text: str) -> "SpatialGraph":
@@ -313,6 +362,7 @@ class SpatialGraph:
             counts["slabs"]    += s.elements.slabs
             counts["roofs"]    += s.elements.roofs
             counts["railings"] += s.elements.railings
+        counts["shafts"] = len(self.shafts)
         return counts
 
 
@@ -328,6 +378,48 @@ def _coerce_room(raw: dict) -> RoomNode:
         has_external_facade=bool(raw.get("has_external_facade", False)),
         n_windows=int(raw.get("n_windows", 0)),
         n_external_doors=int(raw.get("n_external_doors", 0)),
+        shaft_id=str(raw.get("shaft_id", "")),
+        is_core=bool(raw.get("is_core", False)),
+    )
+
+
+def _coerce_footprint(raw: dict) -> Footprint:
+    return Footprint(
+        shape=str(raw.get("shape", "rectangle")),
+        x_mm=float(raw.get("x_mm", 10000.0)),
+        y_mm=float(raw.get("y_mm", 8000.0)),
+        boundary=_coerce_optional_poly(raw.get("boundary")),
+        voids=[_tuplist(v) for v in (raw.get("voids") or [])],
+    )
+
+
+def _coerce_optional_poly(raw) -> list[Point2D]:
+    if not raw:
+        return []
+    return _tuplist(raw)
+
+
+def _coerce_structural_system(raw: dict) -> StructuralSystem:
+    return StructuralSystem(
+        kind=str(raw.get("kind", "frame")),
+        grid_spacing_x_mm=float(raw.get("grid_spacing_x_mm", 6000.0)),
+        grid_spacing_y_mm=float(raw.get("grid_spacing_y_mm", 6000.0)),
+        core_position=str(raw.get("core_position", "center")),
+    )
+
+
+def _coerce_vertical_shaft(raw: dict) -> VerticalShaft:
+    size = raw.get("shaft_mm", (2000.0, 3000.0))
+    if not isinstance(size, (list, tuple)) or len(size) < 2:
+        size = (2000.0, 3000.0)
+    return VerticalShaft(
+        id=str(raw.get("id") or raw.get("kind") or "shaft"),
+        kind=str(raw.get("kind", "stair")),
+        storey_ids=[str(x) for x in (raw.get("storey_ids") or [])],
+        footprint=_coerce_optional_poly(raw.get("footprint")),
+        shaft_mm=(float(size[0]), float(size[1])),
+        wall_thickness_mm=float(raw.get("wall_thickness_mm", 200.0)),
+        material=str(raw.get("material", "Concrete")),
     )
 
 

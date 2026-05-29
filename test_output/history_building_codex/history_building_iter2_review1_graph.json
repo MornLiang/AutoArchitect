@@ -1,0 +1,1143 @@
+{
+  "metadata": {
+    "name": "Inferred building",
+    "description": "Deterministically generated rooms-based graph",
+    "project_name": "Text2IFC",
+    "site_name": "Default Site",
+    "schema": "IFC4",
+    "length_unit": "MILLIMETRE"
+  },
+  "storeys": [
+    {
+      "id": "s1",
+      "name": "Ground Floor",
+      "elevation": 0.0,
+      "height": 3000.0,
+      "walls": [
+        {
+          "id": "s1-iw0",
+          "start": [
+            -5000.0,
+            1263.1578947368416
+          ],
+          "end": [
+            -2391.304347826087,
+            1263.1578947368416
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw1",
+          "start": [
+            -2391.304347826087,
+            1263.1578947368416
+          ],
+          "end": [
+            -217.391304347826,
+            1263.1578947368416
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw2",
+          "start": [
+            -217.391304347826,
+            1263.1578947368416
+          ],
+          "end": [
+            1521.739130434783,
+            1263.1578947368416
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw3",
+          "start": [
+            1521.739130434783,
+            1263.1578947368416
+          ],
+          "end": [
+            5000.0,
+            1263.1578947368416
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw4",
+          "start": [
+            -5000.0,
+            -1263.1578947368425
+          ],
+          "end": [
+            -2500.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw5",
+          "start": [
+            -2500.0,
+            -1263.1578947368425
+          ],
+          "end": [
+            0.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw6",
+          "start": [
+            0.0,
+            -1263.1578947368425
+          ],
+          "end": [
+            2500.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw7",
+          "start": [
+            2500.0,
+            -1263.1578947368425
+          ],
+          "end": [
+            5000.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw8",
+          "start": [
+            -2391.304347826087,
+            1263.1578947368416
+          ],
+          "end": [
+            -2391.304347826087,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw9",
+          "start": [
+            -217.391304347826,
+            1263.1578947368416
+          ],
+          "end": [
+            -217.391304347826,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw10",
+          "start": [
+            1521.739130434783,
+            1263.1578947368416
+          ],
+          "end": [
+            1521.739130434783,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw11",
+          "start": [
+            -2500.0,
+            -4000.0
+          ],
+          "end": [
+            -2500.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw12",
+          "start": [
+            0.0,
+            -4000.0
+          ],
+          "end": [
+            0.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-iw13",
+          "start": [
+            2500.0,
+            -4000.0
+          ],
+          "end": [
+            2500.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": false
+        },
+        {
+          "id": "s1-ew14",
+          "start": [
+            -5000.0,
+            -1263.1578947368425
+          ],
+          "end": [
+            -5000.0,
+            1263.1578947368416
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew15",
+          "start": [
+            5000.0,
+            -1263.1578947368425
+          ],
+          "end": [
+            5000.0,
+            1263.1578947368416
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew16",
+          "start": [
+            -5000.0,
+            4000.0
+          ],
+          "end": [
+            -2391.304347826087,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew17",
+          "start": [
+            -5000.0,
+            1263.1578947368416
+          ],
+          "end": [
+            -5000.0,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew18",
+          "start": [
+            -2391.304347826087,
+            4000.0
+          ],
+          "end": [
+            -217.391304347826,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew19",
+          "start": [
+            -217.391304347826,
+            4000.0
+          ],
+          "end": [
+            1521.739130434783,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew20",
+          "start": [
+            1521.739130434783,
+            4000.0
+          ],
+          "end": [
+            5000.0,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew21",
+          "start": [
+            5000.0,
+            1263.1578947368416
+          ],
+          "end": [
+            5000.0,
+            4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew22",
+          "start": [
+            -5000.0,
+            -4000.0
+          ],
+          "end": [
+            -2500.0,
+            -4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew23",
+          "start": [
+            -5000.0,
+            -4000.0
+          ],
+          "end": [
+            -5000.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew24",
+          "start": [
+            -2500.0,
+            -4000.0
+          ],
+          "end": [
+            0.0,
+            -4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew25",
+          "start": [
+            0.0,
+            -4000.0
+          ],
+          "end": [
+            2500.0,
+            -4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew26",
+          "start": [
+            2500.0,
+            -4000.0
+          ],
+          "end": [
+            5000.0,
+            -4000.0
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        },
+        {
+          "id": "s1-ew27",
+          "start": [
+            5000.0,
+            -4000.0
+          ],
+          "end": [
+            5000.0,
+            -1263.1578947368425
+          ],
+          "thickness": 200.0,
+          "height": 3000.0,
+          "material": "Concrete",
+          "is_external": true
+        }
+      ],
+      "openings": [
+        {
+          "id": "s1-d1",
+          "host_wall": "s1-iw0",
+          "kind": "door",
+          "offset": 854.3478260869565,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d2",
+          "host_wall": "s1-iw1",
+          "kind": "door",
+          "offset": 636.9565217391305,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d3",
+          "host_wall": "s1-iw2",
+          "kind": "door",
+          "offset": 419.5652173913045,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d4",
+          "host_wall": "s1-iw3",
+          "kind": "door",
+          "offset": 1289.1304347826085,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d5",
+          "host_wall": "s1-iw4",
+          "kind": "door",
+          "offset": 800.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d6",
+          "host_wall": "s1-iw5",
+          "kind": "door",
+          "offset": 800.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d7",
+          "host_wall": "s1-iw6",
+          "kind": "door",
+          "offset": 800.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d8",
+          "host_wall": "s1-iw7",
+          "kind": "door",
+          "offset": 800.0,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-d9",
+          "host_wall": "s1-ew16",
+          "kind": "door",
+          "offset": 854.3478260869565,
+          "width": 900.0,
+          "height": 2100.0,
+          "sill_height": 0.0
+        },
+        {
+          "id": "s1-w1",
+          "host_wall": "s1-ew16",
+          "kind": "window",
+          "offset": 704.3478260869565,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w2",
+          "host_wall": "s1-ew20",
+          "kind": "window",
+          "offset": 1139.1304347826085,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        },
+        {
+          "id": "s1-w3",
+          "host_wall": "s1-ew21",
+          "kind": "window",
+          "offset": 768.4210526315792,
+          "width": 1200.0,
+          "height": 1200.0,
+          "sill_height": 900.0
+        }
+      ],
+      "columns": [
+        {
+          "id": "s1-c1",
+          "position": [
+            -2500.0,
+            -1263.1578947368425
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 3000.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s1-c2",
+          "position": [
+            -2500.0,
+            1263.1578947368416
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 3000.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s1-c3",
+          "position": [
+            -2391.304347826087,
+            -1263.1578947368425
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 3000.0,
+          "material": "Concrete"
+        },
+        {
+          "id": "s1-c4",
+          "position": [
+            -2391.304347826087,
+            1263.1578947368416
+          ],
+          "section": [
+            400.0,
+            400.0
+          ],
+          "height": 3000.0,
+          "material": "Concrete"
+        }
+      ],
+      "slabs": [
+        {
+          "id": "s1-floor1",
+          "boundary": [
+            [
+              -5000.0,
+              -4000.0
+            ],
+            [
+              5000.0,
+              -4000.0
+            ],
+            [
+              5000.0,
+              4000.0
+            ],
+            [
+              -5000.0,
+              4000.0
+            ]
+          ],
+          "thickness": 200.0,
+          "elevation": 0,
+          "material": "Concrete",
+          "predefined_type": "FLOOR"
+        }
+      ],
+      "roofs": [],
+      "railings": [],
+      "spaces": [
+        {
+          "id": "corridor",
+          "name": "Corridor",
+          "function": "corridor",
+          "boundary": [
+            [
+              -5000.0,
+              -1263.1578947368425
+            ],
+            [
+              5000.0,
+              -1263.1578947368425
+            ],
+            [
+              5000.0,
+              1263.1578947368416
+            ],
+            [
+              -5000.0,
+              1263.1578947368416
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "+y",
+          "window_side": "-x"
+        },
+        {
+          "id": "lobby",
+          "name": "Lobby",
+          "function": "lobby",
+          "boundary": [
+            [
+              -5000.0,
+              1263.1578947368416
+            ],
+            [
+              -2391.304347826087,
+              1263.1578947368416
+            ],
+            [
+              -2391.304347826087,
+              4000.0
+            ],
+            [
+              -5000.0,
+              4000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "lobby_reception_desk",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "DESK",
+              "name": "Reception Desk",
+              "position": [
+                -3695.6521739130435,
+                2213.1578947368416
+              ],
+              "size": [
+                2000.0,
+                700.0,
+                1100.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "lobby_lobby_sofa",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "SOFA",
+              "name": "Lobby Sofa",
+              "position": [
+                -3695.6521739130435,
+                2975.0
+              ],
+              "size": [
+                2000.0,
+                850.0,
+                800.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Fabric"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "-x"
+        },
+        {
+          "id": "bathroom",
+          "name": "Bathroom",
+          "function": "bathroom",
+          "boundary": [
+            [
+              -2391.304347826087,
+              1263.1578947368416
+            ],
+            [
+              -217.391304347826,
+              1263.1578947368416
+            ],
+            [
+              -217.391304347826,
+              4000.0
+            ],
+            [
+              -2391.304347826087,
+              4000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "bathroom_pan_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 1",
+              "position": [
+                -647.391304347826,
+                1563.1578947368416
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_pan_2",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "TOILETPAN",
+              "name": "Pan 2",
+              "position": [
+                -647.391304347826,
+                3700.0
+              ],
+              "size": [
+                700.0,
+                380.0,
+                400.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 0.0,
+              "material": "Ceramic"
+            },
+            {
+              "id": "bathroom_basin_1",
+              "ifc_class": "IfcSanitaryTerminal",
+              "predefined_type": "WASHHANDBASIN",
+              "name": "Washbasin 1",
+              "position": [
+                -2086.304347826087,
+                2631.578947368421
+              ],
+              "size": [
+                450.0,
+                550.0,
+                850.0
+              ],
+              "rot_z_deg": 90.0,
+              "elevation": 700.0,
+              "material": "Ceramic"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "service",
+          "name": "Service",
+          "function": "service",
+          "boundary": [
+            [
+              -217.391304347826,
+              1263.1578947368416
+            ],
+            [
+              1521.739130434783,
+              1263.1578947368416
+            ],
+            [
+              1521.739130434783,
+              4000.0
+            ],
+            [
+              -217.391304347826,
+              4000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "meeting",
+          "name": "Meeting Room",
+          "function": "meeting",
+          "boundary": [
+            [
+              1521.739130434783,
+              1263.1578947368416
+            ],
+            [
+              5000.0,
+              1263.1578947368416
+            ],
+            [
+              5000.0,
+              4000.0
+            ],
+            [
+              1521.739130434783,
+              4000.0
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [
+            {
+              "id": "meeting_table",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "TABLE",
+              "name": "Meeting Table",
+              "position": [
+                3260.869565217392,
+                2631.578947368421
+              ],
+              "size": [
+                2400.0,
+                1200.0,
+                750.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N1",
+              "position": [
+                2360.869565217392,
+                1681.5789473684208
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_1",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S1",
+              "position": [
+                2360.869565217392,
+                3581.578947368421
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N2",
+              "position": [
+                2960.869565217392,
+                1681.5789473684208
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_2",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S2",
+              "position": [
+                2960.869565217392,
+                3581.578947368421
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N3",
+              "position": [
+                3560.869565217392,
+                1681.5789473684208
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_3",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S3",
+              "position": [
+                3560.869565217392,
+                3581.578947368421
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_n_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair N4",
+              "position": [
+                4160.869565217392,
+                1681.5789473684208
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            },
+            {
+              "id": "meeting_mchair_s_4",
+              "ifc_class": "IfcFurniture",
+              "predefined_type": "CHAIR",
+              "name": "Chair S4",
+              "position": [
+                4160.869565217392,
+                3581.578947368421
+              ],
+              "size": [
+                450.0,
+                450.0,
+                450.0
+              ],
+              "rot_z_deg": 0.0,
+              "elevation": 0.0,
+              "material": "Wood"
+            }
+          ],
+          "door_side": "-y",
+          "window_side": "+y"
+        },
+        {
+          "id": "office_n1",
+          "name": "Office N1",
+          "function": "office",
+          "boundary": [
+            [
+              -5000.0,
+              -4000.0
+            ],
+            [
+              -2500.0,
+              -4000.0
+            ],
+            [
+              -2500.0,
+              -1263.1578947368425
+            ],
+            [
+              -5000.0,
+              -1263.1578947368425
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "+y",
+          "window_side": "-x"
+        },
+        {
+          "id": "office_s1",
+          "name": "Office S1",
+          "function": "office",
+          "boundary": [
+            [
+              -2500.0,
+              -4000.0
+            ],
+            [
+              0.0,
+              -4000.0
+            ],
+            [
+              0.0,
+              -1263.1578947368425
+            ],
+            [
+              -2500.0,
+              -1263.1578947368425
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "office_n2",
+          "name": "Office N2",
+          "function": "office",
+          "boundary": [
+            [
+              0.0,
+              -4000.0
+            ],
+            [
+              2500.0,
+              -4000.0
+            ],
+            [
+              2500.0,
+              -1263.1578947368425
+            ],
+            [
+              0.0,
+              -1263.1578947368425
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "+y",
+          "window_side": "-y"
+        },
+        {
+          "id": "office_s2",
+          "name": "Office S2",
+          "function": "office",
+          "boundary": [
+            [
+              2500.0,
+              -4000.0
+            ],
+            [
+              5000.0,
+              -4000.0
+            ],
+            [
+              5000.0,
+              -1263.1578947368425
+            ],
+            [
+              2500.0,
+              -1263.1578947368425
+            ]
+          ],
+          "elevation": 0.0,
+          "height": 3000.0,
+          "furniture": [],
+          "door_side": "+y",
+          "window_side": "+x"
+        }
+      ],
+      "furniture": []
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "passed_checks": 6,
+  "failed_checks": 5,
+  "warning_checks": 6,
+  "issues": [
+    {
+      "category": "geometry",
+      "severity": "error",
+      "rule_id": "ROOM_TOO_SMALL",
+      "message": "lobby area is 4.8m2",
+      "affected_storey": "s1",
+      "affected_room": "lobby",
+      "metric_value": 4.8,
+      "metric_target": 10.0,
+      "fix_hint": "Increase area_ratio or merge this room"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "ROOM_SMALL",
+      "message": "service area is 3.2m2",
+      "affected_storey": "s1",
+      "affected_room": "service",
+      "metric_value": 3.2,
+      "metric_target": 6.0,
+      "fix_hint": "Consider increasing area_ratio"
+    },
+    {
+      "category": "geometry",
+      "severity": "warning",
+      "rule_id": "ROOM_SMALL",
+      "message": "meeting area is 6.4m2",
+      "affected_storey": "s1",
+      "affected_room": "meeting",
+      "metric_value": 6.4,
+      "metric_target": 12.0,
+      "fix_hint": "Consider increasing area_ratio"
+    },
+    {
+      "category": "geometry",
+      "severity": "error",
+      "rule_id": "ROOM_TOO_SMALL",
+      "message": "office area is 3.2m2",
+      "affected_storey": "s1",
+      "affected_room": "office_n1",
+      "metric_value": 3.2,
+      "metric_target": 8.0,
+      "fix_hint": "Increase area_ratio or merge this room"
+    },
+    {
+      "category": "geometry",
+      "severity": "error",
+      "rule_id": "ROOM_TOO_SMALL",
+      "message": "office area is 3.2m2",
+      "affected_storey": "s1",
+      "affected_room": "office_s1",
+      "metric_value": 3.2,
+      "metric_target": 8.0,
+      "fix_hint": "Increase area_ratio or merge this room"
+    },
+    {
+      "category": "geometry",
+      "severity": "error",
+      "rule_id": "ROOM_TOO_SMALL",
+      "message": "office area is 3.2m2",
+      "affected_storey": "s1",
+      "affected_room": "office_n2",
+      "metric_value": 3.2,
+      "metric_target": 8.0,
+      "fix_hint": "Increase area_ratio or merge this room"
+    },
+    {
+      "category": "geometry",
+      "severity": "error",
+      "rule_id": "ROOM_TOO_SMALL",
+      "message": "office area is 3.2m2",
+      "affected_storey": "s1",
+      "affected_room": "office_s2",
+      "metric_value": 3.2,
+      "metric_target": 8.0,
+      "fix_hint": "Increase area_ratio or merge this room"
+    },
+    {
+      "category": "code",
+      "severity": "warning",
+      "rule_id": "EXTERIOR_ROOM_NO_WINDOW",
+      "message": "Exterior room has no windows",
+      "affected_storey": "s1",
+      "affected_room": "office_n1",
+      "metric_value": 0,
+      "metric_target": 1,
+      "fix_hint": "Set n_windows >= 1"
+    },
+    {
+      "category": "code",
+      "severity": "warning",
+      "rule_id": "EXTERIOR_ROOM_NO_WINDOW",
+      "message": "Exterior room has no windows",
+      "affected_storey": "s1",
+      "affected_room": "office_s1",
+      "metric_value": 0,
+      "metric_target": 1,
+      "fix_hint": "Set n_windows >= 1"
+    },
+    {
+      "category": "code",
+      "severity": "warning",
+      "rule_id": "EXTERIOR_ROOM_NO_WINDOW",
+      "message": "Exterior room has no windows",
+      "affected_storey": "s1",
+      "affected_room": "office_n2",
+      "metric_value": 0,
+      "metric_target": 1,
+      "fix_hint": "Set n_windows >= 1"
+    },
+    {
+      "category": "code",
+      "severity": "warning",
+      "rule_id": "EXTERIOR_ROOM_NO_WINDOW",
+      "message": "Exterior room has no windows",
+      "affected_storey": "s1",
+      "affected_room": "office_s2",
+      "metric_value": 0,
+      "metric_target": 1,
+      "fix_hint": "Set n_windows >= 1"
+    }
+  ]
+}

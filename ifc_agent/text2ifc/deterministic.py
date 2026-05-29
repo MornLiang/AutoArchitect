@@ -25,7 +25,9 @@ from ifc_agent.text2ifc.schemas import (
     RoomNode,
     SpatialGraph,
     SpatialStorey,
+    StructuralSystem,
     StoreyElements,
+    VerticalShaft,
 )
 
 logger = logging.getLogger(__name__)
@@ -100,6 +102,8 @@ class DeterministicAnalyst:
                 "x_mm": int(fx),
                 "y_mm": int(fy),
             },
+            "structural_system": _infer_structural_system(text, int(storey_count)),
+            "vertical_circulation": _infer_vertical_circulation(text, int(storey_count)),
             "element_targets": {
                 "walls": int(walls),
                 "doors": int(doors),
@@ -164,7 +168,22 @@ class DeterministicArchitect:
             shape=str(fp_raw.get("shape", "rectangle")),
             x_mm=float(fp_raw.get("x_mm", 10000)),
             y_mm=float(fp_raw.get("y_mm", 8000)),
+            boundary=list(fp_raw.get("boundary") or []),
+            voids=list(fp_raw.get("voids") or []),
         )
+        structural_raw = requirements.get("structural_system", {}) or {}
+        if isinstance(structural_raw, str):
+            structural = StructuralSystem(kind=structural_raw)
+        else:
+            structural = StructuralSystem(
+                kind=str(structural_raw.get(
+                    "kind",
+                    "core_tube" if n_storeys >= 10 else "frame",
+                )),
+                grid_spacing_x_mm=float(structural_raw.get("grid_spacing_x_mm", 6000)),
+                grid_spacing_y_mm=float(structural_raw.get("grid_spacing_y_mm", 6000)),
+                core_position=str(structural_raw.get("core_position", "center")),
+            )
 
         targets = requirements.get("element_targets", {}) or {}
         total_walls   = max(4, int(targets.get("walls", 4)))
@@ -174,6 +193,7 @@ class DeterministicArchitect:
         total_slabs   = max(1, int(targets.get("slabs", 1)))
         n_roofs       = int(targets.get("roofs", 0))
         n_railings    = int(targets.get("railings", 0))
+        wall_thickness = float(targets.get("wall_thickness_mm", 200.0))
 
         materials = requirements.get("materials", {}) or {}
         wall_mat = str(materials.get("wall", "Concrete"))
@@ -202,6 +222,8 @@ class DeterministicArchitect:
             roof_per[-1] = n_roofs
 
         storeys: list[SpatialStorey] = []
+        shafts = _make_shafts(requirements, footprint, n_storeys)
+        shaft_ids = [s.id for s in shafts]
         for i in range(n_storeys):
             elements = StoreyElements(
                 walls=total_walls if inhabited[i] else 0,  # legacy
@@ -211,6 +233,7 @@ class DeterministicArchitect:
                 slabs=slab_per[i],
                 roofs=roof_per[i],
                 railings=rail_per[i],
+                wall_thickness_mm=wall_thickness,
                 wall_material=wall_mat,
                 slab_material=slab_mat,
                 roof_material=roof_mat,
@@ -233,9 +256,16 @@ class DeterministicArchitect:
                 rooms=rooms,
                 elements=elements,
                 layout_hint="central_corridor" if inhabited[i] else "empty",
+                shaft_ids=shaft_ids if inhabited[i] else [],
             ))
 
-        return SpatialGraph(metadata=meta, footprint=footprint, storeys=storeys)
+        return SpatialGraph(
+            metadata=meta,
+            footprint=footprint,
+            storeys=storeys,
+            shafts=shafts,
+            structural_system=structural,
+        )
 
 
 # ---------------------------------------------------------------------------
@@ -361,6 +391,80 @@ def _make_central_corridor_rooms(
             rooms[0].opening_to.append(r.id)
 
     return rooms
+
+
+def _infer_structural_system(text: str, storey_count: int) -> dict:
+    if "core tube" in text or "core-tube" in text or "核心筒" in text:
+        kind = "core_tube"
+    elif "shear wall" in text or "剪力墙" in text:
+        kind = "shear_wall"
+    elif "mixed" in text or "混合" in text:
+        kind = "mixed"
+    elif storey_count >= 10:
+        kind = "core_tube"
+    else:
+        kind = "frame"
+    return {
+        "kind": kind,
+        "grid_spacing_x_mm": 6000,
+        "grid_spacing_y_mm": 6000,
+        "core_position": "center",
+    }
+
+
+def _infer_vertical_circulation(text: str, storey_count: int) -> list[dict]:
+    stairs = 0
+    elevators = 0
+    if storey_count >= 2 or "stair" in text or "楼梯" in text:
+        stairs = 1
+    if storey_count >= 3:
+        stairs = max(stairs, 2)
+    if storey_count >= 4 or "elevator" in text or "lift" in text or "电梯" in text:
+        elevators = 1
+    if storey_count >= 10:
+        elevators = max(elevators, 2)
+    out = []
+    if stairs:
+        out.append({"kind": "stair", "count": stairs})
+    if elevators:
+        out.append({"kind": "elevator", "count": elevators})
+    return out
+
+
+def _make_shafts(
+    requirements: dict,
+    footprint: Footprint,
+    storey_count: int,
+) -> list[VerticalShaft]:
+    vc = requirements.get("vertical_circulation") or []
+    if not vc:
+        vc = _infer_vertical_circulation("", storey_count)
+    storey_ids = [f"s{i + 1}" for i in range(storey_count)]
+    shafts: list[VerticalShaft] = []
+    idx = 0
+    for item in vc:
+        if not isinstance(item, dict):
+            continue
+        kind = str(item.get("kind", "stair"))
+        count = max(0, int(item.get("count", 1)))
+        for _ in range(count):
+            idx += 1
+            sx, sy = ((2200.0, 4200.0) if kind == "stair" else (2200.0, 2200.0))
+            x0 = 700.0 + (idx - 1) * (sx + 700.0)
+            y0 = 700.0
+            shafts.append(VerticalShaft(
+                id=f"{kind}_{idx}",
+                kind=kind,
+                storey_ids=storey_ids,
+                shaft_mm=(sx, sy),
+                footprint=[
+                    (x0, y0),
+                    (min(x0 + sx, footprint.x_mm - 700.0), y0),
+                    (min(x0 + sx, footprint.x_mm - 700.0), min(y0 + sy, footprint.y_mm - 700.0)),
+                    (x0, min(y0 + sy, footprint.y_mm - 700.0)),
+                ],
+            ))
+    return shafts
 
 
 def _split_among(total: int, mask: list[bool], *,

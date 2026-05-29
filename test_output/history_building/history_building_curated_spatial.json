@@ -1,0 +1,409 @@
+{
+  "metadata": {
+    "name": "18th Century French Classical Mansion",
+    "description": "A symmetric French classical residence derived from a historical elevation and ground-floor plan.",
+    "project_name": "History Building Text2IFC",
+    "site_name": "Courtyard and Garden Site",
+    "schema": "IFC4",
+    "length_unit": "MILLIMETRE"
+  },
+  "footprint": {
+    "shape": "rectangle",
+    "x_mm": 35082.0,
+    "y_mm": 21439.0,
+    "boundary": [],
+    "voids": []
+  },
+  "storeys": [
+    {
+      "id": "s1",
+      "name": "Rez-de-Chaussee",
+      "elevation_mm": 0,
+      "height_mm": 4200,
+      "is_inhabited": true,
+      "rooms": [
+        {
+          "id": "axis_peristyle",
+          "function": "lobby",
+          "area_ratio": 0.1,
+          "adjacent_to": [
+            "central_salon",
+            "cour_entry"
+          ],
+          "opening_to": [
+            "central_salon",
+            "cour_entry"
+          ],
+          "has_external_facade": true,
+          "n_windows": 0,
+          "n_external_doors": 1,
+          "name": "Peristyle",
+          "shaft_id": "",
+          "is_core": true
+        },
+        {
+          "id": "cour_entry",
+          "function": "reception",
+          "area_ratio": 0.07,
+          "adjacent_to": [
+            "axis_peristyle",
+            "left_antichamber",
+            "right_company",
+            "central_salon"
+          ],
+          "opening_to": [
+            "axis_peristyle",
+            "left_antichamber",
+            "right_company",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "Courtyard Entrance Hall",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "central_salon",
+          "function": "livingroom",
+          "area_ratio": 0.16,
+          "adjacent_to": [
+            "axis_peristyle",
+            "garden_terrace",
+            "left_assembly",
+            "right_dining"
+          ],
+          "opening_to": [
+            "axis_peristyle",
+            "garden_terrace",
+            "left_assembly",
+            "right_dining"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 0,
+          "name": "Central Salon",
+          "shaft_id": "",
+          "is_core": true
+        },
+        {
+          "id": "garden_terrace",
+          "function": "lobby",
+          "area_ratio": 0.07,
+          "adjacent_to": [
+            "central_salon",
+            "left_cabinet",
+            "right_cabinet"
+          ],
+          "opening_to": [
+            "central_salon",
+            "left_cabinet",
+            "right_cabinet"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 1,
+          "name": "Garden Side Vestibule",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_assembly",
+          "function": "meeting",
+          "area_ratio": 0.1,
+          "adjacent_to": [
+            "central_salon",
+            "left_cabinet",
+            "left_antichamber"
+          ],
+          "opening_to": [
+            "central_salon",
+            "left_cabinet",
+            "left_antichamber"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 0,
+          "name": "Salle d Assemblee",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_antichamber",
+          "function": "lobby",
+          "area_ratio": 0.06,
+          "adjacent_to": [
+            "cour_entry",
+            "left_assembly",
+            "left_bedroom",
+            "central_salon"
+          ],
+          "opening_to": [
+            "cour_entry",
+            "left_assembly",
+            "left_bedroom",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "Antichambre",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_bedroom",
+          "function": "bedroom",
+          "area_ratio": 0.08,
+          "adjacent_to": [
+            "left_antichamber",
+            "left_garderobe",
+            "central_salon"
+          ],
+          "opening_to": [
+            "left_antichamber",
+            "left_garderobe",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "Chambre a Coucher",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_garderobe",
+          "function": "storage",
+          "area_ratio": 0.04,
+          "adjacent_to": [
+            "left_bedroom",
+            "left_cabinet",
+            "central_salon"
+          ],
+          "opening_to": [
+            "left_bedroom",
+            "left_cabinet",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "Garderobe",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "left_cabinet",
+          "function": "office",
+          "area_ratio": 0.06,
+          "adjacent_to": [
+            "garden_terrace",
+            "left_assembly",
+            "left_garderobe",
+            "central_salon"
+          ],
+          "opening_to": [
+            "garden_terrace",
+            "left_assembly",
+            "left_garderobe",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "Cabinet",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "right_dining",
+          "function": "diningroom",
+          "area_ratio": 0.1,
+          "adjacent_to": [
+            "central_salon",
+            "right_office",
+            "right_company"
+          ],
+          "opening_to": [
+            "central_salon",
+            "right_office",
+            "right_company"
+          ],
+          "has_external_facade": true,
+          "n_windows": 3,
+          "n_external_doors": 0,
+          "name": "Salle a Manger",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "right_company",
+          "function": "meeting",
+          "area_ratio": 0.08,
+          "adjacent_to": [
+            "cour_entry",
+            "right_dining",
+            "right_billard",
+            "central_salon"
+          ],
+          "opening_to": [
+            "cour_entry",
+            "right_dining",
+            "right_billard",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "Salle de Compagnie",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "right_billard",
+          "function": "meeting",
+          "area_ratio": 0.07,
+          "adjacent_to": [
+            "right_company",
+            "right_cabinet",
+            "central_salon"
+          ],
+          "opening_to": [
+            "right_company",
+            "right_cabinet",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "Billard",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "right_cabinet",
+          "function": "office",
+          "area_ratio": 0.05,
+          "adjacent_to": [
+            "garden_terrace",
+            "right_billard",
+            "right_office",
+            "central_salon"
+          ],
+          "opening_to": [
+            "garden_terrace",
+            "right_billard",
+            "right_office",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 2,
+          "n_external_doors": 0,
+          "name": "Cabinet",
+          "shaft_id": "",
+          "is_core": false
+        },
+        {
+          "id": "right_office",
+          "function": "service",
+          "area_ratio": 0.06,
+          "adjacent_to": [
+            "right_dining",
+            "right_cabinet",
+            "central_salon"
+          ],
+          "opening_to": [
+            "right_dining",
+            "right_cabinet",
+            "central_salon"
+          ],
+          "has_external_facade": true,
+          "n_windows": 1,
+          "n_external_doors": 0,
+          "name": "Office Service",
+          "shaft_id": "",
+          "is_core": false
+        }
+      ],
+      "layout_hint": "central_corridor",
+      "elements": {
+        "walls": 52,
+        "doors": 22,
+        "windows": 26,
+        "columns": 18,
+        "slabs": 1,
+        "roofs": 0,
+        "railings": 2,
+        "wall_thickness_mm": 360,
+        "wall_material": "Limestone",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Limestone",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Stone",
+        "roof_thickness_mm": 200.0,
+        "roof_material": "Concrete",
+        "railing_height_mm": 1100.0
+      },
+      "notes": [],
+      "shaft_ids": [],
+      "structural_system_override": null,
+      "footprint_override": null
+    },
+    {
+      "id": "roof",
+      "name": "Classical Roof and Pediment Level",
+      "elevation_mm": 4200,
+      "height_mm": 0,
+      "is_inhabited": false,
+      "rooms": [],
+      "layout_hint": "empty",
+      "elements": {
+        "walls": 0,
+        "doors": 0,
+        "windows": 0,
+        "columns": 0,
+        "slabs": 0,
+        "roofs": 1,
+        "railings": 0,
+        "wall_thickness_mm": 200.0,
+        "wall_material": "Concrete",
+        "door_width_mm": 900.0,
+        "door_height_mm": 2100.0,
+        "window_width_mm": 1200.0,
+        "window_height_mm": 1200.0,
+        "window_sill_mm": 900.0,
+        "column_section_mm": [
+          400.0,
+          400.0
+        ],
+        "column_material": "Concrete",
+        "slab_thickness_mm": 200.0,
+        "slab_material": "Concrete",
+        "roof_thickness_mm": 300,
+        "roof_material": "Slate",
+        "railing_height_mm": 1100.0
+      },
+      "notes": [],
+      "shaft_ids": [],
+      "structural_system_override": null,
+      "footprint_override": null
+    }
+  ],
+  "shafts": [],
+  "structural_system": {
+    "kind": "frame",
+    "grid_spacing_x_mm": 5800,
+    "grid_spacing_y_mm": 5200,
+    "core_position": "center"
+  }
+}

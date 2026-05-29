@@ -65,6 +65,12 @@ def main():
     )
     parser.add_argument("--iterations", type=int, default=3,
                         help="Maximum iteration rounds (default: 3).")
+    parser.add_argument("--review-cycles", type=int, default=1,
+                        help="Inner programmatic design-review cycles per "
+                             "iteration (default: 1).")
+    parser.add_argument("--skill-registry", default=None,
+                        help="Optional JSON skill registry path used for "
+                             "pre-applying and minting design-review fixes.")
     parser.add_argument("--target-score", type=float, default=0.95,
                         help="Stop iterating once similarity ≥ this (default: 0.95).")
     parser.add_argument("--output-dir", default="test_output/text2ifc",
@@ -122,6 +128,8 @@ def main():
         use_llm=not args.no_llm,
         enable_ids=not args.no_ids,
         ids_min_pass_rate=args.ids_min_pass_rate,
+        review_cycles=args.review_cycles,
+        skill_registry_path=args.skill_registry,
     )
     seed_spatial = None
     if args.seed_spatial:
@@ -148,6 +156,9 @@ def main():
         print(f"IFC: {it.ifc_path}")
         print(f"SpatialGraph: {it.spatial_graph_path}")
         print(f"BuildingGraph: {it.graph_path}")
+        if it.design_review_path:
+            print(f"Design review: {it.design_review_path} "
+                  f"(cycle={it.review_cycle})")
         print(f"Score: {it.score:.3f}")
         if it.ids_total_specs:
             print(f"IDS: {it.ids_total_specs - it.ids_failed_specs}"

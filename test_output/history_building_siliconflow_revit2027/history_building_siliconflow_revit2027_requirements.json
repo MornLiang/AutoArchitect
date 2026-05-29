@@ -1,0 +1,118 @@
+{
+  "building_type": "French classical mansion (hôtel particulier)",
+  "storey_count": 2,
+  "storey_height_mm": 4500,
+  "footprint": {
+    "shape": "custom",
+    "x_mm": 35082,
+    "y_mm": 21439,
+    "boundary": [
+      [
+        0,
+        0
+      ],
+      [
+        11541,
+        0
+      ],
+      [
+        14541,
+        -3000
+      ],
+      [
+        17541,
+        -6000
+      ],
+      [
+        20541,
+        -3000
+      ],
+      [
+        23541,
+        0
+      ],
+      [
+        35082,
+        0
+      ],
+      [
+        35082,
+        21439
+      ],
+      [
+        23541,
+        21439
+      ],
+      [
+        20541,
+        23439
+      ],
+      [
+        17541,
+        26439
+      ],
+      [
+        14541,
+        23439
+      ],
+      [
+        11541,
+        21439
+      ],
+      [
+        0,
+        21439
+      ]
+    ],
+    "voids": []
+  },
+  "structural_system": {
+    "kind": "mixed",
+    "grid_spacing_x_mm": 3000,
+    "grid_spacing_y_mm": 4000,
+    "core_position": "center"
+  },
+  "vertical_circulation": [
+    {
+      "kind": "stair",
+      "count": 2
+    },
+    {
+      "kind": "service",
+      "count": 1
+    }
+  ],
+  "element_targets": {
+    "walls": 80,
+    "doors": 80,
+    "windows": 60,
+    "columns": 12,
+    "slabs": 2,
+    "roofs": 3,
+    "railings": 6
+  },
+  "materials": {
+    "wall": "stone",
+    "slab": "timber",
+    "roof": "slate"
+  },
+  "layout_notes": [
+    "Strictly symmetrical about a central longitudinal axis",
+    "Courtyard side (front) with semi-circular portico and steps",
+    "Garden side (rear) with curved terrace and steps",
+    "Central axis: courtyard → peristyle → grand salon → garden",
+    "Left wing: bedroom, antechamber, cabinet, assembly room",
+    "Right wing: dining room, billiard room, social room, cabinet",
+    "Service spaces (office, garderobe) tucked in secondary zones",
+    "Grand staircases in both wings leading to the first floor"
+  ],
+  "assumptions": [
+    "1 toise = 1949 mm, giving overall main block 35082 x 21439 mm",
+    "Two main storeys (ground and first) with 4500 mm floor-to-floor height",
+    "Semi-circular portico radius 6000 mm, terrace radius 5000 mm, approximated as polygons",
+    "Mixed structural system: load-bearing stone walls and classical columns",
+    "Column grid spacing estimated at 3000 mm (x) and 4000 mm (y)",
+    "No elevators (18th-century building); two symmetrical main stairs and one service stair",
+    "Element counts are approximate for a building of this scale and program"
+  ]
+}
